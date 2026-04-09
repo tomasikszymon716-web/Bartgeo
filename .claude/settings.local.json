@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(export PATH=\"/usr/local/bin:/opt/homebrew/bin:$HOME/.nvm/versions/node/*/bin:$PATH\")",
+      "Bash(export PATH=\"/usr/local/bin:/opt/homebrew/bin:$PATH\")",
+      "Bash(npm --version)",
+      "Bash(cp -r \"/Users/szymektomasik/Strony Internetowe/bartgeo-temp/\"* \"/Users/szymektomasik/Strony Internetowe/BartGeo/\")",
+      "Bash(cp \"/Users/szymektomasik/Strony Internetowe/bartgeo-temp/\".[!.]* \"/Users/szymektomasik/Strony Internetowe/BartGeo/\")",
+      "Bash(rm -rf \"/Users/szymektomasik/Strony Internetowe/bartgeo-temp\")",
+      "Bash(npm install:*)",
+      "Bash(npm cache:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run:*)",
+      "Bash(node -e \":*)",
+      "mcp__Claude_Preview__preview_start",
+      "Read(//usr/local/lib/node_modules/npm/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(export PATH=\"/usr/local/bin:$PATH\")",
+      "Bash(sips -g pixelWidth -g pixelHeight \"/Users/szymektomasik/Strony Internetowe/BartGeo/public/brand/logo-full.png\")",
+      "Bash(sips -g pixelWidth -g pixelHeight \"/Users/szymektomasik/Strony Internetowe/BartGeo/public/brand/logo-icon.png\")",
+      "Bash(python3 -c \"from PIL import Image; print\\('pillow ok'\\)\")",
+      "Bash(python3)"
+    ]
+  }
+}

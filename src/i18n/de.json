@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "oferta": "Leistungen",
+    "realizacje": "Portfolio",
+    "onas": "Über uns",
+    "opinie": "Bewertungen",
+    "kontakt": "Kontakt",
+    "cta": "Termin buchen"
+  },
+  "hero": {
+    "eyebrow": "VERMESSUNG · KREIS RZESZÓW UND UMGEBUNG",
+    "h1_1": "Wir helfen Ihnen den",
+    "h1_highlight": "richtigen Weg",
+    "h1_2": "in der Vermessung zu finden.",
+    "sub": "BartGeo steht für 15 Jahre Erfahrung in Planungskarten, Gebäudeabsteckung, Grundstücksteilung und Grenzwiederherstellung. Vom Entwurf bis zur Übergabe — vor Ort und digital.",
+    "cta_primary": "Beratung buchen",
+    "cta_ghost": "Portfolio ansehen",
+    "stat_years": "JAHRE ERFAHRUNG",
+    "stat_projects": "ABGESCHLOSSENE PROJEKTE",
+    "stat_counties": "BETREUTE LANDKREISE",
+    "stat_award": "GEODÄSIE-ADLER"
+  },
+  "services": {
+    "eyebrow": "LEISTUNGEN",
+    "heading": "Sechs Leistungen. Ein Qualitätsstandard.",
+    "sub": "Jedes Projekt wird individuell behandelt. Die Preise werden nach einem kurzen Gespräch und Kenntnis der Auftragsdetails festgelegt.",
+    "cta": "Angebot anfragen →",
+    "tachymeter_caption": "MODELL: TOTALSTATION · SCROLLEN ZUM DREHEN",
+    "map": {
+      "title": "Planungskarten",
+      "desc": "Grundlage jeder Bauinvestition. Dokumentation gemäß den Anforderungen der geodätischen Dokumentationsstelle."
+    },
+    "stake": {
+      "title": "Gebäude- und Netzabsteckung",
+      "desc": "Präzise Absteckung von Bauwerken und Versorgungsnetzen vor Ort, gemäß Planung."
+    },
+    "inventory": {
+      "title": "Bestandsaufnahmen",
+      "desc": "Dokumentation fertiggestellter Objekte für Abnahmen und Nutzungsgenehmigungen."
+    },
+    "division": {
+      "title": "Grundstücksteilung",
+      "desc": "Umfassende Betreuung des Teilungsverfahrens — vom Vorentwurf bis zum Grundbucheintrag."
+    },
+    "boundary": {
+      "title": "Grenzwiederherstellung",
+      "desc": "Wiederherstellung und Bestimmung verlorener oder strittiger Grenzzeichen."
+    },
+    "legal": {
+      "title": "Karten für Rechtszwecke",
+      "desc": "Dokumentation für Gerichte, Anwaltskanzleien, Rechtsberater und Notare."
+    }
+  },
+  "realizacje": {
+    "eyebrow": "PORTFOLIO",
+    "heading": "Hunderte Kunden. Tausende Projekte.",
+    "sub": "Von Einzelgrundstücken bis hin zu großen Bauträgerinvestitionen — jedes Projekt mit derselben Präzision.",
+    "badge": "Ausgezeichnet beim Wettbewerb Geodäsie-Adler",
+    "caption1": "Planungskarte · Kreis Rzeszów",
+    "caption2": "Gebäudeabsteckung · Trzebownisko",
+    "caption3": "Bestandsaufnahme · Rzeszów",
+    "caption4": "Grundstücksteilung · Kreis Łańcut",
+    "caption5": "Grenzwiederherstellung · Kreis Kolbuszowa",
+    "caption6": "Karte für Rechtszwecke · Rzeszów",
+    "caption7": "Vermessungsbetreuung · Kreis Rzeszów",
+    "caption8": "Flurstücksteilung · Trzebownisko",
+    "caption9": "Netzabsteckung · Kreis Ropczyce-Sędziszów"
+  },
+  "about": {
+    "eyebrow": "ÜBER UNS",
+    "heading": "15 Jahre Präzision im Gelände.",
+    "p1": "BartGeo ist ein Vermessungs- und Kartografieunternehmen unter der Leitung von Dipl.-Ing. Bartłomiej Tomasik. Seit 15 Jahren bieten wir Vermessungsleistungen höchster Qualität in den Landkreisen Rzeszów, Łańcut, Kolbuszowa und Ropczyce-Sędziszów.",
+    "p2": "Wir arbeiten mit Architekturbüros, Anwaltskanzleien, Rechtsberatern und Notaren zusammen. Jedes Projekt — vom Einzelgrundstück bis zur Betreuung großer Investitionen — wird mit derselben Sorgfalt und Termintreue ausgeführt.",
+    "stat_projects": "Abgeschlossene Projekte",
+    "stat_years": "Jahre Erfahrung",
+    "stat_counties": "Betreute Landkreise",
+    "badge": "Geodäsie-Adler"
+  },
+  "reviews": {
+    "eyebrow": "KUNDENBEWERTUNGEN",
+    "heading": "Was unsere Kunden sagen.",
+    "google_rating": "5.0 / 5.0 BEI GOOGLE",
+    "see_all": "Alle Bewertungen ansehen →",
+    "see_all_long": "Alle Bewertungen bei Google ansehen",
+    "google_client": "GOOGLE-KUNDE",
+    "review1": "Ich empfehle Herrn Bartłomiej. Kommunikation, Preis, Fachwissen, Pünktlichkeit — alles erstklassig. Einer der besten Vermesser in der Gegend von Rzeszów.",
+    "review2": "Ich empfehle die Vermessungsleistungen von Herrn Bartłomiej. Hervorragende Kommunikation, umfangreiches Wissen und Erfahrung. Aufträge termingerecht und professionell erledigt.",
+    "review3": "Ich empfehle die Dienste von Herrn Bartłomiej. Schnelle Ausführung, fachkundige Beratung."
+  },
+  "contact": {
+    "eyebrow": "KONTAKT",
+    "heading": "Beratung buchen.",
+    "sub": "Wir antworten innerhalb von 24 Stunden. Termine werden am besten telefonisch vereinbart.",
+    "info_note": "Wir arbeiten vor Ort und digital. Bitte vereinbaren Sie Termine telefonisch.",
+    "form": {
+      "name": "Vor- und Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Anfrage senden",
+      "privacy_note": "Mit dem Absenden akzeptieren Sie die Datenschutzerklärung.",
+      "success": "Vielen Dank! Wir melden uns schnellstmöglich.",
+      "error": "Ein Fehler ist aufgetreten. Bitte rufen Sie uns an: +48 669 563 771",
+      "subjects": {
+        "map": "Planungskarte",
+        "stake": "Gebäudeabsteckung",
+        "inventory": "Bestandsaufnahme",
+        "division": "Grundstücksteilung",
+        "boundary": "Grenzwiederherstellung",
+        "legal": "Karte für Rechtszwecke",
+        "consultation": "Beratung",
+        "other": "Sonstiges"
+      }
+    }
+  },
+  "hours": {
+    "monSat": "Mo–Sa",
+    "sunday": "Sonntag",
+    "closed": "Geschlossen"
+  },
+  "footer": {
+    "tagline": "PRÄZISION · TERMINTREUE · PROFESSIONALITÄT",
+    "nav": "Navigation",
+    "contact": "Kontakt",
+    "language": "Sprache",
+    "privacy": "Datenschutzerklärung",
+    "rights": "Alle Rechte vorbehalten.",
+    "made": "MIT PRÄZISION ERSTELLT"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "sections": {
+      "admin_title": "1. Verantwortlicher",
+      "admin_text": "Verantwortlicher für Ihre personenbezogenen Daten ist BartGeo Vermessungs- und Kartografiedienstleistungen, Dipl.-Ing. Bartłomiej Tomasik, Trzebownisko 949, 36-001 Trzebownisko, Polen, USt-IdNr.: 5170221234, Kontakt: bbartgeo@gmail.com, +48 669 563 771.",
+      "purpose_title": "2. Zweck und Umfang der Datenverarbeitung",
+      "purpose_text": "Ihre personenbezogenen Daten (Name, E-Mail-Adresse, Telefonnummer, Nachrichteninhalt) werden ausschließlich zur Beantwortung von Anfragen über das Kontaktformular und zur Anbahnung einer Zusammenarbeit verarbeitet.",
+      "legal_title": "3. Rechtsgrundlage",
+      "legal_text": "Rechtsgrundlage der Datenverarbeitung ist Art. 6 Abs. 1 lit. a) und b) DSGVO — Einwilligung der betroffenen Person sowie die Notwendigkeit zur Vertragserfüllung oder Durchführung vorvertraglicher Maßnahmen.",
+      "retention_title": "4. Speicherdauer",
+      "retention_text": "Die Daten werden für die zur Bearbeitung der Anfrage erforderliche Dauer gespeichert, höchstens 24 Monate ab dem letzten Kontakt.",
+      "recipients_title": "5. Datenempfänger",
+      "recipients_text": "Daten werden ausschließlich im Rahmen unserer eigenen Benachrichtigungsautomatisierung (n8n, WhatsApp, Gmail) auf unseren eigenen Kontaktkanälen weitergegeben. Wir geben keine Daten an Dritte weiter.",
+      "rights_title": "6. Ihre Rechte",
+      "rights_text": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit sowie Widerspruch und Beschwerde beim Präsidenten des UODO (Polnische Datenschutzbehörde).",
+      "cookies_title": "7. Cookies und Analytik",
+      "cookies_text": "Die Website verwendet keine analytischen oder Marketing-Cookies. Wir setzen keine Nutzertracking-Tools ein.",
+      "contact_title": "8. Kontakt",
+      "contact_text": "In Datenschutzangelegenheiten kontaktieren Sie uns unter bbartgeo@gmail.com."
+    },
+    "updated": "Letzte Aktualisierung:"
+  },
+  "loader": {
+    "brand": "BartGeo"
+  },
+  "skip": "Zum Inhalt springen",
+  "back_to_top": "Nach oben",
+  "not_found": {
+    "title": "404 — Seite nicht gefunden",
+    "text": "Die gesuchte Seite existiert nicht.",
+    "cta": "Zur Startseite"
+  }
+}

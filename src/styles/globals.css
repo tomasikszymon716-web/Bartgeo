@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #FAFAF7;
+  --color-bg-alt: #F2F1EC;
+  --color-card: #FFFFFF;
+  --color-ink: #0E1620;
+  --color-ink-soft: #1F2A36;
+  --color-graphite: #2D4057;
+  --color-graphite-soft: #3E5573;
+  --color-muted: #6B7480;
+  --color-line: #E6E4DC;
+  --color-line-strong: #D4D1C5;
+  --color-gold: #F0A500;
+  --color-gold-hi: #FFB726;
+  --color-gold-lo: #C98800;
+  --color-gold-tint: #FFF4DC;
+
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-display: "Inter", system-ui, sans-serif;
+
+  --shadow-soft: 0 30px 80px -40px rgba(45, 64, 87, 0.25);
+  --shadow-card: 0 1px 0 0 rgba(45, 64, 87, 0.04), 0 12px 32px -16px rgba(45, 64, 87, 0.12);
+  --shadow-gold: 0 20px 60px -20px rgba(240, 165, 0, 0.45);
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01", "cv11";
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("/grain.png");
+  opacity: 0.025;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: multiply;
+}
+
+/* Skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  padding: 1rem 2rem;
+  background: var(--color-ink);
+  color: var(--color-bg);
+  border-radius: 0 0 12px 12px;
+  font-weight: 600;
+  transition: top 0.2s;
+}
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-gold-tint);
+  color: var(--color-ink);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 3px;
+}

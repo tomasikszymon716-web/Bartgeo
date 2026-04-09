@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "oferta": "Oferta",
+    "realizacje": "Realizacje",
+    "onas": "O nas",
+    "opinie": "Opinie",
+    "kontakt": "Kontakt",
+    "cta": "Umów wizytę"
+  },
+  "hero": {
+    "eyebrow": "GEODEZJA · POWIAT RZESZOWSKI I OKOLICE",
+    "h1_1": "Pomożemy Ci wybrać",
+    "h1_highlight": "właściwą drogę",
+    "h1_2": "w geodezji.",
+    "sub": "BartGeo to 15 lat doświadczenia w mapach do celów projektowych, tyczeniach budynków, podziałach nieruchomości i wznowieniach granic. Od pomysłu po oddanie obiektu — w terenie i zdalnie.",
+    "cta_primary": "Umów konsultację",
+    "cta_ghost": "Zobacz realizacje",
+    "stat_years": "LAT DOŚWIADCZENIA",
+    "stat_projects": "REALIZACJI",
+    "stat_counties": "POWIATÓW",
+    "stat_award": "ORŁY GEODEZJI"
+  },
+  "services": {
+    "eyebrow": "USŁUGI",
+    "heading": "Sześć usług. Jeden standard precyzji.",
+    "sub": "Każdy projekt traktujemy indywidualnie. Cennik ustalamy po krótkiej rozmowie i poznaniu szczegółów zlecenia.",
+    "cta": "Zapytaj o wycenę →",
+    "tachymeter_caption": "MODEL: STACJA TOTALNA · ROTUJ SCROLLEM",
+    "map": {
+      "title": "Mapy do celów projektowych",
+      "desc": "Podstawa każdej inwestycji budowlanej. Dokumentacja zgodna z wymogami ośrodka dokumentacji geodezyjnej."
+    },
+    "stake": {
+      "title": "Tyczenie budynków i sieci",
+      "desc": "Precyzyjne wyznaczenie obiektów i sieci uzbrojenia terenu w terenie, zgodnie z projektem."
+    },
+    "inventory": {
+      "title": "Inwentaryzacje powykonawcze",
+      "desc": "Dokumentacja zrealizowanych obiektów do odbiorów i oddania budowy do użytku."
+    },
+    "division": {
+      "title": "Podziały nieruchomości",
+      "desc": "Kompleksowa obsługa procedury podziału działki — od wstępnego projektu po wpis w księdze wieczystej."
+    },
+    "boundary": {
+      "title": "Wznowienia znaków granicznych",
+      "desc": "Przywracanie i wyznaczanie zaginionych lub spornych znaków granicznych."
+    },
+    "legal": {
+      "title": "Mapy do celów prawnych",
+      "desc": "Dokumentacja dla sądów, kancelarii adwokackich, radców prawnych i notariuszy."
+    }
+  },
+  "realizacje": {
+    "eyebrow": "PORTFOLIO",
+    "heading": "Setki klientów. Tysiące projektów.",
+    "sub": "Od pojedynczych działek po duże inwestycje deweloperskie — każdy projekt z taką samą precyzją.",
+    "badge": "Wyróżnieni w plebiscycie Orły Geodezji",
+    "caption1": "Mapa do celów projektowych · Powiat rzeszowski",
+    "caption2": "Tyczenie budynku · Trzebownisko",
+    "caption3": "Inwentaryzacja powykonawcza · Rzeszów",
+    "caption4": "Podział nieruchomości · Powiat łańcucki",
+    "caption5": "Wznowienie granic · Powiat kolbuszowski",
+    "caption6": "Mapa do celów prawnych · Rzeszów",
+    "caption7": "Obsługa geodezyjna inwestycji · Powiat rzeszowski",
+    "caption8": "Podział działki · Trzebownisko",
+    "caption9": "Tyczenie sieci uzbrojenia · Powiat ropczycko-sędziszowski"
+  },
+  "about": {
+    "eyebrow": "O FIRMIE",
+    "heading": "15 lat precyzji w terenie.",
+    "p1": "BartGeo to firma geodezyjno-kartograficzna prowadzona przez mgr inż. Bartłomieja Tomasika. Od 15 lat dostarczamy usługi geodezyjne najwyższej jakości na terenie powiatu rzeszowskiego, łańcuckiego, kolbuszowskiego oraz ropczycko-sędziszowskiego.",
+    "p2": "Współpracujemy z biurami architektonicznymi, kancelariami adwokackimi, radców prawnych oraz kancelariami notarialnymi. Każdy projekt — od pojedynczej działki po obsługę dużych inwestycji — realizujemy z taką samą starannością i terminowością.",
+    "stat_projects": "Zrealizowanych projektów",
+    "stat_years": "Lat doświadczenia",
+    "stat_counties": "Obsługiwanych powiatów",
+    "badge": "Orły Geodezji"
+  },
+  "reviews": {
+    "eyebrow": "OPINIE KLIENTÓW",
+    "heading": "Co mówią o naszej pracy.",
+    "google_rating": "5.0 / 5.0 W GOOGLE",
+    "see_all": "Zobacz wszystkie opinie →",
+    "see_all_long": "Zobacz wszystkie opinie w Google",
+    "google_client": "KLIENT GOOGLE",
+    "review1": "Polecam Pana Bartłomieja. Kontakt, cena, wiedza, terminowość — wszystko na plus. Jeden z lepszych geodetów w Rzeszowie i okolicach.",
+    "review2": "Polecam usługi geodezyjne Pana Bartłomieja. Świetny kontakt, ogromna wiedza i doświadczenie. Zlecenia zrealizowane terminowo, profesjonalnie.",
+    "review3": "Polecam usługi Pana Bartłomieja. Szybko wykonana usługa, fachowe doradztwo."
+  },
+  "contact": {
+    "eyebrow": "KONTAKT",
+    "heading": "Umów konsultację.",
+    "sub": "Odpowiadamy w ciągu 24 godzin. Najlepiej umawiać spotkania telefonicznie.",
+    "info_note": "Pracujemy w terenie i zdalnie. Spotkania prosimy umawiać telefonicznie.",
+    "form": {
+      "name": "Imię i nazwisko",
+      "email": "Email",
+      "phone": "Telefon",
+      "subject": "Temat",
+      "message": "Wiadomość",
+      "submit": "Wyślij zapytanie",
+      "privacy_note": "Wysyłając formularz akceptujesz politykę prywatności.",
+      "success": "Dziękujemy! Odpowiemy najszybciej jak to możliwe.",
+      "error": "Wystąpił błąd. Skontaktuj się telefonicznie: +48 669 563 771",
+      "subjects": {
+        "map": "Mapa do celów projektowych",
+        "stake": "Tyczenie budynku",
+        "inventory": "Inwentaryzacja powykonawcza",
+        "division": "Podział nieruchomości",
+        "boundary": "Wznowienie znaków granicznych",
+        "legal": "Mapa do celów prawnych",
+        "consultation": "Konsultacja",
+        "other": "Inne"
+      }
+    }
+  },
+  "hours": {
+    "monSat": "Pon–Sob",
+    "sunday": "Niedziela",
+    "closed": "Zamknięte"
+  },
+  "footer": {
+    "tagline": "PRECYZJA · TERMINOWOŚĆ · PROFESJONALIZM",
+    "nav": "Nawigacja",
+    "contact": "Kontakt",
+    "language": "Język",
+    "privacy": "Polityka prywatności",
+    "rights": "Wszelkie prawa zastrzeżone.",
+    "made": "MADE WITH PRECISION"
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "sections": {
+      "admin_title": "1. Administrator danych",
+      "admin_text": "Administratorem Twoich danych osobowych jest BartGeo Usługi Geodezyjno-Kartograficzne mgr inż. Bartłomiej Tomasik, Trzebownisko 949, 36-001 Trzebownisko, NIP: 5170221234, kontakt: bbartgeo@gmail.com, +48 669 563 771.",
+      "purpose_title": "2. Cel i zakres przetwarzania danych",
+      "purpose_text": "Twoje dane osobowe (imię, adres e-mail, numer telefonu, treść wiadomości) są przetwarzane wyłącznie w celu udzielenia odpowiedzi na zapytanie wysłane przez formularz kontaktowy oraz w celu nawiązania współpracy.",
+      "legal_title": "3. Podstawa prawna",
+      "legal_text": "Podstawą prawną przetwarzania danych jest art. 6 ust. 1 lit. a) i b) RODO — zgoda osoby, której dane dotyczą, oraz konieczność wykonania umowy lub podjęcia działań przed jej zawarciem.",
+      "retention_title": "4. Okres przechowywania",
+      "retention_text": "Dane są przechowywane przez czas niezbędny do obsługi zapytania, nie dłużej niż 24 miesiące od ostatniego kontaktu.",
+      "recipients_title": "5. Odbiorcy danych",
+      "recipients_text": "Dane są przekazywane wyłącznie w ramach automatyzacji powiadomień (n8n, WhatsApp, Gmail) na nasze własne kanały kontaktowe. Nie udostępniamy danych osobom trzecim.",
+      "rights_title": "6. Twoje prawa",
+      "rights_text": "Masz prawo do dostępu do swoich danych, ich poprawiania, usunięcia, ograniczenia przetwarzania, przeniesienia oraz wniesienia sprzeciwu i skargi do Prezesa UODO.",
+      "cookies_title": "7. Cookies i analityka",
+      "cookies_text": "Strona nie używa plików cookies analitycznych ani marketingowych. Nie stosujemy żadnych narzędzi śledzących użytkowników.",
+      "contact_title": "8. Kontakt",
+      "contact_text": "W sprawach dotyczących danych osobowych skontaktuj się z nami pod adresem bbartgeo@gmail.com."
+    },
+    "updated": "Data ostatniej aktualizacji:"
+  },
+  "loader": {
+    "brand": "BartGeo"
+  },
+  "skip": "Przejdź do treści",
+  "back_to_top": "Wróć na górę",
+  "not_found": {
+    "title": "404 — Strona nie istnieje",
+    "text": "Strona, której szukasz, nie została znaleziona.",
+    "cta": "Wróć na stronę główną"
+  }
+}
