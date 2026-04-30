@@ -76,11 +76,17 @@ export function OfertaDesktop() {
     if (!area) return;
     const areaTop = area.getBoundingClientRect().top + window.scrollY;
     const areaH = area.offsetHeight;
-    const raw = areaTop + (index / 6) * areaH + 10;
-    /* Clamp so clicking the last item can't scroll past the section */
-    const maxScroll = areaTop + areaH - window.innerHeight;
-    const target = Math.min(raw, maxScroll);
-    window.scrollTo({ top: target, behavior: 'smooth' });
+    const viewportH = window.innerHeight;
+    /* useScroll progress is measured over the SCROLLABLE distance,
+       which is areaH - viewportH (not areaH). Mapping by areaH
+       overshoots by viewportH ≈ one slice on tall monitors, which
+       is exactly the "lands on next item" bug. The +0.1 places the
+       target 10% into slice `index` so Math.floor(progress * 6)
+       lands cleanly on `index`. */
+    const usable = Math.max(0, areaH - viewportH);
+    const fraction = (index + 0.1) / 6;
+    const target = areaTop + fraction * usable;
+    window.scrollTo({ top: Math.min(target, areaTop + usable), behavior: 'smooth' });
   }, []);
 
   return (

@@ -2,6 +2,14 @@ import { useEffect } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
+/* SVG host is intentionally larger than the visible dot so transform: scale()
+   stays in the SVG vector space — the circle is rasterized fresh on every
+   transform, instead of stretching a cached 8px bitmap and pixelating on
+   high-DPI / large monitors. */
+const SVG = 32;
+const HALF = SVG / 2;
+const DOT_R = 4;
+
 export function CursorDot() {
   const isMobile = useIsMobile();
   const x = useMotionValue(-100);
@@ -18,8 +26,8 @@ export function CursorDot() {
     document.documentElement.style.cursor = 'none';
 
     const move = (e: MouseEvent) => {
-      x.set(e.clientX - 4);
-      y.set(e.clientY - 4);
+      x.set(e.clientX - HALF);
+      y.set(e.clientY - HALF);
     };
 
     const over = (e: MouseEvent) => {
@@ -48,15 +56,22 @@ export function CursorDot() {
   if (isMobile) return null;
 
   return (
-    <motion.div
-      className="fixed top-0 left-0 w-2 h-2 rounded-full bg-[var(--color-gold)] pointer-events-none z-[10001] mix-blend-difference"
+    <motion.svg
+      width={SVG}
+      height={SVG}
+      viewBox={`0 0 ${SVG} ${SVG}`}
+      className="fixed top-0 left-0 pointer-events-none z-[10001] mix-blend-difference"
       style={{
         x: springX,
         y: springY,
         scale: springScale,
         opacity: 0.8,
         willChange: 'transform',
+        transformOrigin: 'center center',
       }}
-    />
+      aria-hidden
+    >
+      <circle cx={HALF} cy={HALF} r={DOT_R} fill="var(--color-gold)" />
+    </motion.svg>
   );
 }
