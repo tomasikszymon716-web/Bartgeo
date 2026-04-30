@@ -89,7 +89,7 @@ export function OfertaDesktop() {
         <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
 
           {/* ── Header — left-aligned, consistent with other sections ── */}
-          <div className="max-w-[1280px] mx-auto px-10 w-full pt-24 pb-2">
+          <div className="max-w-[1280px] mx-auto px-10 w-full pt-14 pb-2">
             <SectionHeading
               eyebrow={t('services.eyebrow')}
               heading={t('services.heading')}
