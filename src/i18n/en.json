@@ -9,30 +9,30 @@
   },
   "hero": {
     "eyebrow": "SURVEYING · RZESZÓW COUNTY & SURROUNDINGS",
-    "h1_1": "We'll help you find the",
+    "h1_1": "We'll find the",
     "h1_highlight": "right path",
     "h1_2": "in surveying.",
-    "sub": "BartGeo brings 15 years of expertise in design-purpose maps, building setting out, property division and boundary restoration. From concept to handover — on-site and remotely.",
+    "sub": "BartGeo brings 15 years of expertise in design maps, building staking, property division and boundary restoration. From concept to handover - on-site and remotely.",
     "cta_primary": "Book a consultation",
     "cta_ghost": "View portfolio",
-    "stat_years": "YEARS OF EXPERIENCE",
-    "stat_projects": "PROJECTS COMPLETED",
-    "stat_counties": "COUNTIES SERVED",
+    "stat_years": "YEARS EXPERIENCE",
+    "stat_projects": "PROJECTS",
+    "stat_counties": "COUNTIES",
     "stat_award": "GEODESY EAGLES"
   },
   "services": {
     "eyebrow": "SERVICES",
-    "heading": "Six services. One standard of precision.",
-    "sub": "Every project is treated individually. Pricing is determined after a brief consultation and understanding the project details.",
-    "cta": "Request a quote →",
+    "heading": "Six services. One standard.",
+    "sub": "Every project is treated individually. Pricing is set after a brief consultation.",
+    "cta": "Request a quote",
     "tachymeter_caption": "MODEL: TOTAL STATION · SCROLL TO ROTATE",
     "map": {
       "title": "Design-purpose maps",
-      "desc": "The foundation of every construction investment. Documentation compliant with geodetic documentation centre requirements."
+      "desc": "The foundation of every construction project. Documentation compliant with geodetic centre requirements."
     },
     "stake": {
-      "title": "Building & utility setting out",
-      "desc": "Precise on-site marking of structures and utility networks in accordance with the design."
+      "title": "Building setting out",
+      "desc": "Precise on-site marking of structures and utility networks per the design."
     },
     "inventory": {
       "title": "As-built surveys",
@@ -40,10 +40,10 @@
     },
     "division": {
       "title": "Property division",
-      "desc": "Comprehensive handling of the plot division procedure — from preliminary design to land registry entry."
+      "desc": "Full handling of the division procedure - from preliminary design to land registry entry."
     },
     "boundary": {
-      "title": "Boundary marker restoration",
+      "title": "Boundary restoration",
       "desc": "Restoration and demarcation of lost or disputed boundary markers."
     },
     "legal": {
@@ -54,7 +54,7 @@
   "realizacje": {
     "eyebrow": "PORTFOLIO",
     "heading": "Hundreds of clients. Thousands of projects.",
-    "sub": "From individual plots to major development investments — every project with the same precision.",
+    "sub": "From individual plots to major investments - every project with the same precision.",
     "badge": "Awarded in the Geodesy Eagles competition",
     "caption1": "Design-purpose map · Rzeszów County",
     "caption2": "Building setting out · Trzebownisko",
@@ -62,19 +62,40 @@
     "caption4": "Property division · Łańcut County",
     "caption5": "Boundary restoration · Kolbuszowa County",
     "caption6": "Legal-purpose map · Rzeszów",
-    "caption7": "Surveying support for investment · Rzeszów County",
+    "caption7": "Surveying support · Rzeszów County",
     "caption8": "Plot division · Trzebownisko",
-    "caption9": "Utility setting out · Ropczyce-Sędziszów County"
+    "caption9": "Utility setting out · Ropczyce-Sędziszów County",
+    "tags": {
+      "maps": "Maps",
+      "settingOut": "Setting Out",
+      "asBuilt": "As-Built",
+      "divisions": "Divisions",
+      "restorations": "Restorations",
+      "legalMaps": "Legal Maps",
+      "support": "Support"
+    }
+  },
+  "partners": {
+    "architectural": "ARCHITECTURAL FIRMS",
+    "law": "LAW OFFICES",
+    "legal": "LEGAL ADVISORS",
+    "notary": "NOTARY OFFICES",
+    "developers": "DEVELOPERS",
+    "individual": "INDIVIDUAL CLIENTS"
   },
   "about": {
     "eyebrow": "ABOUT US",
     "heading": "15 years of precision in the field.",
-    "p1": "BartGeo is a surveying and cartography company led by Bartłomiej Tomasik, MSc Eng. For 15 years we have been delivering top-quality surveying services in Rzeszów, Łańcut, Kolbuszowa and Ropczyce-Sędziszów counties.",
-    "p2": "We cooperate with architectural firms, law offices, legal advisors and notaries. Every project — from a single plot to managing large-scale investments — is carried out with the same care and punctuality.",
+    "p1": "BartGeo is a surveying and cartography company led by Bartłomiej Tomasik, MSc Eng. For 15 years we deliver top-quality surveying services in Rzeszów, Łańcut, Kolbuszowa and Ropczyce-Sędziszów counties.",
+    "p2": "We cooperate with architectural firms, law offices, legal advisors and notaries. Every project - from a single plot to large-scale investments - is carried out with the same care and punctuality.",
     "stat_projects": "Projects completed",
     "stat_years": "Years of experience",
     "stat_counties": "Counties served",
-    "badge": "Geodesy Eagles"
+    "badge": "Geodesy Eagles",
+    "awards_eyebrow": "AWARDS",
+    "awards_link": "View profile",
+    "award_laureate": "Laureate",
+    "award_silver": "Silver"
   },
   "reviews": {
     "eyebrow": "CLIENT REVIEWS",
@@ -83,7 +104,7 @@
     "see_all": "See all reviews →",
     "see_all_long": "See all reviews on Google",
     "google_client": "GOOGLE CLIENT",
-    "review1": "I recommend Mr Bartłomiej. Communication, price, knowledge, punctuality — everything top-notch. One of the best surveyors in the Rzeszów area.",
+    "review1": "I recommend Mr Bartłomiej. Communication, price, knowledge, punctuality - everything top-notch. One of the best surveyors in Rzeszów.",
     "review2": "I recommend Mr Bartłomiej's surveying services. Great communication, vast knowledge and experience. Orders completed on time, professionally.",
     "review3": "I recommend Mr Bartłomiej's services. Quick turnaround, expert advice."
   },
@@ -107,12 +128,16 @@
         "stake": "Building setting out",
         "inventory": "As-built survey",
         "division": "Property division",
-        "boundary": "Boundary marker restoration",
+        "boundary": "Boundary restoration",
         "legal": "Legal-purpose map",
         "consultation": "Consultation",
         "other": "Other"
       }
     }
+  },
+  "map": {
+    "show": "Show map",
+    "address": "Trzebownisko 949, 36-001 Trzebownisko"
   },
   "hours": {
     "monSat": "Mon–Sat",
@@ -130,19 +155,21 @@
   },
   "privacy": {
     "title": "Privacy Policy",
+    "sections_count": "{{count}} sections",
+    "read_time": "~3 min read",
     "sections": {
       "admin_title": "1. Data Controller",
       "admin_text": "The controller of your personal data is BartGeo Surveying & Cartography Services, Bartłomiej Tomasik MSc Eng., Trzebownisko 949, 36-001 Trzebownisko, Poland, Tax ID: 5170221234, contact: bbartgeo@gmail.com, +48 669 563 771.",
       "purpose_title": "2. Purpose and scope of data processing",
-      "purpose_text": "Your personal data (name, email address, phone number, message content) is processed solely to respond to inquiries submitted via the contact form and to establish cooperation.",
+      "purpose_text": "Your personal data (name, email, phone number, message) is processed solely to respond to inquiries via the contact form and to establish cooperation.",
       "legal_title": "3. Legal basis",
-      "legal_text": "The legal basis for data processing is Art. 6(1)(a) and (b) of the GDPR — consent of the data subject and the necessity of performing a contract or taking pre-contractual steps.",
+      "legal_text": "The legal basis for data processing is Art. 6(1)(a) and (b) of the GDPR - consent of the data subject and the necessity of performing a contract or taking pre-contractual steps.",
       "retention_title": "4. Retention period",
       "retention_text": "Data is stored for the time necessary to handle the inquiry, no longer than 24 months from the last contact.",
       "recipients_title": "5. Data recipients",
-      "recipients_text": "Data is shared only within our own notification automation (n8n, WhatsApp, Gmail) on our own contact channels. We do not share data with third parties.",
+      "recipients_text": "Data is shared only within our notification automation (n8n, WhatsApp, Gmail) on our own channels. We do not share data with third parties.",
       "rights_title": "6. Your rights",
-      "rights_text": "You have the right to access, rectify, delete, restrict processing, data portability, and to lodge an objection or complaint with the President of the UODO (Polish Data Protection Authority).",
+      "rights_text": "You have the right to access, rectify, delete, restrict processing, data portability, and to lodge an objection or complaint with the President of the UODO.",
       "cookies_title": "7. Cookies and analytics",
       "cookies_text": "The website does not use analytical or marketing cookies. We do not use any user tracking tools.",
       "contact_title": "8. Contact",
@@ -153,10 +180,20 @@
   "loader": {
     "brand": "BartGeo"
   },
+  "validation": {
+    "required": "This field is required",
+    "name_min": "Name must be at least 2 characters",
+    "name_max": "Name must be at most 100 characters",
+    "email_invalid": "Please enter a valid email address",
+    "phone_invalid": "Please enter a valid phone number",
+    "subject_required": "Please select a subject",
+    "message_min": "Message must be at least 5 characters",
+    "message_max": "Message must be at most 1,000 characters"
+  },
   "skip": "Skip to content",
   "back_to_top": "Back to top",
   "not_found": {
-    "title": "404 — Page not found",
+    "title": "404 - Page not found",
     "text": "The page you're looking for doesn't exist.",
     "cta": "Go to homepage"
   }

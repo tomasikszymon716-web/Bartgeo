@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { Star } from 'lucide-react';
+import { Star, ArrowUpRight } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { opinie } from '../../data/opinie';
 import { company } from '../../data/company';
@@ -9,61 +8,76 @@ export function OpinieMobile() {
   const { t } = useTranslation();
 
   return (
-    <section id="opinie" className="py-16 px-5" aria-labelledby="opinie-heading-m">
+    <section id="opinie" className="py-14 px-6" aria-labelledby="opinie-heading-m">
       <SectionHeading
         eyebrow={t('reviews.eyebrow')}
         heading={t('reviews.heading')}
-        center
         id="opinie-heading-m"
       />
 
-      <div className="flex items-center justify-center gap-3 mt-6">
+      {/* Google badge */}
+      <a
+        href={company.googleReviewsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-2.5 mt-5 mb-8"
+      >
         <div className="flex gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} className="w-4 h-4 fill-[var(--color-gold)] text-[var(--color-gold)]" />
+            <Star key={i} className="w-3.5 h-3.5 fill-[var(--color-gold)] text-[var(--color-gold)]" />
           ))}
         </div>
-        <span className="font-mono text-xs tracking-[0.08em] text-[var(--color-muted)]">
+        <span className="font-mono text-[10px] tracking-[0.08em] text-[var(--color-muted)]">
           {t('reviews.google_rating')}
         </span>
-      </div>
+      </a>
 
-      <div className="flex flex-col gap-4 mt-10">
+      {/* Stacked reviews — no framer-motion, pure CSS */}
+      <div className="flex flex-col gap-8">
         {opinie.map((review, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="bg-[var(--color-card)] rounded-[20px] p-6 border border-[var(--color-line)]"
-          >
-            <div className="flex gap-1 mb-4">
-              {Array.from({ length: 5 }).map((_, j) => (
-                <Star key={j} className="w-3.5 h-3.5 fill-[var(--color-gold)] text-[var(--color-gold)]" />
-              ))}
-            </div>
-            <p className="text-base leading-[1.6] text-[var(--color-ink-soft)] mb-4">
-              &ldquo;{t(review.textKey)}&rdquo;
+          <div key={i}>
+            <span className="block text-[56px] leading-[0.7] font-serif text-[var(--color-gold)] opacity-25 select-none mb-4">
+              &ldquo;
+            </span>
+
+            <p className="text-[16px] leading-[1.8] text-[var(--color-ink)] pl-1">
+              {t(review.textKey)}
             </p>
-            <div className="border-t border-[var(--color-line)] pt-3">
-              <p className="text-sm font-semibold text-[var(--color-ink)]">{review.author}</p>
-              <p className="font-mono text-[10px] tracking-[0.08em] text-[var(--color-muted)] mt-0.5">
-                {t('reviews.google_client')}
+
+            <div className="mt-5 pl-1">
+              <div className="w-8 h-px bg-[var(--color-gold)] opacity-40 mb-4" />
+              <p className="text-[14px] font-semibold text-[var(--color-ink)]">
+                {review.author}
               </p>
+              <div className="flex items-center gap-1.5 mt-1.5">
+                <div className="flex gap-px">
+                  {Array.from({ length: 5 }).map((_, s) => (
+                    <Star key={s} className="w-[9px] h-[9px] fill-[var(--color-gold)] text-[var(--color-gold)]" />
+                  ))}
+                </div>
+                <span className="text-[9px] tracking-[0.08em] text-[var(--color-muted)] uppercase">
+                  Google
+                </span>
+              </div>
             </div>
-          </motion.div>
+
+            {i < opinie.length - 1 && (
+              <div className="mt-8 h-px bg-[var(--color-line)]" />
+            )}
+          </div>
         ))}
       </div>
 
-      <div className="mt-8 text-center">
+      {/* CTA */}
+      <div className="mt-10 flex justify-center">
         <a
           href={company.googleReviewsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-medium text-[var(--color-gold)]"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[var(--color-line-strong)] text-[13px] font-medium text-[var(--color-muted)] active:text-[var(--color-gold)] active:border-[var(--color-gold)] transition-colors"
         >
-          {t('reviews.see_all_long')}
+          {t('reviews.see_all')}
+          <ArrowUpRight className="w-3.5 h-3.5" />
         </a>
       </div>
     </section>

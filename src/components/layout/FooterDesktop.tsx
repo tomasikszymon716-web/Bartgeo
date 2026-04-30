@@ -2,9 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { navItems } from '../../data/nav';
 import { company } from '../../data/company';
 import { LangSwitcher } from './LangSwitcher';
+import { useNavLink } from '../../lib/useNavLink';
 
 export function FooterDesktop() {
   const { t } = useTranslation();
+  const navTo = useNavLink();
 
   return (
     <footer className="bg-[var(--color-ink)] text-[var(--color-bg)] pt-20 pb-10">
@@ -17,7 +19,7 @@ export function FooterDesktop() {
           </div>
           <p className="text-sm text-white/60 mb-1">{company.name}</p>
           <p className="text-sm text-white/60 mb-6">NIP: {company.nip}</p>
-          <p className="font-mono text-xs tracking-[0.12em] text-[var(--color-gold)]">
+          <p className="text-[11px] font-semibold tracking-[0.06em] text-[var(--color-gold)]">
             {t('footer.tagline')}
           </p>
         </div>
@@ -30,7 +32,8 @@ export function FooterDesktop() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="text-sm text-white/70 hover:text-[var(--color-gold)] transition-colors"
+                  onClick={(e) => { e.preventDefault(); navTo(item.href); }}
+                  className="text-sm text-white/70 hover:text-[var(--color-gold)] transition-colors cursor-pointer"
                 >
                   {t(item.labelKey)}
                 </a>

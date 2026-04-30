@@ -1,4 +1,4 @@
-import { lazy, Suspense, useState } from 'react';
+import { lazy, Suspense, useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
@@ -9,6 +9,7 @@ import { ScrollProgress } from './components/layout/ScrollProgress';
 import { BackToTop } from './components/layout/BackToTop';
 import { CursorDot } from './components/layout/CursorDot';
 import { Home } from './routes/Home';
+import { scrollToSection } from './lib/scrollToSection';
 
 const Privacy = lazy(() => import('./routes/Privacy').then((m) => ({ default: m.Privacy })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
@@ -17,9 +18,25 @@ function HomeLayout() {
   const { t } = useTranslation();
   const [loaded, setLoaded] = useState(false);
 
+  /* Always start at the top on page load / refresh */
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+  }, []);
+
+  /* After loader completes — scroll to section if navigated from another page */
+  const handleLoaderComplete = () => {
+    setLoaded(true);
+    const target = sessionStorage.getItem('scrollTarget');
+    if (target) {
+      sessionStorage.removeItem('scrollTarget');
+      setTimeout(() => scrollToSection(`#${target}`), 150);
+    }
+  };
+
   return (
     <>
-      {!loaded && <Loader onComplete={() => setLoaded(true)} />}
+      {!loaded && <Loader onComplete={handleLoaderComplete} />}
       <a href="#hero" className="skip-to-content">
         {t('skip')}
       </a>

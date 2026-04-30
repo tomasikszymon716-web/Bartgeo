@@ -15,14 +15,16 @@ export function Home() {
     <>
       <Helmet>
         <html lang={i18n.language} />
-        <title>BartGeo — Usługi Geodezyjne Rzeszów | Mapy, Tyczenia, Podziały</title>
+        <title>BartGeo Usługi Geodezyjno-Kartograficzne</title>
         <meta
           name="description"
-          content="BartGeo — 15 lat doświadczenia w geodezji. Mapy do celów projektowych, tyczenie budynków, inwentaryzacje, podziały nieruchomości. Powiat rzeszowski, łańcucki, kolbuszowski, ropczycko-sędziszowski."
+          content="Profesjonalne usługi geodezyjne w Rzeszowie i okolicach. Mapy do celów projektowych, podziały działek, tyczenia. Szybkie terminy i precyzyjna realizacja."
         />
-        <meta property="og:title" content="BartGeo — Usługi Geodezyjne Rzeszów" />
-        <meta property="og:description" content="2014 zrealizowanych projektów. Precyzja, której można zaufać." />
-        <meta property="og:image" content="/og-image.jpg" />
+        <link rel="icon" type="image/png" href="/brand/logo-icon.png" />
+        <link rel="apple-touch-icon" href="/brand/logo-icon.png" />
+        <meta property="og:title" content="BartGeo Usługi Geodezyjno-Kartograficzne" />
+        <meta property="og:description" content="Profesjonalne usługi geodezyjne w Rzeszowie i okolicach. Mapy do celów projektowych, podziały działek, tyczenia. Szybkie terminy i precyzyjna realizacja." />
+        <meta property="og:image" content="/brand/logo-icon.png" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="pl_PL" />
         <link rel="canonical" href="https://bartgeo.pl" />

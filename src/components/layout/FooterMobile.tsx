@@ -1,25 +1,38 @@
 import { useTranslation } from 'react-i18next';
 import { navItems } from '../../data/nav';
 import { company } from '../../data/company';
+import { useNavLink } from '../../lib/useNavLink';
 
 export function FooterMobile() {
   const { t, i18n } = useTranslation();
+  const navTo = useNavLink();
 
   return (
-    <footer className="bg-[var(--color-ink)] text-[var(--color-bg)] pt-16 pb-8 px-5">
+    <footer className="bg-[var(--color-ink)] text-[var(--color-bg)] pt-16 pb-10 px-6">
       {/* Brand */}
-      <div className="flex items-center gap-2 mb-3">
-        <img src="/brand/logo-icon.png" alt="BartGeo logo" className="h-8 w-auto" />
-        <span className="font-display font-bold text-base">{company.shortName}</span>
+      <div className="flex items-center gap-2.5 mb-4">
+        <img src="/brand/logo-icon.png" alt="BartGeo logo" className="h-9 w-auto" />
+        <span className="font-display font-bold text-[17px]">{company.shortName}</span>
       </div>
-      <p className="text-sm text-white/60 mb-1">{company.name}</p>
-      <p className="text-sm text-white/60 mb-8">NIP: {company.nip}</p>
+      <p className="text-[13px] text-white/60 mb-1">{company.name}</p>
+      <p className="text-[13px] text-white/60 mb-5">NIP: {company.nip}</p>
+      <p className="text-[11px] font-semibold tracking-[0.06em] text-[var(--color-gold)]">
+        {t('footer.tagline')}
+      </p>
 
-      <div className="border-t border-white/10 pt-8 mb-8">
+      {/* Navigation */}
+      <div className="mt-10 pt-8 border-t border-white/10">
+        <h3 className="font-mono text-[10px] tracking-[0.12em] text-white/40 uppercase mb-5">
+          {t('footer.nav')}
+        </h3>
         <ul className="space-y-3">
           {navItems.map((item) => (
             <li key={item.href}>
-              <a href={item.href} className="text-sm text-white/70 hover:text-[var(--color-gold)] transition-colors">
+              <a
+                href={item.href}
+                onClick={(e) => { e.preventDefault(); navTo(item.href); }}
+                className="text-[13px] text-white/70 active:text-[var(--color-gold)] transition-colors cursor-pointer"
+              >
                 {t(item.labelKey)}
               </a>
             </li>
@@ -27,15 +40,19 @@ export function FooterMobile() {
         </ul>
       </div>
 
-      <div className="border-t border-white/10 pt-8 mb-8">
-        <ul className="space-y-3 text-sm">
+      {/* Contact */}
+      <div className="mt-8 pt-8 border-t border-white/10">
+        <h3 className="font-mono text-[10px] tracking-[0.12em] text-white/40 uppercase mb-5">
+          {t('footer.contact')}
+        </h3>
+        <ul className="space-y-3 text-[13px]">
           <li>
-            <a href={`tel:${company.phoneRaw}`} className="text-white/70 hover:text-[var(--color-gold)] transition-colors">
+            <a href={`tel:${company.phoneRaw}`} className="text-white/70 active:text-[var(--color-gold)] transition-colors">
               {company.phone}
             </a>
           </li>
           <li>
-            <a href={`mailto:${company.email}`} className="text-white/70 hover:text-[var(--color-gold)] transition-colors">
+            <a href={`mailto:${company.email}`} className="text-white/70 active:text-[var(--color-gold)] transition-colors">
               {company.email}
             </a>
           </li>
@@ -43,25 +60,42 @@ export function FooterMobile() {
         </ul>
       </div>
 
-      <div className="border-t border-white/10 pt-8 mb-8 flex items-center justify-between">
-        <a href="/polityka-prywatnosci" className="text-sm text-white/70 hover:text-[var(--color-gold)] transition-colors">
+      {/* Language & Privacy */}
+      <div className="mt-8 pt-8 border-t border-white/10 flex items-center justify-between">
+        <div>
+          <h3 className="font-mono text-[10px] tracking-[0.12em] text-white/40 uppercase mb-3">
+            {t('footer.language')}
+          </h3>
+          <div className="flex items-center gap-3">
+            {(['pl', 'en', 'de'] as const).map((code) => (
+              <button
+                key={code}
+                onClick={() => i18n.changeLanguage(code)}
+                className={`text-[12px] font-semibold tracking-[0.06em] cursor-pointer transition-colors ${
+                  i18n.language === code ? 'text-[var(--color-gold)]' : 'text-white/50 active:text-[var(--color-gold)]'
+                }`}
+              >
+                {code.toUpperCase()}
+              </button>
+            ))}
+          </div>
+        </div>
+        <a
+          href="/polityka-prywatnosci"
+          className="text-[12px] text-white/50 active:text-[var(--color-gold)] transition-colors"
+        >
           {t('footer.privacy')}
         </a>
-        <div className="flex items-center gap-3">
-          {(['pl', 'en', 'de'] as const).map((code) => (
-            <button
-              key={code}
-              onClick={() => i18n.changeLanguage(code)}
-              className={`text-sm font-medium cursor-pointer ${i18n.language === code ? 'text-[var(--color-gold)]' : 'text-white/50'}`}
-            >
-              {code.toUpperCase()}
-            </button>
-          ))}
-        </div>
       </div>
 
-      <div className="border-t border-[var(--color-gold)]/20 pt-6">
-        <p className="text-xs text-white/40 text-center">&copy; {new Date().getFullYear()} {company.shortName}. {t('footer.rights')}</p>
+      {/* Bottom */}
+      <div className="mt-10 pt-6 border-t border-[var(--color-gold)]/20">
+        <p className="text-[11px] text-white/40 text-center mb-2">
+          &copy; {new Date().getFullYear()} {company.shortName}. {t('footer.rights')}
+        </p>
+        <p className="font-mono text-[9px] tracking-[0.14em] text-white/25 text-center">
+          {t('footer.made')}
+        </p>
       </div>
     </footer>
   );

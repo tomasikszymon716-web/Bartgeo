@@ -7,9 +7,9 @@ import { Button } from '../ui/Button';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&q=80', h: 520, mt: 48 },
-  { src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80', h: 620, mt: 0 },
-  { src: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80', h: 460, mt: 90 },
+  { src: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&q=80', h: 480, mt: 48, pos: 'center' },
+  { src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80', h: 572, mt: 0, pos: 'center' },
+  { src: '/photos/hero-3.jpg', h: 424, mt: 90, pos: 'center 45%' },
 ];
 
 export function HeroDesktop() {
@@ -93,7 +93,7 @@ export function HeroDesktop() {
             {photos.map((photo, i) => (
               <motion.div
                 key={i}
-                className="w-[30%] overflow-hidden rounded-[20px]"
+                className="w-[27.5%] overflow-hidden rounded-[20px] ring-1 ring-black/[0.08] shadow-[0_2px_16px_rgba(0,0,0,0.06)]"
                 style={{
                   height: photo.h,
                   marginTop: photo.mt,
@@ -109,6 +109,7 @@ export function HeroDesktop() {
                     src={photo.src}
                     alt={`BartGeo geodesy project ${i + 1}`}
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-[filter] duration-700"
+                    style={{ objectPosition: photo.pos }}
                     fetchPriority={i === 0 ? 'high' : undefined}
                   />
                 </div>

@@ -1,18 +1,29 @@
 import type { ContactFormData } from './schema';
 
 export async function sendContactForm(data: ContactFormData): Promise<void> {
-  const url = import.meta.env.VITE_N8N_WEBHOOK_URL;
-  if (!url) throw new Error('Brak konfiguracji webhooka.');
+  console.log('[form] Submitting contact form...');
+  console.log('[form] Payload:', JSON.stringify(data, null, 2));
 
-  const res = await fetch(url, {
+  const res = await fetch('/api/contact', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      ...data,
-      timestamp: new Date().toISOString(),
-      source: 'bartgeo.pl',
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      subject: data.subject,
+      message: data.message,
     }),
   });
 
-  if (!res.ok) throw new Error(`Webhook error: ${res.status}`);
+  const result = await res.json();
+  console.log('[form] Response status:', res.status);
+  console.log('[form] Response body:', result);
+
+  if (!res.ok) {
+    console.error('[form] Submit failed:', result);
+    throw new Error(result.error || `Server error: ${res.status}`);
+  }
+
+  console.log('[form] Email sent successfully! ID:', result.id);
 }

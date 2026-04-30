@@ -11,7 +11,7 @@ export function Marquee({ children, duration = 30, className = '' }: MarqueeProp
   return (
     <div className={`overflow-hidden ${className}`}>
       <motion.div
-        className="flex w-max gap-12 hover:[animation-play-state:paused]"
+        className="flex w-max hover:[animation-play-state:paused]"
         animate={{ x: ['0%', '-50%'] }}
         transition={{ duration, repeat: Infinity, ease: 'linear' }}
       >

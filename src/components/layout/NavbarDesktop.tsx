@@ -4,11 +4,13 @@ import { useState } from 'react';
 import { navItems } from '../../data/nav';
 import { LangSwitcher } from './LangSwitcher';
 import { Button } from '../ui/Button';
+import { useNavLink } from '../../lib/useNavLink';
 
 export function NavbarDesktop() {
   const { t } = useTranslation();
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
+  const navTo = useNavLink();
 
   useMotionValueEvent(scrollY, 'change', (v) => setScrolled(v > 40));
 
@@ -21,11 +23,11 @@ export function NavbarDesktop() {
       }`}
     >
       <nav className="max-w-[1280px] mx-auto flex items-center justify-between px-10 py-5" aria-label="Main navigation">
-        <a href="#hero" className="flex items-center gap-2.5">
+        <a href="#hero" onClick={(e) => { e.preventDefault(); navTo('#hero'); }} className="flex items-center gap-2.5">
           <img src="/brand/logo-icon.png" alt="BartGeo" className="h-10 w-10 object-contain" />
           <span className="text-[22px] font-bold leading-none" style={{ fontFamily: 'Quicksand, sans-serif' }}>
             <span className="italic text-[var(--color-gold)]">Bart</span>
-            <span className="text-[var(--color-graphite)]">Geo</span>
+            <span className="italic text-[var(--color-graphite)]">Geo</span>
           </span>
         </a>
 
@@ -34,6 +36,7 @@ export function NavbarDesktop() {
             <a
               key={item.href}
               href={item.href}
+              onClick={(e) => { e.preventDefault(); navTo(item.href); }}
               className="text-sm font-medium tracking-[0.02em] text-[var(--color-ink)] hover:text-[var(--color-gold)] transition-colors relative group"
             >
               {t(item.labelKey)}

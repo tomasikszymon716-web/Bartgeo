@@ -12,7 +12,7 @@
     "h1_1": "Pomożemy Ci wybrać",
     "h1_highlight": "właściwą drogę",
     "h1_2": "w geodezji.",
-    "sub": "BartGeo to 15 lat doświadczenia w mapach do celów projektowych, tyczeniach budynków, podziałach nieruchomości i wznowieniach granic. Od pomysłu po oddanie obiektu — w terenie i zdalnie.",
+    "sub": "BartGeo to 15 lat doświadczenia w mapach do celów projektowych, tyczeniach budynków, podziałach nieruchomości i wznowieniach granic. Od pomysłu po oddanie obiektu - w terenie i zdalnie.",
     "cta_primary": "Umów konsultację",
     "cta_ghost": "Zobacz realizacje",
     "stat_years": "LAT DOŚWIADCZENIA",
@@ -24,7 +24,7 @@
     "eyebrow": "USŁUGI",
     "heading": "Sześć usług. Jeden standard precyzji.",
     "sub": "Każdy projekt traktujemy indywidualnie. Cennik ustalamy po krótkiej rozmowie i poznaniu szczegółów zlecenia.",
-    "cta": "Zapytaj o wycenę →",
+    "cta": "Zapytaj o wycenę",
     "tachymeter_caption": "MODEL: STACJA TOTALNA · ROTUJ SCROLLEM",
     "map": {
       "title": "Mapy do celów projektowych",
@@ -40,7 +40,7 @@
     },
     "division": {
       "title": "Podziały nieruchomości",
-      "desc": "Kompleksowa obsługa procedury podziału działki — od wstępnego projektu po wpis w księdze wieczystej."
+      "desc": "Kompleksowa obsługa procedury podziału działki - od wstępnego projektu po wpis w księdze wieczystej."
     },
     "boundary": {
       "title": "Wznowienia znaków granicznych",
@@ -51,10 +51,18 @@
       "desc": "Dokumentacja dla sądów, kancelarii adwokackich, radców prawnych i notariuszy."
     }
   },
+  "partners": {
+    "architectural": "BIURA ARCHITEKTONICZNE",
+    "law": "KANCELARIE ADWOKACKIE",
+    "legal": "KANCELARIE RADCÓW PRAWNYCH",
+    "notary": "KANCELARIE NOTARIALNE",
+    "developers": "DEWELOPERZY",
+    "individual": "KLIENCI INDYWIDUALNI"
+  },
   "realizacje": {
     "eyebrow": "PORTFOLIO",
     "heading": "Setki klientów. Tysiące projektów.",
-    "sub": "Od pojedynczych działek po duże inwestycje deweloperskie — każdy projekt z taką samą precyzją.",
+    "sub": "Od pojedynczych działek po duże inwestycje deweloperskie - każdy projekt z taką samą precyzją.",
     "badge": "Wyróżnieni w plebiscycie Orły Geodezji",
     "caption1": "Mapa do celów projektowych · Powiat rzeszowski",
     "caption2": "Tyczenie budynku · Trzebownisko",
@@ -64,17 +72,30 @@
     "caption6": "Mapa do celów prawnych · Rzeszów",
     "caption7": "Obsługa geodezyjna inwestycji · Powiat rzeszowski",
     "caption8": "Podział działki · Trzebownisko",
-    "caption9": "Tyczenie sieci uzbrojenia · Powiat ropczycko-sędziszowski"
+    "caption9": "Tyczenie sieci uzbrojenia · Powiat ropczycko-sędziszowski",
+    "tags": {
+      "maps": "Mapy",
+      "settingOut": "Tyczenie",
+      "asBuilt": "Inwentaryzacja",
+      "divisions": "Podziały",
+      "restorations": "Wznowienia",
+      "legalMaps": "Mapy prawne",
+      "support": "Obsługa"
+    }
   },
   "about": {
     "eyebrow": "O FIRMIE",
     "heading": "15 lat precyzji w terenie.",
     "p1": "BartGeo to firma geodezyjno-kartograficzna prowadzona przez mgr inż. Bartłomieja Tomasika. Od 15 lat dostarczamy usługi geodezyjne najwyższej jakości na terenie powiatu rzeszowskiego, łańcuckiego, kolbuszowskiego oraz ropczycko-sędziszowskiego.",
-    "p2": "Współpracujemy z biurami architektonicznymi, kancelariami adwokackimi, radców prawnych oraz kancelariami notarialnymi. Każdy projekt — od pojedynczej działki po obsługę dużych inwestycji — realizujemy z taką samą starannością i terminowością.",
+    "p2": "Współpracujemy z biurami architektonicznymi, kancelariami adwokackimi, radców prawnych oraz kancelariami notarialnymi. Każdy projekt - od pojedynczej działki po obsługę dużych inwestycji - realizujemy z taką samą starannością i terminowością.",
     "stat_projects": "Zrealizowanych projektów",
     "stat_years": "Lat doświadczenia",
     "stat_counties": "Obsługiwanych powiatów",
-    "badge": "Orły Geodezji"
+    "badge": "Orły Geodezji",
+    "awards_eyebrow": "WYRÓŻNIENIA",
+    "awards_link": "Zobacz profil",
+    "award_laureate": "Laureat",
+    "award_silver": "Silver"
   },
   "reviews": {
     "eyebrow": "OPINIE KLIENTÓW",
@@ -83,7 +104,7 @@
     "see_all": "Zobacz wszystkie opinie →",
     "see_all_long": "Zobacz wszystkie opinie w Google",
     "google_client": "KLIENT GOOGLE",
-    "review1": "Polecam Pana Bartłomieja. Kontakt, cena, wiedza, terminowość — wszystko na plus. Jeden z lepszych geodetów w Rzeszowie i okolicach.",
+    "review1": "Polecam Pana Bartłomieja. Kontakt, cena, wiedza, terminowość - wszystko na plus. Jeden z lepszych geodetów w Rzeszowie i okolicach.",
     "review2": "Polecam usługi geodezyjne Pana Bartłomieja. Świetny kontakt, ogromna wiedza i doświadczenie. Zlecenia zrealizowane terminowo, profesjonalnie.",
     "review3": "Polecam usługi Pana Bartłomieja. Szybko wykonana usługa, fachowe doradztwo."
   },
@@ -114,6 +135,10 @@
       }
     }
   },
+  "map": {
+    "show": "Pokaż mapę",
+    "address": "Trzebownisko 949, 36-001 Trzebownisko"
+  },
   "hours": {
     "monSat": "Pon–Sob",
     "sunday": "Niedziela",
@@ -130,13 +155,15 @@
   },
   "privacy": {
     "title": "Polityka prywatności",
+    "sections_count": "{{count}} sekcji",
+    "read_time": "~3 min czytania",
     "sections": {
       "admin_title": "1. Administrator danych",
       "admin_text": "Administratorem Twoich danych osobowych jest BartGeo Usługi Geodezyjno-Kartograficzne mgr inż. Bartłomiej Tomasik, Trzebownisko 949, 36-001 Trzebownisko, NIP: 5170221234, kontakt: bbartgeo@gmail.com, +48 669 563 771.",
       "purpose_title": "2. Cel i zakres przetwarzania danych",
       "purpose_text": "Twoje dane osobowe (imię, adres e-mail, numer telefonu, treść wiadomości) są przetwarzane wyłącznie w celu udzielenia odpowiedzi na zapytanie wysłane przez formularz kontaktowy oraz w celu nawiązania współpracy.",
       "legal_title": "3. Podstawa prawna",
-      "legal_text": "Podstawą prawną przetwarzania danych jest art. 6 ust. 1 lit. a) i b) RODO — zgoda osoby, której dane dotyczą, oraz konieczność wykonania umowy lub podjęcia działań przed jej zawarciem.",
+      "legal_text": "Podstawą prawną przetwarzania danych jest art. 6 ust. 1 lit. a) i b) RODO - zgoda osoby, której dane dotyczą, oraz konieczność wykonania umowy lub podjęcia działań przed jej zawarciem.",
       "retention_title": "4. Okres przechowywania",
       "retention_text": "Dane są przechowywane przez czas niezbędny do obsługi zapytania, nie dłużej niż 24 miesiące od ostatniego kontaktu.",
       "recipients_title": "5. Odbiorcy danych",
@@ -153,10 +180,20 @@
   "loader": {
     "brand": "BartGeo"
   },
+  "validation": {
+    "required": "To pole jest wymagane",
+    "name_min": "Imię musi mieć co najmniej 2 znaki",
+    "name_max": "Imię może mieć maksymalnie 100 znaków",
+    "email_invalid": "Podaj prawidłowy adres email",
+    "phone_invalid": "Podaj prawidłowy numer telefonu",
+    "subject_required": "Wybierz temat zapytania",
+    "message_min": "Wiadomość musi mieć co najmniej 5 znaków",
+    "message_max": "Wiadomość może mieć maksymalnie 1000 znaków"
+  },
   "skip": "Przejdź do treści",
   "back_to_top": "Wróć na górę",
   "not_found": {
-    "title": "404 — Strona nie istnieje",
+    "title": "404 - Strona nie istnieje",
     "text": "Strona, której szukasz, nie została znaleziona.",
     "cta": "Wróć na stronę główną"
   }

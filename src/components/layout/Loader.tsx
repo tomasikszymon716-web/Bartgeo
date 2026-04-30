@@ -24,12 +24,14 @@ export function Loader({ onComplete }: { onComplete: () => void }) {
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           />
           <motion.span
-            className="font-display font-extrabold text-[56px] text-[var(--color-ink)] tracking-[-0.03em]"
+            className="font-display font-extrabold text-[56px] tracking-[-0.03em]"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.15 }}
+            style={{ fontFamily: 'Quicksand, sans-serif' }}
           >
-            BartGeo
+            <span className="italic text-[var(--color-gold)]">Bart</span>
+            <span className="italic text-[var(--color-graphite)]">Geo</span>
           </motion.span>
           <motion.div
             className="h-px bg-[var(--color-gold)] mt-4"

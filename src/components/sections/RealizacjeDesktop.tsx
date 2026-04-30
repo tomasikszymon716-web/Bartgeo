@@ -1,16 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Award } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Marquee } from '../ui/Marquee';
 import { realizacje } from '../../data/realizacje';
-import { partners } from '../../data/partners';
+
+/* Bento grid — asymmetric column widths create editorial rhythm
+   Row 1:  5 + 3 + 4 = 12
+   Row 2:  4 + 4 + 4 = 12
+   Row 3:  3 + 5 + 4 = 12  */
+const grid = [
+  'col-span-5 h-[240px]', 'col-span-3 h-[240px]', 'col-span-4 h-[240px]',
+  'col-span-4 h-[220px]', 'col-span-4 h-[220px]', 'col-span-4 h-[220px]',
+  'col-span-3 h-[220px]', 'col-span-5 h-[220px]', 'col-span-4 h-[220px]',
+];
 
 export function RealizacjeDesktop() {
   const { t } = useTranslation();
 
   return (
-    <section id="realizacje" className="py-[80px]" aria-labelledby="realizacje-heading">
+    <section id="realizacje" className="py-[56px]" aria-labelledby="realizacje-heading">
       <div className="max-w-[1280px] mx-auto px-10">
         <SectionHeading
           eyebrow={t('realizacje.eyebrow')}
@@ -19,64 +27,59 @@ export function RealizacjeDesktop() {
           id="realizacje-heading"
         />
 
-        {/* Masonry grid */}
-        <div className="columns-3 gap-6 mt-16 [&>div]:mb-6 [&>div]:break-inside-avoid">
+        {/* ── Bento grid ── */}
+        <div className="grid grid-cols-12 gap-3 mt-14">
           {realizacje.map((item, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 0.6, delay: i * 0.06 }}
-              whileHover={{ scale: 1.04 }}
-              className="relative rounded-2xl overflow-hidden group cursor-pointer"
-              style={{ height: item.height }}
+              viewport={{ once: true, amount: 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.05 }}
+              className={`${grid[i]} relative rounded-2xl overflow-hidden group cursor-pointer`}
             >
-              {/* TODO: replace with real project photos */}
+              {/* Image with zoom */}
               <img
                 src={item.src}
                 alt={t(item.captionKey)}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
                 loading="lazy"
               />
-              <motion.div
-                className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-500"
-              >
-                <p className="text-sm font-medium text-[var(--color-gold)]">{t(item.captionKey)}</p>
-              </motion.div>
+
+              {/* Permanent subtle bottom vignette */}
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
+
+              {/* Category tag — always visible */}
+              <span className="absolute top-3 left-3 z-10 font-mono text-[10px] tracking-[0.1em] uppercase px-2.5 py-1 rounded-full bg-black/25 backdrop-blur-md text-white/90 border border-white/10">
+                {t(item.tagKey)}
+              </span>
+
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end">
+                <div className="p-5 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                  <p className="text-[15px] font-medium text-white leading-snug">
+                    {t(item.captionKey)}
+                  </p>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Partner marquee */}
-        <div className="mt-20 border-t border-b border-[var(--color-line)] py-8">
+        {/* ── Partner marquee ── */}
+        <div className="mt-16 border-t border-b border-[var(--color-line)] py-8">
           <Marquee duration={30}>
-            <div className="flex items-center gap-12">
-              {partners.map((partner, i) => (
-                <span key={i} className="flex items-center gap-4 font-mono text-sm tracking-[0.06em] text-[var(--color-muted)] whitespace-nowrap">
-                  {partner}
-                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]" />
+            <div className="flex items-center">
+              {(['architectural', 'law', 'legal', 'notary', 'developers', 'individual'] as const).map((key) => (
+                <span key={key} className="flex items-center font-mono text-sm tracking-[0.06em] text-[var(--color-muted)] whitespace-nowrap">
+                  {t(`partners.${key}`)}
+                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] mx-6 shrink-0" />
                 </span>
               ))}
             </div>
           </Marquee>
         </div>
 
-        {/* Award badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-10 flex justify-center"
-        >
-          <div className="inline-flex items-center gap-2 bg-[var(--color-gold-tint)] border border-[var(--color-gold)] rounded-full py-2.5 px-5">
-            <Award className="w-4 h-4 text-[var(--color-gold)]" />
-            <span className="font-mono text-xs font-medium tracking-[0.1em] uppercase text-[var(--color-gold-lo)]">
-              {t('realizacje.badge')}
-            </span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
