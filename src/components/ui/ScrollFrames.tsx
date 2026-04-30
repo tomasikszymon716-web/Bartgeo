@@ -39,6 +39,7 @@ export function ScrollFrames({
   const lastDrawnRef = useRef(-1);
   const rafRef = useRef(0);
   const targetIdxRef = useRef(0);
+  const dirtyRef = useRef(false);
   const [loaded, setLoaded] = useState(false);
 
   const { scrollYProgress } = useScroll({ target: containerRef, offset });
@@ -127,15 +128,27 @@ export function ScrollFrames({
       lastDrawnRef.current = chosen;
     };
 
+    /*
+     * Tick only when scroll has advanced — eliminates the constant
+     * 16ms wakeups when the section is on-screen but the user isn't
+     * scrolling. Each scroll change marks the next frame dirty; rAF
+     * draws once and goes idle until the next change.
+     */
     const tick = () => {
-      draw(targetIdxRef.current);
+      if (dirtyRef.current) {
+        dirtyRef.current = false;
+        draw(targetIdxRef.current);
+      }
       rafRef.current = requestAnimationFrame(tick);
     };
     rafRef.current = requestAnimationFrame(tick);
 
     const unsubscribe = scrollYProgress.on('change', (p) => {
       const idx = Math.max(0, Math.min(frameCount - 1, Math.round(p * (frameCount - 1))));
-      targetIdxRef.current = idx;
+      if (idx !== targetIdxRef.current) {
+        targetIdxRef.current = idx;
+        dirtyRef.current = true;
+      }
     });
 
     return () => {
@@ -159,6 +172,8 @@ export function ScrollFrames({
         style={{
           opacity: loaded ? 1 : 0.4,
           transition: 'opacity 0.4s ease',
+          transform: 'translateZ(0)',
+          willChange: 'transform',
         }}
       />
     </div>

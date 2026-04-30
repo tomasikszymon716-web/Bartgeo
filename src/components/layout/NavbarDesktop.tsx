@@ -16,10 +16,11 @@ export function NavbarDesktop() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[100] transition-[background-color,backdrop-filter,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] border-b ${
+      style={{ willChange: 'backdrop-filter, background-color' }}
+      className={`fixed top-0 left-0 right-0 z-[100] transition-[background-color,border-color,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] border-b ${
         scrolled
-          ? 'bg-[var(--color-bg)]/80 backdrop-blur-[20px] border-[var(--color-line)] shadow-[0_1px_12px_rgba(0,0,0,0.04)]'
-          : 'bg-transparent backdrop-blur-0 border-transparent shadow-none'
+          ? 'bg-[var(--color-bg)]/85 backdrop-blur-md border-[var(--color-line)] shadow-[0_1px_12px_rgba(0,0,0,0.04)]'
+          : 'bg-transparent border-transparent shadow-none'
       }`}
     >
       <nav className="max-w-[1280px] mx-auto flex items-center justify-between px-10 py-5" aria-label="Main navigation">

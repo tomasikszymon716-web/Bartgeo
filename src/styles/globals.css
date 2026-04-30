@@ -41,15 +41,23 @@ body {
   font-feature-settings: "ss01", "cv11";
 }
 
+/*
+ * Grain overlay — opacity-only blend (no mix-blend-mode).
+ * mix-blend-mode forces full-viewport recompositing on every scroll
+ * which kills mouse-wheel smoothness on Windows. At 0.04 opacity the
+ * texture is still visible without the blend cost. Promoted to its own
+ * GPU layer via translateZ so it never re-paints on scroll.
+ */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background: url("/grain.png");
-  opacity: 0.025;
+  opacity: 0.04;
   pointer-events: none;
   z-index: 1;
-  mix-blend-mode: multiply;
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 /* Skip to content */

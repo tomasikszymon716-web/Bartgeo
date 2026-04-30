@@ -98,6 +98,7 @@ export function HeroDesktop() {
                   height: photo.h,
                   marginTop: photo.mt,
                   y: reduced ? 0 : parallaxY[i],
+                  willChange: reduced ? 'auto' : 'transform',
                 }}
                 initial={{ scale: 1.06, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}

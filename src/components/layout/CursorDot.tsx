@@ -55,6 +55,7 @@ export function CursorDot() {
         y: springY,
         scale: springScale,
         opacity: 0.8,
+        willChange: 'transform',
       }}
     />
   );
