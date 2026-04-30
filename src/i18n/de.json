@@ -53,9 +53,18 @@
   },
   "realizacje": {
     "eyebrow": "PORTFOLIO",
-    "heading": "Hunderte Kunden. Tausende Projekte.",
-    "sub": "Von Einzelgrundstücken bis zu großen Investitionen - jedes Projekt mit derselben Präzision.",
+    "heading": "Sechs Leistungen. Eine Galerie.",
+    "sub": "Wählen Sie eine Leistung, um mehr Fotos aus unseren Projekten zu sehen — von Einzelgrundstücken bis zu großen Investitionen.",
     "badge": "Ausgezeichnet beim Wettbewerb Geodäsie-Adler",
+    "gallery_label": "Galerie",
+    "gallery_cta": "Galerie ansehen",
+    "lightbox": {
+      "eyebrow": "Projektgalerie",
+      "close": "Galerie schließen",
+      "prev": "Vorheriges Foto",
+      "next": "Nächstes Foto",
+      "swipe_hint": "Wischen zum Wechseln"
+    },
     "caption1": "Planungskarte · Kreis Rzeszów",
     "caption2": "Gebäudeabsteckung · Trzebownisko",
     "caption3": "Bestandsaufnahme · Rzeszów",

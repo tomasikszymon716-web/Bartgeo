@@ -53,9 +53,18 @@
   },
   "realizacje": {
     "eyebrow": "PORTFOLIO",
-    "heading": "Hundreds of clients. Thousands of projects.",
-    "sub": "From individual plots to major investments - every project with the same precision.",
+    "heading": "Six services. A gallery of work.",
+    "sub": "Pick a service to see more photos from our projects — from individual plots to major investments.",
     "badge": "Awarded in the Geodesy Eagles competition",
+    "gallery_label": "Gallery",
+    "gallery_cta": "View gallery",
+    "lightbox": {
+      "eyebrow": "Project gallery",
+      "close": "Close gallery",
+      "prev": "Previous photo",
+      "next": "Next photo",
+      "swipe_hint": "Swipe to change photo"
+    },
     "caption1": "Design-purpose map · Rzeszów County",
     "caption2": "Building setting out · Trzebownisko",
     "caption3": "As-built survey · Rzeszów",

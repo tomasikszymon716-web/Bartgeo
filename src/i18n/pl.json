@@ -62,9 +62,18 @@
   },
   "realizacje": {
     "eyebrow": "PORTFOLIO",
-    "heading": "Setki klientów. Tysiące projektów.",
-    "sub": "Od pojedynczych działek po duże inwestycje deweloperskie - każdy projekt z taką samą precyzją.",
+    "heading": "Sześć usług. Galeria realizacji.",
+    "sub": "Wybierz usługę, aby zobaczyć więcej zdjęć z naszych projektów. Od pojedynczych działek po duże inwestycje deweloperskie.",
     "badge": "Wyróżnieni w plebiscycie Orły Geodezji",
+    "gallery_label": "Galeria",
+    "gallery_cta": "Zobacz galerię",
+    "lightbox": {
+      "eyebrow": "Galeria realizacji",
+      "close": "Zamknij galerię",
+      "prev": "Poprzednie zdjęcie",
+      "next": "Następne zdjęcie",
+      "swipe_hint": "Przeciągnij, aby zmienić zdjęcie"
+    },
     "caption1": "Mapa do celów projektowych · Powiat rzeszowski",
     "caption2": "Tyczenie budynku · Trzebownisko",
     "caption3": "Inwentaryzacja powykonawcza · Rzeszów",
