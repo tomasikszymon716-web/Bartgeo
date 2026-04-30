@@ -1,22 +1,24 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { Flag } from './Flag';
+
+type FlagCode = 'PL' | 'DE' | 'CZ' | 'SK' | 'UA' | 'GB' | 'AT';
 
 interface Country {
-  code: string;
+  code: FlagCode;
   dial: string;
-  flag: string;
   name: string;
 }
 
 const countries: Country[] = [
-  { code: 'PL', dial: '+48', flag: '🇵🇱', name: 'Polska' },
-  { code: 'DE', dial: '+49', flag: '🇩🇪', name: 'Deutschland' },
-  { code: 'CZ', dial: '+420', flag: '🇨🇿', name: 'Česko' },
-  { code: 'SK', dial: '+421', flag: '🇸🇰', name: 'Slovensko' },
-  { code: 'UA', dial: '+380', flag: '🇺🇦', name: 'Україна' },
-  { code: 'GB', dial: '+44', flag: '🇬🇧', name: 'United Kingdom' },
-  { code: 'AT', dial: '+43', flag: '🇦🇹', name: 'Österreich' },
+  { code: 'PL', dial: '+48',  name: 'Polska' },
+  { code: 'DE', dial: '+49',  name: 'Deutschland' },
+  { code: 'CZ', dial: '+420', name: 'Česko' },
+  { code: 'SK', dial: '+421', name: 'Slovensko' },
+  { code: 'UA', dial: '+380', name: 'Україна' },
+  { code: 'GB', dial: '+44',  name: 'United Kingdom' },
+  { code: 'AT', dial: '+43',  name: 'Österreich' },
 ];
 
 interface PhoneInputProps {
@@ -83,7 +85,7 @@ export function PhoneInput({ value, onChange, label, error, id }: PhoneInputProp
           className="flex items-center gap-1.5 pl-4 pr-2 py-2 shrink-0 cursor-pointer hover:bg-[var(--color-bg-alt)] rounded-l-xl transition-colors"
           aria-label="Select country code"
         >
-          <span className="text-[16px] leading-none">{country.flag}</span>
+          <Flag code={country.code} size={{ w: 20, h: 14 }} />
           <span className="text-[13px] font-mono text-[var(--color-muted)]">{country.dial}</span>
           <ChevronDown className={`w-3 h-3 text-[var(--color-muted)] transition-transform duration-200 ${open ? 'rotate-180' : ''}`} />
         </button>
@@ -144,7 +146,7 @@ export function PhoneInput({ value, onChange, label, error, id }: PhoneInputProp
                       ${isActive ? 'text-[var(--color-gold)] font-medium bg-[var(--color-gold-tint)]' : 'text-[var(--color-ink)]'}
                     `}
                   >
-                    <span className="text-[16px]">{c.flag}</span>
+                    <Flag code={c.code} size={{ w: 22, h: 15 }} />
                     <span className="flex-1">{c.name}</span>
                     <span className="font-mono text-[12px] text-[var(--color-muted)]">{c.dial}</span>
                   </button>
