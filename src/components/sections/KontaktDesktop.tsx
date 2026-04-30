@@ -2,8 +2,12 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
+import { ContactRow } from '../ui/ContactRow';
 import { ContactForm } from '../forms/ContactForm';
 import { company } from '../../data/company';
+
+const fullAddress = `${company.address.street}, ${company.address.postalCode} ${company.address.city}`;
+const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`;
 
 export function KontaktDesktop() {
   const { t } = useTranslation();
@@ -45,39 +49,39 @@ export function KontaktDesktop() {
 
               {/* Contact items */}
               <div className="border-t border-white/10 pt-7 space-y-5 flex-1">
-                <a
+                <ContactRow
+                  icon={<Phone className="w-4 h-4 text-[var(--color-gold)]" />}
                   href={`tel:${company.phoneRaw}`}
-                  className="group flex items-center gap-3.5 text-[14px] hover:text-[var(--color-gold)] transition-colors"
+                  copyValue={company.phone}
+                  ariaLabel={t('contact.actions.callPhone')}
                 >
-                  <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center group-hover:bg-[var(--color-gold)]/10 transition-colors">
-                    <Phone className="w-4 h-4 text-[var(--color-gold)]" />
-                  </div>
                   {company.phone}
-                </a>
-                <a
+                </ContactRow>
+                <ContactRow
+                  icon={<Mail className="w-4 h-4 text-[var(--color-gold)]" />}
                   href={`mailto:${company.email}`}
-                  className="group flex items-center gap-3.5 text-[14px] hover:text-[var(--color-gold)] transition-colors"
+                  copyValue={company.email}
+                  ariaLabel={t('contact.actions.sendEmail')}
                 >
-                  <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center group-hover:bg-[var(--color-gold)]/10 transition-colors">
-                    <Mail className="w-4 h-4 text-[var(--color-gold)]" />
-                  </div>
                   {company.email}
-                </a>
-                <div className="flex items-start gap-3.5 text-[14px]">
-                  <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
-                    <MapPin className="w-4 h-4 text-[var(--color-gold)]" />
-                  </div>
-                  <span className="pt-1.5">{company.address.street}, {company.address.postalCode} {company.address.city}</span>
-                </div>
-                <div className="flex items-start gap-3.5 text-[14px]">
-                  <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
-                    <Clock className="w-4 h-4 text-[var(--color-gold)]" />
-                  </div>
-                  <div className="pt-1.5">
-                    <p>{t('hours.monSat')}: 07:00–18:00</p>
-                    <p className="text-white/50">{t('hours.sunday')}: {t('hours.closed')}</p>
-                  </div>
-                </div>
+                </ContactRow>
+                <ContactRow
+                  icon={<MapPin className="w-4 h-4 text-[var(--color-gold)]" />}
+                  href={directionsUrl}
+                  external
+                  copyValue={fullAddress}
+                  ariaLabel={t('contact.actions.directions')}
+                  align="start"
+                >
+                  {fullAddress}
+                </ContactRow>
+                <ContactRow
+                  icon={<Clock className="w-4 h-4 text-[var(--color-gold)]" />}
+                  align="start"
+                >
+                  <p>{t('hours.monSat')}: 07:00–18:00</p>
+                  <p className="text-white/50">{t('hours.sunday')}: {t('hours.closed')}</p>
+                </ContactRow>
               </div>
 
               {/* Info note */}

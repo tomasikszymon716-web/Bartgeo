@@ -1,8 +1,12 @@
 import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
+import { ContactRow } from '../ui/ContactRow';
 import { ContactForm } from '../forms/ContactForm';
 import { company } from '../../data/company';
+
+const fullAddress = `${company.address.street}, ${company.address.postalCode} ${company.address.city}`;
+const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`;
 
 export function KontaktMobile() {
   const { t } = useTranslation();
@@ -33,33 +37,39 @@ export function KontaktMobile() {
         <p className="text-[13px] text-[var(--color-gold-hi)] mb-6">{company.owner}</p>
 
         <div className="border-t border-white/10 pt-6 space-y-4">
-          <a href={`tel:${company.phoneRaw}`} className="flex items-center gap-3 text-[14px] active:text-[var(--color-gold)] transition-colors">
-            <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0">
-              <Phone className="w-4 h-4 text-[var(--color-gold)]" />
-            </div>
+          <ContactRow
+            icon={<Phone className="w-4 h-4 text-[var(--color-gold)]" />}
+            href={`tel:${company.phoneRaw}`}
+            copyValue={company.phone}
+            ariaLabel={t('contact.actions.callPhone')}
+          >
             {company.phone}
-          </a>
-          <a href={`mailto:${company.email}`} className="flex items-center gap-3 text-[14px] active:text-[var(--color-gold)] transition-colors">
-            <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0">
-              <Mail className="w-4 h-4 text-[var(--color-gold)]" />
-            </div>
+          </ContactRow>
+          <ContactRow
+            icon={<Mail className="w-4 h-4 text-[var(--color-gold)]" />}
+            href={`mailto:${company.email}`}
+            copyValue={company.email}
+            ariaLabel={t('contact.actions.sendEmail')}
+          >
             {company.email}
-          </a>
-          <div className="flex items-start gap-3 text-[14px]">
-            <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
-              <MapPin className="w-4 h-4 text-[var(--color-gold)]" />
-            </div>
-            <span className="pt-1.5">{company.address.street}, {company.address.postalCode} {company.address.city}</span>
-          </div>
-          <div className="flex items-start gap-3 text-[14px]">
-            <div className="w-8 h-8 rounded-lg bg-white/[0.06] flex items-center justify-center shrink-0 mt-0.5">
-              <Clock className="w-4 h-4 text-[var(--color-gold)]" />
-            </div>
-            <div className="pt-1.5">
-              <p>{t('hours.monSat')}: 07:00–18:00</p>
-              <p className="text-white/50">{t('hours.sunday')}: {t('hours.closed')}</p>
-            </div>
-          </div>
+          </ContactRow>
+          <ContactRow
+            icon={<MapPin className="w-4 h-4 text-[var(--color-gold)]" />}
+            href={directionsUrl}
+            external
+            copyValue={fullAddress}
+            ariaLabel={t('contact.actions.directions')}
+            align="start"
+          >
+            {fullAddress}
+          </ContactRow>
+          <ContactRow
+            icon={<Clock className="w-4 h-4 text-[var(--color-gold)]" />}
+            align="start"
+          >
+            <p>{t('hours.monSat')}: 07:00–18:00</p>
+            <p className="text-white/50">{t('hours.sunday')}: {t('hours.closed')}</p>
+          </ContactRow>
         </div>
 
         <div className="mt-6 pt-5 border-t border-white/10">

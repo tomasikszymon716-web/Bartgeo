@@ -114,6 +114,13 @@
     "heading": "Beratung buchen.",
     "sub": "Wir antworten innerhalb von 24 Stunden. Termine am besten telefonisch.",
     "info_note": "Wir arbeiten vor Ort und digital. Bitte vereinbaren Sie Termine telefonisch.",
+    "actions": {
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "directions": "Route planen",
+      "callPhone": "Anrufen",
+      "sendEmail": "E-Mail senden"
+    },
     "form": {
       "name": "Vor- und Nachname",
       "email": "E-Mail",

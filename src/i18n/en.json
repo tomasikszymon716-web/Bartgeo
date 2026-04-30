@@ -114,6 +114,13 @@
     "heading": "Book a consultation.",
     "sub": "We respond within 24 hours. Appointments are best arranged by phone.",
     "info_note": "We work on-site and remotely. Please arrange meetings by phone.",
+    "actions": {
+      "copy": "Copy",
+      "copied": "Copied",
+      "directions": "Get directions",
+      "callPhone": "Call",
+      "sendEmail": "Send email"
+    },
     "form": {
       "name": "Full name",
       "email": "Email",

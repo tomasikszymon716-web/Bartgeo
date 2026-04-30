@@ -114,6 +114,13 @@
     "heading": "Umów konsultację.",
     "sub": "Odpowiadamy w ciągu 24 godzin. Najlepiej umawiać spotkania telefonicznie.",
     "info_note": "Pracujemy w terenie i zdalnie. Spotkania prosimy umawiać telefonicznie.",
+    "actions": {
+      "copy": "Kopiuj",
+      "copied": "Skopiowano",
+      "directions": "Wyznacz trasę",
+      "callPhone": "Zadzwoń",
+      "sendEmail": "Napisz wiadomość"
+    },
     "form": {
       "name": "Imię i nazwisko",
       "email": "Email",
