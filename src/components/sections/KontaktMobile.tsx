@@ -82,6 +82,12 @@ export function KontaktMobile() {
         className="mt-5 bg-[var(--color-card)] rounded-2xl p-7 border border-[var(--color-line)]"
         style={{ boxShadow: 'var(--shadow-card)' }}
       >
+        <div className="flex items-center gap-2.5 mb-6 pb-5 border-b border-[var(--color-line)]">
+          <span className="h-px w-6 bg-[var(--color-gold)]/70" />
+          <span className="font-mono text-[9.5px] tracking-[0.22em] uppercase text-[var(--color-gold)]">
+            {t('contact.form_label')}
+          </span>
+        </div>
         <ContactForm />
       </div>
 

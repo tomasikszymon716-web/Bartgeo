@@ -99,9 +99,15 @@ export function KontaktDesktop() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="col-span-7 bg-[var(--color-card)] rounded-[24px] p-10 border border-[var(--color-line)]"
+            className="col-span-7 bg-[var(--color-card)] rounded-[24px] p-10 border border-[var(--color-line)] h-full flex flex-col"
             style={{ boxShadow: 'var(--shadow-card)' }}
           >
+            <div className="flex items-center gap-3 mb-7 pb-6 border-b border-[var(--color-line)]">
+              <span className="h-px w-8 bg-[var(--color-gold)]/70" />
+              <span className="font-mono text-[11px] tracking-[0.22em] uppercase text-[var(--color-gold)]">
+                {t('contact.form_label')}
+              </span>
+            </div>
             <ContactForm />
           </motion.div>
         </div>
