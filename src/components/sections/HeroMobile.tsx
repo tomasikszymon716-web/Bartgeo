@@ -18,7 +18,7 @@ export function HeroMobile() {
   const after = t('hero.h1_2');
 
   return (
-    <section id="hero" className="min-h-[100svh] flex flex-col pt-24 pb-12 px-6" aria-labelledby="hero-heading-m">
+    <section id="hero" className="min-h-[90svh] pt-24 pb-12 px-6" aria-labelledby="hero-heading-m">
       {/* Eyebrow */}
       <motion.p
         className="font-mono text-[10px] font-semibold tracking-[0.14em] text-[var(--color-gold)] uppercase mb-4"
@@ -80,7 +80,7 @@ export function HeroMobile() {
 
       {/* CTA buttons */}
       <motion.div
-        className="flex flex-col gap-3"
+        className="flex flex-col gap-3 mb-7"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.55 }}
@@ -91,7 +91,7 @@ export function HeroMobile() {
 
       {/* Stats strip */}
       <motion.div
-        className="flex items-center justify-center gap-5 flex-wrap mt-auto pt-8"
+        className="flex items-center justify-center gap-5 flex-wrap"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.7 }}
