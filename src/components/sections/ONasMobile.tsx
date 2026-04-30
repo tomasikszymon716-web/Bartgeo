@@ -76,15 +76,20 @@ export function ONasMobile() {
 
       {/* Awards */}
       <div className="mt-8 pt-7 border-t border-[var(--color-line)]">
-        <div className="flex items-center justify-between mb-5">
-          <p className="font-mono text-[10px] font-medium tracking-[0.12em] uppercase text-[var(--color-muted)]">
-            Orły Geodezji
-          </p>
+        <div className="flex items-start justify-between gap-4 mb-5">
+          <div className="leading-none">
+            <p className="font-mono text-[8.5px] tracking-[0.22em] uppercase text-[var(--color-muted)]">
+              {t('about.awards_kicker')}
+            </p>
+            <p className="font-mono text-[10.5px] font-semibold tracking-[0.12em] uppercase text-[var(--color-ink-soft)] mt-1.5">
+              Orły Geodezji
+            </p>
+          </div>
           <a
             href={ORLY_PROFILE}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.06em] text-[var(--color-gold-lo)] active:text-[var(--color-gold)] transition-colors"
+            className="inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.06em] text-[var(--color-gold-lo)] active:text-[var(--color-gold)] transition-colors mt-0.5 shrink-0"
           >
             {t('about.awards_link')}
             <ArrowUpRight className="w-3 h-3" />

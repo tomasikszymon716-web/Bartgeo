@@ -125,9 +125,14 @@ export function ONasDesktop() {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="mt-8 pt-7 border-t border-[var(--color-line)] flex items-center"
         >
-          <p className="font-mono text-[11px] font-medium tracking-[0.12em] uppercase text-[var(--color-muted)] shrink-0 mr-8">
-            Orły Geodezji
-          </p>
+          <div className="shrink-0 mr-8 leading-none">
+            <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--color-muted)]">
+              {t('about.awards_kicker')}
+            </p>
+            <p className="font-mono text-[11.5px] font-semibold tracking-[0.12em] uppercase text-[var(--color-ink-soft)] mt-1.5">
+              Orły Geodezji
+            </p>
+          </div>
 
           <div className="flex items-center gap-6">
             {awards.map((award, i) => (
