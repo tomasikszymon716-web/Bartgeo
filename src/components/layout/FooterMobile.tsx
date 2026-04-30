@@ -10,12 +10,16 @@ export function FooterMobile() {
   return (
     <footer className="bg-[var(--color-ink)] text-[var(--color-bg)] pt-16 pb-10 px-6">
       {/* Brand */}
-      <div className="flex items-center gap-2.5 mb-4">
-        <img src="/brand/logo-icon.png" alt="BartGeo logo" className="h-9 w-auto" />
-        <span className="font-display font-bold text-[17px]">{company.shortName}</span>
+      <div className="flex items-center gap-2.5 mb-5">
+        <img src="/brand/logo-icon.png" alt="BartGeo logo" className="h-9 w-9 object-contain" />
+        <span className="text-[19px] font-bold leading-none" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+          <span className="italic text-[var(--color-gold)]">Bart</span>
+          <span className="italic text-white">Geo</span>
+        </span>
       </div>
-      <p className="text-[13px] text-white/60 mb-1">{company.name}</p>
-      <p className="text-[13px] text-white/60 mb-5">NIP: {company.nip}</p>
+      <p className="text-[13px] text-white/75 leading-snug">{company.name}</p>
+      <p className="text-[13px] text-[var(--color-gold-hi)] mt-1 mb-4">{company.owner}</p>
+      <p className="text-[12px] text-white/40 mb-5">NIP: {company.nip}</p>
       <p className="text-[11px] font-semibold tracking-[0.06em] text-[var(--color-gold)]">
         {t('footer.tagline')}
       </p>

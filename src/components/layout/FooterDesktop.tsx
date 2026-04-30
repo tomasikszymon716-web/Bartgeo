@@ -13,12 +13,16 @@ export function FooterDesktop() {
       <div className="max-w-[1280px] mx-auto px-10 grid grid-cols-12 gap-10">
         {/* Brand */}
         <div className="col-span-4">
-          <div className="flex items-center gap-3 mb-4">
-            <img src="/brand/logo-icon.png" alt="BartGeo logo" className="h-10 w-auto" />
-            <span className="font-display font-bold text-lg">{company.shortName}</span>
+          <div className="flex items-center gap-2.5 mb-5">
+            <img src="/brand/logo-icon.png" alt="BartGeo logo" className="h-10 w-10 object-contain" />
+            <span className="text-[22px] font-bold leading-none" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+              <span className="italic text-[var(--color-gold)]">Bart</span>
+              <span className="italic text-white">Geo</span>
+            </span>
           </div>
-          <p className="text-sm text-white/60 mb-1">{company.name}</p>
-          <p className="text-sm text-white/60 mb-6">NIP: {company.nip}</p>
+          <p className="text-[13px] text-white/75 leading-snug max-w-[280px]">{company.name}</p>
+          <p className="text-[13px] text-[var(--color-gold-hi)] mt-1 mb-5">{company.owner}</p>
+          <p className="text-[12px] text-white/40 mb-6">NIP: {company.nip}</p>
           <p className="text-[11px] font-semibold tracking-[0.06em] text-[var(--color-gold)]">
             {t('footer.tagline')}
           </p>
