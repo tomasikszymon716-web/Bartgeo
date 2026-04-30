@@ -24,10 +24,10 @@ export function HeroDesktop() {
   const parallaxY = [y0, y1, y2];
 
   return (
-    <section ref={sectionRef} id="hero" className="pt-36 pb-14" aria-labelledby="hero-heading">
-      <div className="max-w-[1280px] mx-auto px-10 grid grid-cols-12 gap-10 items-start">
+    <section ref={sectionRef} id="hero" className="min-h-screen flex flex-col pt-36 pb-14" aria-labelledby="hero-heading">
+      <div className="max-w-[1280px] mx-auto px-10 w-full grid grid-cols-12 gap-10 flex-1">
         {/* Left column — text */}
-        <div className="col-span-5 pt-8">
+        <div className="col-span-5 pt-8 flex flex-col">
           <motion.p
             className="text-[13px] font-semibold tracking-[0.06em] text-[var(--color-gold)] mb-7 uppercase"
             initial={{ opacity: 0, y: 8 }}
@@ -57,7 +57,7 @@ export function HeroDesktop() {
             {t('hero.sub')}
           </motion.p>
           <motion.div
-            className="flex items-center gap-4 mb-14"
+            className="flex items-center gap-4"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 2.2 }}
@@ -68,7 +68,7 @@ export function HeroDesktop() {
 
           {/* Stats strip */}
           <motion.div
-            className="flex items-center gap-6 text-[13px] tracking-[-0.005em] text-[var(--color-muted)]"
+            className="flex items-center gap-6 text-[13px] tracking-[-0.005em] text-[var(--color-muted)] mt-auto pt-14"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 2.4 }}
