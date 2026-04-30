@@ -74,13 +74,18 @@ export function HeroDesktop() {
             transition={{ duration: 0.6, delay: 2.4 }}
           >
             {[
-              { value: '15', label: t('hero.stat_years') },
-              { value: '2014', label: t('hero.stat_projects') },
-              { value: '5', label: t('hero.stat_counties') },
+              { value: '15',   label: t('hero.stat_years') },
+              { value: '2014', label: t('hero.stat_projects'), suffix: '+' },
+              { value: '5',    label: t('hero.stat_counties') },
             ].map((stat, i) => (
-              <div key={i} className="flex items-center gap-1.5">
+              <div key={i} className="flex items-baseline gap-1.5">
                 {i > 0 && <span className="text-[var(--color-line-strong)] -ml-2 mr-1">·</span>}
-                <span className="font-bold text-[var(--color-ink)]">{stat.value}</span>
+                <span className="flex items-baseline">
+                  <span className="font-bold text-[var(--color-ink)]">{stat.value}</span>
+                  {stat.suffix && (
+                    <span className="font-bold text-[var(--color-gold)] ml-[1px]">{stat.suffix}</span>
+                  )}
+                </span>
                 <span>{stat.label}</span>
               </div>
             ))}
