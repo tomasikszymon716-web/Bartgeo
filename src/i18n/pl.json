@@ -52,6 +52,7 @@
     }
   },
   "partners": {
+    "label": "Stale współpracujemy z",
     "architectural": "BIURA ARCHITEKTONICZNE",
     "law": "KANCELARIE ADWOKACKIE",
     "legal": "KANCELARIE RADCÓW PRAWNYCH",

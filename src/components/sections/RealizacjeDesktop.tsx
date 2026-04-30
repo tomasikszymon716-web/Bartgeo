@@ -67,7 +67,14 @@ export function RealizacjeDesktop() {
         </div>
 
         {/* ── Partner marquee ── */}
-        <div className="mt-16 border-t border-b border-[var(--color-line)] py-8">
+        <div className="mt-16 relative border-t border-b border-[var(--color-line)] py-9">
+          <div className="absolute -top-[10px] left-1/2 -translate-x-1/2 px-5 bg-[var(--color-bg)] flex items-center gap-3 whitespace-nowrap">
+            <span className="h-px w-6 bg-[var(--color-gold)]/60" />
+            <span className="font-mono text-[11px] tracking-[0.24em] uppercase text-[var(--color-gold)]">
+              {t('partners.label')}
+            </span>
+            <span className="h-px w-6 bg-[var(--color-gold)]/60" />
+          </div>
           <Marquee duration={30}>
             <div className="flex items-center">
               {(['architectural', 'law', 'legal', 'notary', 'developers', 'individual'] as const).map((key) => (

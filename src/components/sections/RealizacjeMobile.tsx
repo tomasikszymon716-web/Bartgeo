@@ -75,7 +75,14 @@ export function RealizacjeMobile() {
       </div>
 
       {/* Partner marquee */}
-      <div className="mt-10 border-t border-b border-[var(--color-line)] py-6">
+      <div className="mt-10 relative border-t border-b border-[var(--color-line)] py-7">
+        <div className="absolute -top-[9px] left-1/2 -translate-x-1/2 px-3.5 bg-[var(--color-bg)] flex items-center gap-2 whitespace-nowrap">
+          <span className="h-px w-3.5 bg-[var(--color-gold)]/60" />
+          <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--color-gold)]">
+            {t('partners.label')}
+          </span>
+          <span className="h-px w-3.5 bg-[var(--color-gold)]/60" />
+        </div>
         <Marquee duration={25}>
           <div className="flex items-center">
             {(['architectural', 'law', 'legal', 'notary', 'developers', 'individual'] as const).map((key) => (
