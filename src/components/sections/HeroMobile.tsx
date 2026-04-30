@@ -18,7 +18,7 @@ export function HeroMobile() {
   const after = t('hero.h1_2');
 
   return (
-    <section id="hero" className="min-h-[90svh] pt-24 pb-12 px-6" aria-labelledby="hero-heading-m">
+    <section id="hero" className="min-h-[100svh] pt-24 pb-12 px-6" aria-labelledby="hero-heading-m">
       {/* Eyebrow */}
       <motion.p
         className="font-mono text-[10px] font-semibold tracking-[0.14em] text-[var(--color-gold)] uppercase mb-4"

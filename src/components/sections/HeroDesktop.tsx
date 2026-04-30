@@ -24,7 +24,7 @@ export function HeroDesktop() {
   const parallaxY = [y0, y1, y2];
 
   return (
-    <section ref={sectionRef} id="hero" className="min-h-[90vh] pt-36 pb-14" aria-labelledby="hero-heading">
+    <section ref={sectionRef} id="hero" className="min-h-screen pt-36 pb-14" aria-labelledby="hero-heading">
       <div className="max-w-[1280px] mx-auto px-10 grid grid-cols-12 gap-10 items-start">
         {/* Left column — text */}
         <div className="col-span-5 pt-8">
