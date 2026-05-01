@@ -104,7 +104,7 @@ export function OfertaDesktop() {
           </div>
 
           {/* ── Content grid ── */}
-          <div className="flex-1 max-w-[1280px] mx-auto px-10 w-full grid grid-cols-[1fr_520px] gap-14 items-center">
+          <div className="flex-1 max-w-[1280px] mx-auto px-10 w-full grid grid-cols-[1fr_520px] gap-14 items-start pt-12">
 
             {/* ── Left: Service list ── */}
             <div className="flex flex-col">
