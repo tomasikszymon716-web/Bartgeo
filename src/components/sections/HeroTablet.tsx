@@ -136,7 +136,7 @@ export function HeroTablet() {
               <span className="flex items-baseline">
                 <span className="font-bold text-[var(--color-ink)]">{stat.value}</span>
                 {stat.suffix && (
-                  <span className="font-bold text-[var(--color-gold)] ml-[1px]">{stat.suffix}</span>
+                  <span className="font-bold text-[var(--color-gold)] ml-[1px] inline-block translate-y-[-0.12em]">{stat.suffix}</span>
                 )}
               </span>
               <span>{stat.label}</span>

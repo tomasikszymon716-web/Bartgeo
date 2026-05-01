@@ -63,7 +63,7 @@ export function ONasMobile() {
                 className="font-display font-bold text-[32px] leading-none tracking-[-0.04em] text-[var(--color-ink)]"
               />
               {'suffix' in stat && stat.suffix && (
-                <span className="font-display font-bold text-[32px] leading-none text-[var(--color-gold)]">
+                <span className="font-display font-bold text-[32px] leading-none text-[var(--color-gold)] inline-block translate-y-[-0.18em]">
                   {stat.suffix}
                 </span>
               )}
