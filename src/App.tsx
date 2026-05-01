@@ -9,6 +9,7 @@ import { ScrollProgress } from './components/layout/ScrollProgress';
 import { BackToTop } from './components/layout/BackToTop';
 import { CursorDot } from './components/layout/CursorDot';
 import { CookieBanner } from './components/layout/CookieBanner';
+import { Analytics } from '@vercel/analytics/react';
 import { Home } from './routes/Home';
 import { scrollToSection } from './lib/scrollToSection';
 import { initAnalyticsConsentBridge } from './lib/analytics';
@@ -71,6 +72,7 @@ export default function App() {
         </Suspense>
         <CookieBanner />
       </BrowserRouter>
+      <Analytics />
     </HelmetProvider>
   );
 }
