@@ -235,7 +235,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   const emailPayload = {
     from: 'BARTGEO <kontakt@bartgeo.pl>',
-    to: 'tomasikszymon716@gmail.com',
+    to: 'bbartgeo@gmail.com',
     subject: `Nowe zapytanie: ${body.subject}`,
     html,
     reply_to: body.email,
