@@ -9,9 +9,9 @@
   },
   "hero": {
     "eyebrow": "VERMESSUNG · KREIS RZESZÓW UND UMGEBUNG",
-    "h1_1": "Wir finden den",
+    "h1_1": "Wir helfen Ihnen, den",
     "h1_highlight": "richtigen Weg",
-    "h1_2": "in der Vermessung.",
+    "h1_2": "in der Vermessung zu finden.",
     "sub": "BartGeo steht für 15 Jahre Erfahrung in Planungskarten, Gebäudeabsteckung, Grundstücksteilung und Grenzwiederherstellung. Vom Entwurf bis zur Übergabe - vor Ort und digital.",
     "cta_primary": "Beratung buchen",
     "cta_ghost": "Portfolio ansehen",
@@ -22,7 +22,7 @@
   },
   "services": {
     "eyebrow": "LEISTUNGEN",
-    "heading": "Sechs Leistungen. Ein Standard.",
+    "heading": "Sechs Leistungen. Ein Präzisionsstandard.",
     "sub": "Jedes Projekt wird individuell behandelt. Preise nach kurzer Beratung.",
     "cta": "Angebot anfragen",
     "tachymeter_caption": "MODELL: TOTALSTATION · SCROLLEN ZUM DREHEN",
@@ -96,7 +96,7 @@
   "about": {
     "eyebrow": "ÜBER UNS",
     "heading": "15 Jahre Präzision im Gelände.",
-    "p1": "BartGeo ist ein Vermessungsunternehmen unter Leitung von Dipl.-Ing. Bartłomiej Tomasik. Seit 15 Jahren bieten wir Vermessungsleistungen höchster Qualität in den Kreisen Rzeszów, Łańcut, Kolbuszowa und Ropczyce-Sędziszów.",
+    "p1": "BartGeo ist ein Vermessungs- und Kartografieunternehmen unter Leitung von Dipl.-Ing. Bartłomiej Tomasik. Seit 15 Jahren bieten wir Vermessungsleistungen höchster Qualität in den Kreisen Rzeszów, Łańcut, Kolbuszowa und Ropczyce-Sędziszów.",
     "p2": "Wir arbeiten mit Architekturbüros, Kanzleien, Rechtsberatern und Notaren zusammen. Jedes Projekt - vom Einzelgrundstück bis zur Großinvestition - wird mit derselben Sorgfalt ausgeführt.",
     "stat_projects": "Projekte",
     "stat_years": "Jahre Erfahrung",
@@ -106,7 +106,7 @@
     "awards_kicker": "Branchenauszeichnung",
     "awards_link": "Profil ansehen",
     "award_laureate": "Preisträger",
-    "award_silver": "Silber"
+    "award_silver": "Silver"
   },
   "reviews": {
     "eyebrow": "KUNDENBEWERTUNGEN",
@@ -115,7 +115,7 @@
     "see_all": "Alle Bewertungen ansehen →",
     "see_all_long": "Alle Bewertungen bei Google ansehen",
     "google_client": "GOOGLE-KUNDE",
-    "review1": "Ich empfehle Herrn Bartłomiej. Kommunikation, Preis, Fachwissen, Pünktlichkeit - alles erstklassig. Einer der besten Vermesser in Rzeszów.",
+    "review1": "Ich empfehle Herrn Bartłomiej. Kommunikation, Preis, Fachwissen, Pünktlichkeit - alles erstklassig. Einer der besten Vermesser in Rzeszów und Umgebung.",
     "review2": "Ich empfehle die Vermessungsleistungen von Herrn Bartłomiej. Hervorragende Kommunikation, umfangreiches Wissen. Aufträge termingerecht und professionell erledigt.",
     "review3": "Ich empfehle die Dienste von Herrn Bartłomiej. Schnelle Ausführung, fachkundige Beratung."
   },
@@ -178,24 +178,24 @@
     "read_time": "~4 Min. Lesezeit",
     "sections": {
       "admin_title": "1. Verantwortlicher",
-      "admin_text": "Verantwortlicher für Ihre personenbezogenen Daten ist BartGeo Vermessungsdienstleistungen, Dipl.-Ing. Bartłomiej Tomasik, Trzebownisko 949, 36-001 Trzebownisko, Polen, USt-IdNr.: 5170221234. Kontakt: bbartgeo@gmail.com, +48 669 563 771.",
+      "admin_text": "Verantwortlicher für Ihre personenbezogenen Daten ist BartGeo Vermessungs- und Kartografiedienstleistungen, Dipl.-Ing. Bartłomiej Tomasik, Trzebownisko 949, 36-001 Trzebownisko, Polen, polnische Steuernummer (NIP): 5170221234. Kontakt: bbartgeo@gmail.com, +48 669 563 771.",
       "purpose_title": "2. Zweck und Umfang der Verarbeitung",
       "purpose_text": "Wir verarbeiten Ihre Daten zu folgenden Zwecken:\n• Bearbeitung von Anfragen über das Kontaktformular (Name, E-Mail, Telefonnummer, Nachricht) - zur Beantwortung und zur Anbahnung einer Zusammenarbeit;\n• Erfüllung von Vermessungsverträgen - soweit zur Auftragsdurchführung erforderlich;\n• Analyse des Website-Traffics - ausschließlich nach Ihrer Einwilligung im Cookie-Banner (siehe „Cookies und Analytik“);\n• Sicherstellung der Sicherheit und Funktionsfähigkeit der Website - einschließlich Speicherung Ihrer Sprachpräferenz und Ihrer Cookie-Entscheidung.",
       "legal_title": "3. Rechtsgrundlage",
-      "legal_text": "Wir verarbeiten Ihre Daten auf folgenden Rechtsgrundlagen:\n• Art. 6 Abs. 1 lit. a) DSGVO - Ihre freiwillige Einwilligung (Kontaktformular, Analyse-Cookies);\n• Art. 6 Abs. 1 lit. b) DSGVO - Vertragserfüllung oder vorvertragliche Maßnahmen (Vermessungsaufträge);\n• Art. 6 Abs. 1 lit. f) DSGVO - berechtigtes Interesse des Verantwortlichen (Sicherheit der Website, notwendige Cookies, Archivierung der Korrespondenz zur Verteidigung gegen Ansprüche).",
+      "legal_text": "Wir verarbeiten Ihre Daten auf folgenden Rechtsgrundlagen:\n• Art. 6 Abs. 1 lit. a) DSGVO - Ihre freiwillige Einwilligung (Kontaktformular, Analyse-Cookies);\n• Art. 6 Abs. 1 lit. b) DSGVO - Vertragserfüllung oder vorvertragliche Maßnahmen (Vermessungsaufträge);\n• Art. 6 Abs. 1 lit. c) DSGVO - Erfüllung einer rechtlichen Verpflichtung (gesetzliche Aufbewahrung von Buchhaltungs- und Steuerunterlagen);\n• Art. 6 Abs. 1 lit. f) DSGVO - berechtigtes Interesse des Verantwortlichen (Sicherheit der Website, notwendige Cookies, Archivierung der Korrespondenz zur Verteidigung gegen mögliche Ansprüche).",
       "retention_title": "4. Speicherdauer",
-      "retention_text": "Wir speichern Ihre Daten nicht länger als erforderlich:\n• Daten aus dem Kontaktformular - bis zu 24 Monate nach dem letzten Kontakt;\n• vertragsbezogene Daten - für den gesetzlich vorgeschriebenen Aufbewahrungszeitraum (bis zu 5 Jahre nach Ende des Geschäftsjahres);\n• Analyse-Cookies (Google Analytics 4) - bis zu 14 Monate nach der letzten Aktivität;\n• notwendige Cookies - bis zum Ende der Browsersitzung oder maximal 12 Monate.",
+      "retention_text": "Wir speichern Ihre Daten nicht länger als erforderlich:\n• Daten aus dem Kontaktformular - bis zu 24 Monate nach dem letzten Kontakt;\n• vertragsbezogene Daten sowie Buchhaltungs- und Steuerunterlagen - mindestens 5 Jahre nach Ende des Geschäftsjahres, gemäß Art. 74 Abs. 2 des polnischen Rechnungslegungsgesetzes und Art. 86 § 1 der polnischen Abgabenordnung;\n• Analyse-Cookies (Google Analytics 4) - bis zu 14 Monate nach der letzten Aktivität;\n• notwendige Cookies - bis zum Ende der Browsersitzung oder maximal 12 Monate.",
       "recipients_title": "5. Datenempfänger",
-      "recipients_text": "Ihre Daten können an folgende Kategorien von Empfängern weitergegeben werden:\n• Vercel Inc. - Hosting-Anbieter der Website (auf Grundlage einer Auftragsverarbeitungsvereinbarung);\n• Google Ireland Limited / Google LLC - Anbieter von Google Analytics 4 (nur mit Ihrer Einwilligung);\n• n8n GmbH - Automatisierung der Kontaktformular-Benachrichtigungen;\n• Google (Gmail), Meta Platforms (WhatsApp Business) - Kanäle, auf denen Anfrage-Benachrichtigungen eingehen;\n• kooperierende Kanzleien und Architekturbüros bei einem konkreten Projekt - nur soweit zur Vertragserfüllung erforderlich.\nWir verkaufen Ihre Daten nicht und geben sie nicht zu Marketingzwecken an Dritte weiter.",
+      "recipients_text": "Ihre Daten können an folgende Kategorien von Empfängern weitergegeben werden (jeweils auf Grundlage einer Auftragsverarbeitungsvereinbarung gemäß Art. 28 DSGVO):\n• Vercel Inc. (USA) - Anbieter des Website-Hostings und der Serverless-Funktionen für das Kontaktformular; verarbeitet bei jedem Aufruf Ihre IP-Adresse und Browser-Header;\n• Resend, Inc. (USA) - E-Mail-Versanddienst, der Ihre Kontaktformular-Nachricht an den Verantwortlichen zustellt;\n• Google LLC (USA) - Gmail-Postfach, in dem die E-Mail aus dem Formular eingeht;\n• Google Ireland Limited / Google LLC (Irland / USA) - Anbieter von Google Analytics 4 (nur nach Ihrer Einwilligung im Cookie-Banner);\n• Anwaltskanzleien, Architekturbüros und weitere Kooperationspartner bei einem konkreten Vermessungsauftrag - nur soweit zur Vertragserfüllung mit Ihnen erforderlich.\nWir verkaufen Ihre Daten nicht und geben sie nicht zu Marketingzwecken an Dritte weiter.",
       "rights_title": "6. Ihre Rechte",
       "rights_text": "Im Zusammenhang mit der Verarbeitung Ihrer Daten haben Sie folgende Rechte:\n• Auskunft über Ihre Daten und Erhalt einer Kopie;\n• Berichtigung unrichtiger oder veralteter Daten;\n• Löschung („Recht auf Vergessenwerden“);\n• Einschränkung der Verarbeitung;\n• Widerspruch gegen die Verarbeitung;\n• Datenübertragbarkeit zu einem anderen Verantwortlichen;\n• jederzeitiger Widerruf der Einwilligung - ohne dass die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung berührt wird;\n• Beschwerde bei der Aufsichtsbehörde - Präsident des Amts für den Schutz personenbezogener Daten (Stawki 2, 00-193 Warschau, uodo.gov.pl)."
 ,
       "cookies_title": "7. Cookies und Analytik",
-      "cookies_text": "Die Website verwendet zwei Cookie-Kategorien:\n\nNotwendig (immer aktiv) - sie sichern den Grundbetrieb der Website: Speicherung Ihrer Sprachpräferenz und Ihrer Entscheidung im Cookie-Banner. Ohne sie funktioniert die Seite nicht ordnungsgemäß. Rechtsgrundlage: Art. 6 Abs. 1 lit. f) DSGVO.\n\nAnalyse (Google Analytics 4) - zählen anonym Besuche und das Nutzungsverhalten, damit wir die Seite verbessern können. IP-Adressen werden anonymisiert; Google Signals und Werbepersonalisierung sind deaktiviert. Analyse-Cookies werden nur nach Ihrer ausdrücklichen Einwilligung im Banner geladen. Rechtsgrundlage: Art. 6 Abs. 1 lit. a) DSGVO.\n\nIhre Entscheidung können Sie jederzeit ändern - klicken Sie auf die Schaltfläche unten oder löschen Sie Website-Daten in Ihren Browsereinstellungen. Ein Widerruf wirkt sich nicht auf die Rechtmäßigkeit der vorherigen Verarbeitung aus.",
+      "cookies_text": "Die Website verwendet zwei Cookie-Kategorien:\n\nNotwendig (immer aktiv) - sie sichern den Grundbetrieb der Website: Speicherung Ihrer Sprachpräferenz und Ihrer Entscheidung im Cookie-Banner. Ohne sie funktioniert die Seite nicht ordnungsgemäß. Gemäß Art. 173 Abs. 3 des polnischen Telekommunikationsgesetzes erfordern unbedingt notwendige Cookies keine Einwilligung. DSGVO-Grundlage: Art. 6 Abs. 1 lit. f) - berechtigtes Interesse des Verantwortlichen.\n\nAnalyse (Google Analytics 4) - zählen anonym Besuche und das Nutzungsverhalten, damit wir die Seite verbessern können. IP-Adressen werden anonymisiert; Google Signals und Werbepersonalisierung sind deaktiviert. Analyse-Cookies werden nur nach Ihrer ausdrücklichen Einwilligung im Banner geladen. Rechtsgrundlage: Art. 6 Abs. 1 lit. a) DSGVO und Art. 173 Abs. 1 des polnischen Telekommunikationsgesetzes.\n\nIhre Entscheidung können Sie jederzeit ändern - klicken Sie auf die Schaltfläche unten oder löschen Sie Website-Daten in Ihren Browsereinstellungen. Ein Widerruf wirkt sich nicht auf die Rechtmäßigkeit der vorherigen Verarbeitung aus.",
       "transfer_title": "8. Datenübermittlung außerhalb des EWR",
-      "transfer_text": "Wenn Sie Google Analytics zustimmen, können Ihre anonymisierten Analysedaten an Google LLC in den USA übermittelt werden. Die Übermittlung erfolgt auf Grundlage des Durchführungsbeschlusses (EU) 2023/1795 der Europäischen Kommission vom 10. Juli 2023 über das angemessene Schutzniveau personenbezogener Daten im Rahmen des EU-US Data Privacy Framework, an dem Google aktiv teilnimmt (Zertifikat verfügbar unter dataprivacyframework.gov). Alle übrigen Daten werden innerhalb des Europäischen Wirtschaftsraums verarbeitet.",
+      "transfer_text": "Im Rahmen des regulären Website-Betriebs und der Bearbeitung des Kontaktformulars können Ihre Daten an folgende Empfänger in die USA übermittelt werden:\n• Vercel Inc. - Website-Hosting und Serverless-Funktionen (technische Besuchsdaten: IP-Adresse, Browser-Header) - bei jedem Seitenaufruf;\n• Resend, Inc. - Versand der E-Mail aus dem Kontaktformular (Formularinhalt) - nur beim Absenden einer Anfrage;\n• Google LLC - Gmail-Postfach des Verantwortlichen, in dem die E-Mail eingeht;\n• Google LLC - Google Analytics 4 (anonymisierte Traffic-Daten) - nur nach Ihrer Einwilligung.\n\nDie Übermittlungen erfolgen auf Grundlage:\n• des Durchführungsbeschlusses (EU) 2023/1795 der Europäischen Kommission vom 10. Juli 2023 über das angemessene Schutzniveau im Rahmen des EU-US Data Privacy Framework - für unter dem DPF zertifizierte Stellen (Vercel, Google LLC, Google Analytics; Zertifikate verfügbar unter dataprivacyframework.gov);\n• der von der Europäischen Kommission genehmigten Standardvertragsklauseln (Art. 46 Abs. 2 lit. c) DSGVO) - zusätzlich für Resend, Inc.\n\nAlle übrigen Daten werden innerhalb des Europäischen Wirtschaftsraums verarbeitet.",
       "profiling_title": "9. Profiling und automatisierte Entscheidungen",
-      "profiling_text": "Wir treffen Ihnen gegenüber keine ausschließlich automatisierten Entscheidungen mit rechtlicher Wirkung oder erheblichen Auswirkungen. Wir führen kein Profiling im Sinne von Art. 22 DSGVO durch.",
+      "profiling_text": "Wir unterwerfen Sie keiner ausschließlich auf einer automatisierten Verarbeitung - einschließlich Profiling - beruhenden Entscheidung, die Ihnen gegenüber rechtliche Wirkung entfaltet oder Sie in ähnlicher Weise erheblich beeinträchtigt. Wir führen kein Profiling im Sinne von Art. 22 DSGVO durch.",
       "contact_title": "10. Datenschutzkontakt",
       "contact_text": "In Datenschutzangelegenheiten wenden Sie sich an den Verantwortlichen:\n• E-Mail: bbartgeo@gmail.com\n• Telefon: +48 669 563 771\n• Postanschrift: BartGeo, Trzebownisko 949, 36-001 Trzebownisko, Polen\nWir antworten auf Ihre Anfrage unverzüglich, spätestens innerhalb von 30 Tagen nach Eingang."
     },
