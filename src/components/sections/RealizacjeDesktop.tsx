@@ -50,7 +50,7 @@ export function RealizacjeDesktop() {
                 <img
                   src={entry.gallery[0]}
                   alt={title}
-                  className="absolute inset-0 w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-[1.045] transition-[transform,filter] duration-[1400ms] ease-[cubic-bezier(0.22,1,0.36,1)] will-change-transform"
+                  className="absolute inset-0 w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 group-hover:scale-[1.035] transition-[transform,filter] duration-[2200ms] ease-[cubic-bezier(0.16,1,0.3,1)] will-change-transform"
                   loading="lazy"
                 />
 
