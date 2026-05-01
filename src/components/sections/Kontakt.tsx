@@ -1,8 +1,11 @@
-import { useIsMobile } from '../../hooks/useIsMobile';
+import { useDevice } from '../../hooks/useDevice';
 import { KontaktDesktop } from './KontaktDesktop';
+import { KontaktTablet } from './KontaktTablet';
 import { KontaktMobile } from './KontaktMobile';
 
 export function Kontakt() {
-  const isMobile = useIsMobile();
-  return isMobile ? <KontaktMobile /> : <KontaktDesktop />;
+  const device = useDevice();
+  if (device === 'mobile') return <KontaktMobile />;
+  if (device === 'tablet') return <KontaktTablet />;
+  return <KontaktDesktop />;
 }

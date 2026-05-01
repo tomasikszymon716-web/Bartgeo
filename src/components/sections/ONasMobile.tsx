@@ -16,7 +16,8 @@ export function ONasMobile() {
   const { t } = useTranslation();
 
   return (
-    <section id="o-nas" className="py-14 px-6" aria-labelledby="onas-heading-m">
+    <section id="o-nas" className="py-14 md:py-16 px-6 md:px-8" aria-labelledby="onas-heading-m">
+      <div className="md:max-w-[760px] md:mx-auto">
       <SectionHeading
         eyebrow={t('about.eyebrow')}
         heading={t('about.heading')}
@@ -24,10 +25,10 @@ export function ONasMobile() {
       />
 
       {/* Photo with gold accent bar */}
-      <div className="mt-8 relative">
+      <div className="mt-8 md:mt-10 relative">
         <div className="absolute left-0 top-8 bottom-8 w-[3px] rounded-full bg-gradient-to-b from-[var(--color-gold)] to-[var(--color-gold-hi)] z-10" />
         <div
-          className="ml-3.5 rounded-2xl overflow-hidden h-[280px] relative"
+          className="ml-3.5 rounded-2xl overflow-hidden h-[280px] md:h-[360px] relative"
           style={{ boxShadow: '0 20px 50px -16px rgba(45, 64, 87, 0.2)' }}
         >
           <img
@@ -105,6 +106,7 @@ export function ONasMobile() {
             </span>
           ))}
         </div>
+      </div>
       </div>
     </section>
   );

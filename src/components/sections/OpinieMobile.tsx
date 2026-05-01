@@ -8,7 +8,8 @@ export function OpinieMobile() {
   const { t } = useTranslation();
 
   return (
-    <section id="opinie" className="py-14 px-6" aria-labelledby="opinie-heading-m">
+    <section id="opinie" className="py-14 md:py-16 px-6 md:px-8" aria-labelledby="opinie-heading-m">
+      <div className="md:max-w-[760px] md:mx-auto">
       <SectionHeading
         eyebrow={t('reviews.eyebrow')}
         heading={t('reviews.heading')}
@@ -79,6 +80,7 @@ export function OpinieMobile() {
           {t('reviews.see_all')}
           <ArrowUpRight className="w-3.5 h-3.5" />
         </a>
+      </div>
       </div>
     </section>
   );

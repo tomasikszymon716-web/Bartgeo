@@ -16,7 +16,7 @@ export function NavbarMobile() {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-[100] bg-[var(--color-bg)]/90 backdrop-blur-[20px] border-b border-[var(--color-line)]">
-        <nav className="flex items-center justify-between px-6 py-4" aria-label="Main navigation">
+        <nav className="flex items-center justify-between px-6 md:px-10 py-4 md:py-5 md:max-w-[1024px] md:mx-auto" aria-label="Main navigation">
           <a href="#hero" onClick={(e) => { e.preventDefault(); navTo('#hero'); }} className="flex items-center gap-2">
             <img src="/brand/logo-icon.png" alt="BartGeo logo" className="h-8 w-8 object-contain" />
             <span className="text-[18px] font-bold leading-none" style={{ fontFamily: 'Quicksand, sans-serif' }}>

@@ -1,0 +1,130 @@
+import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { SectionHeading } from '../ui/SectionHeading';
+import { ContactRow } from '../ui/ContactRow';
+import { ContactForm } from '../forms/ContactForm';
+import { company } from '../../data/company';
+
+const fullAddress = `${company.address.street}, ${company.address.postalCode} ${company.address.city}`;
+const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(fullAddress)}`;
+
+/* Tablet — stacked info card + form (vertical), then map.
+   Desktop's 5+7 side-by-side cramps at <1280px (form fields wrap
+   awkwardly), and Mobile's full-width stack feels under-designed at
+   tablet width. This middle ground keeps both cards full-width but
+   capped at a comfortable max-width so they read as paired blocks. */
+
+export function KontaktTablet() {
+  const { t } = useTranslation();
+
+  return (
+    <section id="kontakt" className="py-16 px-8" aria-labelledby="kontakt-heading-t">
+      <div className="max-w-[820px] mx-auto">
+        <SectionHeading
+          eyebrow={t('contact.eyebrow')}
+          heading={t('contact.heading')}
+          description={t('contact.sub')}
+          id="kontakt-heading-t"
+        />
+
+        {/* ── Info card (dark) ─────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-12 bg-[var(--color-graphite)] text-[var(--color-bg)] rounded-[24px] p-9"
+          style={{ boxShadow: '0 22px 56px -18px rgba(45, 64, 87, 0.28)' }}
+        >
+          <div className="flex items-center gap-2.5 mb-7">
+            <img src="/brand/logo-icon.png" alt="BartGeo" className="h-9 w-9 object-contain" />
+            <span className="text-[20px] font-bold leading-none" style={{ fontFamily: 'Quicksand, sans-serif' }}>
+              <span className="italic text-[var(--color-gold)]">Bart</span>
+              <span className="italic text-white">Geo</span>
+            </span>
+          </div>
+
+          <h3 className="font-bold text-[19px] leading-[1.3] mb-1">{company.name}</h3>
+          <p className="text-[13px] text-[var(--color-gold-hi)] mb-7">{company.owner}</p>
+
+          {/* 2-column contact rows for tablet */}
+          <div className="border-t border-white/10 pt-7 grid grid-cols-2 gap-x-6 gap-y-5">
+            <ContactRow
+              icon={<Phone className="w-4 h-4 text-[var(--color-gold)]" />}
+              href={`tel:${company.phoneRaw}`}
+              copyValue={company.phone}
+              ariaLabel={t('contact.actions.callPhone')}
+            >
+              {company.phone}
+            </ContactRow>
+            <ContactRow
+              icon={<Mail className="w-4 h-4 text-[var(--color-gold)]" />}
+              href={`mailto:${company.email}`}
+              copyValue={company.email}
+              ariaLabel={t('contact.actions.sendEmail')}
+            >
+              {company.email}
+            </ContactRow>
+            <ContactRow
+              icon={<MapPin className="w-4 h-4 text-[var(--color-gold)]" />}
+              href={directionsUrl}
+              external
+              copyValue={fullAddress}
+              ariaLabel={t('contact.actions.directions')}
+              align="start"
+            >
+              {fullAddress}
+            </ContactRow>
+            <ContactRow
+              icon={<Clock className="w-4 h-4 text-[var(--color-gold)]" />}
+              align="start"
+            >
+              <p>{t('hours.monSat')}: 07:00–18:00</p>
+              <p className="text-white/50">{t('hours.sunday')}: {t('hours.closed')}</p>
+            </ContactRow>
+          </div>
+
+          <div className="mt-7 pt-6 border-t border-white/10">
+            <p className="text-[12px] leading-relaxed text-white/40">{t('contact.info_note')}</p>
+          </div>
+        </motion.div>
+
+        {/* ── Form card (light) ────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="mt-6 bg-[var(--color-card)] rounded-[24px] p-9 border border-[var(--color-line)]"
+          style={{ boxShadow: 'var(--shadow-card)' }}
+        >
+          <div className="flex items-center gap-3 mb-7 pb-6 border-b border-[var(--color-line)]">
+            <span className="h-px w-7 bg-[var(--color-gold)]/70" />
+            <span className="font-mono text-[10.5px] tracking-[0.22em] uppercase text-[var(--color-gold)]">
+              {t('contact.form_label')}
+            </span>
+          </div>
+          <ContactForm />
+        </motion.div>
+
+        {/* ── Map ──────────────────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-6 rounded-[24px] overflow-hidden h-[360px] grayscale-[80%] contrast-[1.05] hover:grayscale-0 transition-[filter] duration-700"
+        >
+          <iframe
+            src="https://www.google.com/maps?q=Trzebownisko+949,+36-001+Trzebownisko&output=embed"
+            className="w-full h-full border-0"
+            loading="lazy"
+            title="BartGeo location"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </motion.div>
+      </div>
+    </section>
+  );
+}

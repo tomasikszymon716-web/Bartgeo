@@ -99,8 +99,8 @@ export function PrivacyMobile() {
 
       <Navbar />
 
-      <main className="pt-20 pb-20">
-        <div className="px-6">
+      <main className="pt-20 pb-20 md:max-w-[760px] md:mx-auto">
+        <div className="px-6 md:px-8">
           {/* ── Page header ── */}
           <motion.header
             initial={{ opacity: 0, y: 14 }}
@@ -139,7 +139,7 @@ export function PrivacyMobile() {
         >
           <div
             ref={tocScrollerRef}
-            className="flex items-center gap-2 overflow-x-auto px-6 py-3 no-scrollbar"
+            className="flex items-center gap-2 overflow-x-auto px-6 md:px-8 py-3 no-scrollbar"
             style={{ scrollbarWidth: 'none' }}
           >
             {sectionKeys.map((key, i) => {
@@ -175,7 +175,7 @@ export function PrivacyMobile() {
         </motion.div>
 
         {/* ── Content ── */}
-        <div className="px-6">
+        <div className="px-6 md:px-8">
           {sectionKeys.map((key, i) => {
             const isActive = activeSection === key;
             return (

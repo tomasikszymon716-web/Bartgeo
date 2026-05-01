@@ -1,8 +1,11 @@
-import { useIsMobile } from '../../hooks/useIsMobile';
+import { useDevice } from '../../hooks/useDevice';
 import { HeroDesktop } from './HeroDesktop';
+import { HeroTablet } from './HeroTablet';
 import { HeroMobile } from './HeroMobile';
 
 export function Hero() {
-  const isMobile = useIsMobile();
-  return isMobile ? <HeroMobile /> : <HeroDesktop />;
+  const device = useDevice();
+  if (device === 'mobile') return <HeroMobile />;
+  if (device === 'tablet') return <HeroTablet />;
+  return <HeroDesktop />;
 }
