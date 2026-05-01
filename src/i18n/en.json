@@ -203,8 +203,8 @@
   "cookies": {
     "eyebrow": "Cookies",
     "title": "Your privacy, your choice.",
-    "body": "We use essential cookies (site operation) and — with your consent — analytics cookies (Google Analytics) to measure traffic and improve the site. We never sell your data.",
-    "body_short": "Essential (site operation) and — with consent — analytics (Google Analytics).",
+    "body": "We use essential cookies (site operation) and - with your consent - analytics cookies (Google Analytics) to measure traffic and improve the site. We never sell your data.",
+    "body_short": "Essential (site operation) and - with consent - analytics (Google Analytics).",
     "read_more": "Privacy policy",
     "accept": "Accept all",
     "reject": "Essential only",
@@ -219,11 +219,11 @@
     "cat": {
       "essential": {
         "name": "Essential",
-        "desc": "Keep the site working — language preference and your cookie choice. They do not collect analytics data."
+        "desc": "Keep the site working - language preference and your cookie choice. They do not collect analytics data."
       },
       "analytics": {
         "name": "Analytics",
-        "desc": "Google Analytics 4 — anonymous traffic measurement to improve the site. IPs are anonymized."
+        "desc": "Google Analytics 4 - anonymous traffic measurement to improve the site. IPs are anonymized."
       }
     }
   },

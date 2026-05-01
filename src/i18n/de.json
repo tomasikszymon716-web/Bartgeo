@@ -204,8 +204,8 @@
   "cookies": {
     "eyebrow": "Cookies",
     "title": "Ihre Privatsphäre, Ihre Wahl.",
-    "body": "Wir verwenden notwendige Cookies (Seitenbetrieb) und — mit Ihrer Einwilligung — Analyse-Cookies (Google Analytics), um Traffic zu messen und die Seite zu verbessern. Wir verkaufen Ihre Daten niemals.",
-    "body_short": "Notwendig (Seitenbetrieb) und — mit Einwilligung — Analyse (Google Analytics).",
+    "body": "Wir verwenden notwendige Cookies (Seitenbetrieb) und - mit Ihrer Einwilligung - Analyse-Cookies (Google Analytics), um Traffic zu messen und die Seite zu verbessern. Wir verkaufen Ihre Daten niemals.",
+    "body_short": "Notwendig (Seitenbetrieb) und - mit Einwilligung - Analyse (Google Analytics).",
     "read_more": "Datenschutzerklärung",
     "accept": "Alle akzeptieren",
     "reject": "Nur notwendige",
@@ -220,11 +220,11 @@
     "cat": {
       "essential": {
         "name": "Notwendig",
-        "desc": "Sichern den Seitenbetrieb — Sprachpräferenz und Cookie-Entscheidung. Sie erfassen keine Analysedaten."
+        "desc": "Sichern den Seitenbetrieb - Sprachpräferenz und Cookie-Entscheidung. Sie erfassen keine Analysedaten."
       },
       "analytics": {
         "name": "Analyse",
-        "desc": "Google Analytics 4 — anonyme Traffic-Messung zur Verbesserung der Seite. IPs werden anonymisiert."
+        "desc": "Google Analytics 4 - anonyme Traffic-Messung zur Verbesserung der Seite. IPs werden anonymisiert."
       }
     }
   },
