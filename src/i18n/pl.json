@@ -204,6 +204,7 @@
     "eyebrow": "Pliki cookies",
     "title": "Twoja prywatność, Twój wybór.",
     "body": "Używamy niezbędnych plików cookies (działanie strony) oraz — za Twoją zgodą — analitycznych (Google Analytics) do mierzenia ruchu i ulepszania serwisu. Nigdy nie sprzedajemy Twoich danych.",
+    "body_short": "Niezbędne (działanie strony) i — za zgodą — analityczne (Google Analytics).",
     "read_more": "Polityka prywatności",
     "accept": "Akceptuję wszystkie",
     "reject": "Tylko niezbędne",

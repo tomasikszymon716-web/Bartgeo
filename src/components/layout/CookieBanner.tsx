@@ -13,12 +13,13 @@ import {
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-/* Categories shown in the "Manage" view. Essential is always on
-   (legitimate-interest basis under PUKE, no consent needed). */
 const CATEGORIES = [
   { id: 'essential', icon: ShieldCheck, alwaysOn: true },
   { id: 'analytics', icon: BarChart3, alwaysOn: false },
 ] as const;
+
+/* Light, quiet card. Cream-paper bg + thin gold hairline so it
+   reads as a brand-aware confirmation rather than a popup ad. */
 
 export function CookieBanner() {
   const { t } = useTranslation();
@@ -28,12 +29,10 @@ export function CookieBanner() {
 
   useEffect(() => {
     if (hasDecided()) return;
-    /* Slight delay so the banner doesn't fight the page-load animation. */
     const timer = window.setTimeout(() => setOpen(true), 1100);
     return () => window.clearTimeout(timer);
   }, []);
 
-  /* Re-open when "Manage cookies" link in the privacy page resets consent. */
   useEffect(() => {
     const handler = (e: Event) => {
       const rec = (e as CustomEvent<ConsentRecord | null>).detail;
@@ -65,35 +64,34 @@ export function CookieBanner() {
     <AnimatePresence>
       {open && (
         <motion.div
-          /* Mobile: bottom sheet. Desktop: floating card bottom-right. */
-          initial={{ opacity: 0, y: 28, scale: 0.985 }}
+          initial={{ opacity: 0, y: 18, scale: 0.985 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 18, scale: 0.985 }}
-          transition={{ duration: 0.45, ease: EASE }}
+          exit={{ opacity: 0, y: 12, scale: 0.985 }}
+          transition={{ duration: 0.4, ease: EASE }}
           role="dialog"
           aria-modal="false"
           aria-labelledby="cookie-title"
           aria-describedby="cookie-desc"
-          className="fixed bottom-3 left-3 right-3 sm:bottom-5 sm:left-5 sm:right-5 lg:bottom-6 lg:right-6 lg:left-auto lg:w-[400px] z-[9999] rounded-[20px] bg-[var(--color-graphite)]/97 backdrop-blur-xl text-[var(--color-bg)] border border-white/10 overflow-hidden"
-          style={{ boxShadow: '0 24px 64px -20px rgba(14, 22, 32, 0.55)' }}
+          className="fixed bottom-3 left-3 right-3 sm:bottom-5 sm:left-auto sm:right-5 sm:w-[340px] z-[9999] rounded-2xl bg-[var(--color-card)] text-[var(--color-ink)] border border-[var(--color-line)] overflow-hidden"
+          style={{ boxShadow: '0 14px 40px -14px rgba(45, 64, 87, 0.22)' }}
         >
-          {/* Hairline gold accent at top — quiet brand cue */}
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--color-gold)]/60 to-transparent pointer-events-none" />
+          {/* Hairline gold accent — sole brand cue */}
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--color-gold)]/70 to-transparent pointer-events-none" />
 
-          <div className="p-5 lg:p-6">
+          <div className="p-4 sm:p-[18px]">
             {view === 'banner' ? (
               <>
-                <div className="flex items-start gap-3 mb-3">
-                  <span className="shrink-0 w-9 h-9 rounded-full bg-[var(--color-gold)]/15 flex items-center justify-center">
-                    <Cookie className="w-[18px] h-[18px] text-[var(--color-gold)]" />
+                <div className="flex items-start gap-2.5 mb-2">
+                  <span className="shrink-0 w-8 h-8 rounded-lg bg-[var(--color-gold-tint)] flex items-center justify-center">
+                    <Cookie className="w-[15px] h-[15px] text-[var(--color-gold)]" />
                   </span>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--color-gold)] mb-1">
+                  <div className="min-w-0 flex-1 pt-0.5">
+                    <p className="font-mono text-[9.5px] tracking-[0.2em] uppercase text-[var(--color-gold)] mb-0.5">
                       {t('cookies.eyebrow')}
                     </p>
                     <h3
                       id="cookie-title"
-                      className="font-display font-bold text-[16px] lg:text-[17px] tracking-[-0.01em] leading-snug"
+                      className="font-display font-bold text-[14.5px] tracking-[-0.01em] leading-tight text-[var(--color-ink)]"
                     >
                       {t('cookies.title')}
                     </h3>
@@ -102,17 +100,17 @@ export function CookieBanner() {
                     type="button"
                     onClick={onRejectAll}
                     aria-label={t('cookies.close')}
-                    className="shrink-0 -mt-1 -mr-1 w-8 h-8 rounded-full hover:bg-white/10 text-white/60 hover:text-white flex items-center justify-center transition-colors cursor-pointer"
+                    className="shrink-0 -mt-0.5 -mr-0.5 w-7 h-7 rounded-full hover:bg-[var(--color-bg-alt)] text-[var(--color-muted)] hover:text-[var(--color-ink)] flex items-center justify-center transition-colors cursor-pointer"
                   >
-                    <X className="w-4 h-4" />
+                    <X className="w-3.5 h-3.5" />
                   </button>
                 </div>
 
                 <p
                   id="cookie-desc"
-                  className="text-[13px] leading-[1.6] text-white/72 mb-5"
+                  className="text-[12.5px] leading-[1.55] text-[var(--color-graphite-soft)] mb-3.5"
                 >
-                  {t('cookies.body')}{' '}
+                  {t('cookies.body_short')}{' '}
                   <a
                     href="/polityka-prywatnosci"
                     className="text-[var(--color-gold)] hover:text-[var(--color-gold-hi)] underline-offset-[3px] hover:underline transition-colors whitespace-nowrap"
@@ -121,18 +119,18 @@ export function CookieBanner() {
                   </a>
                 </p>
 
-                <div className="flex gap-2.5">
+                <div className="flex gap-2">
                   <button
                     type="button"
                     onClick={onRejectAll}
-                    className="flex-1 h-10 rounded-lg border border-white/15 hover:border-white/35 hover:bg-white/[0.04] text-[13px] font-medium text-white/85 hover:text-white transition-colors cursor-pointer"
+                    className="flex-1 h-9 rounded-lg border border-[var(--color-line-strong)] hover:border-[var(--color-graphite)] hover:bg-[var(--color-bg-alt)] text-[12.5px] font-medium text-[var(--color-graphite)] hover:text-[var(--color-ink)] transition-colors cursor-pointer"
                   >
                     {t('cookies.reject')}
                   </button>
                   <button
                     type="button"
                     onClick={onAcceptAll}
-                    className="flex-1 h-10 rounded-lg bg-[var(--color-gold)] hover:bg-[var(--color-gold-hi)] text-[var(--color-ink)] text-[13px] font-semibold transition-colors cursor-pointer"
+                    className="flex-1 h-9 rounded-lg bg-[var(--color-gold)] hover:bg-[var(--color-gold-hi)] text-[var(--color-ink)] text-[12.5px] font-semibold transition-colors cursor-pointer"
                   >
                     {t('cookies.accept')}
                   </button>
@@ -144,48 +142,46 @@ export function CookieBanner() {
                     setAnalyticsToggle(false);
                     setView('manage');
                   }}
-                  className="mt-3 w-full font-mono text-[10.5px] tracking-[0.18em] uppercase text-white/45 hover:text-[var(--color-gold)] transition-colors cursor-pointer"
+                  className="mt-2.5 w-full font-mono text-[9.5px] tracking-[0.18em] uppercase text-[var(--color-muted)] hover:text-[var(--color-gold)] transition-colors cursor-pointer"
                 >
                   {t('cookies.manage')}
                 </button>
               </>
             ) : (
               <>
-                <div className="flex items-start gap-3 mb-4">
-                  <span className="shrink-0 w-9 h-9 rounded-full bg-[var(--color-gold)]/15 flex items-center justify-center">
-                    <Cookie className="w-[18px] h-[18px] text-[var(--color-gold)]" />
+                <div className="flex items-start gap-2.5 mb-3">
+                  <span className="shrink-0 w-8 h-8 rounded-lg bg-[var(--color-gold-tint)] flex items-center justify-center">
+                    <Cookie className="w-[15px] h-[15px] text-[var(--color-gold)]" />
                   </span>
-                  <div className="min-w-0 flex-1">
-                    <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--color-gold)] mb-1">
+                  <div className="min-w-0 flex-1 pt-0.5">
+                    <p className="font-mono text-[9.5px] tracking-[0.2em] uppercase text-[var(--color-gold)] mb-0.5">
                       {t('cookies.manage_eyebrow')}
                     </p>
-                    <h3
-                      className="font-display font-bold text-[16px] lg:text-[17px] tracking-[-0.01em] leading-snug"
-                    >
+                    <h3 className="font-display font-bold text-[14.5px] tracking-[-0.01em] leading-tight text-[var(--color-ink)]">
                       {t('cookies.manage_title')}
                     </h3>
                   </div>
                 </div>
 
-                <ul className="space-y-2.5 mb-5">
+                <ul className="space-y-2 mb-3.5">
                   {CATEGORIES.map((cat) => {
                     const Icon = cat.icon;
                     const checked = cat.alwaysOn ? true : analyticsToggle;
                     return (
                       <li
                         key={cat.id}
-                        className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.04] border border-white/5"
+                        className="flex items-start gap-2.5 p-2.5 rounded-lg bg-[var(--color-bg-alt)] border border-[var(--color-line)]"
                       >
-                        <span className="shrink-0 w-8 h-8 rounded-lg bg-[var(--color-gold)]/12 flex items-center justify-center mt-0.5">
-                          <Icon className="w-4 h-4 text-[var(--color-gold)]" />
+                        <span className="shrink-0 w-7 h-7 rounded-lg bg-[var(--color-gold-tint)] flex items-center justify-center mt-px">
+                          <Icon className="w-3.5 h-3.5 text-[var(--color-gold)]" />
                         </span>
                         <div className="min-w-0 flex-1">
-                          <div className="flex items-center justify-between gap-3 mb-0.5">
-                            <p className="font-semibold text-[13.5px] text-white">
+                          <div className="flex items-center justify-between gap-2 mb-0.5">
+                            <p className="font-semibold text-[12.5px] text-[var(--color-ink)] leading-tight">
                               {t(`cookies.cat.${cat.id}.name`)}
                             </p>
                             {cat.alwaysOn ? (
-                              <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-[var(--color-gold)]/85 whitespace-nowrap">
+                              <span className="font-mono text-[8.5px] tracking-[0.18em] uppercase text-[var(--color-gold)] whitespace-nowrap">
                                 {t('cookies.always_on')}
                               </span>
                             ) : (
@@ -194,17 +190,17 @@ export function CookieBanner() {
                                 role="switch"
                                 aria-checked={checked}
                                 onClick={() => setAnalyticsToggle((v) => !v)}
-                                className={`relative shrink-0 h-5 w-9 rounded-full transition-colors duration-200 cursor-pointer ${
+                                className={`relative shrink-0 h-[18px] w-8 rounded-full transition-colors duration-200 cursor-pointer ${
                                   checked
                                     ? 'bg-[var(--color-gold)]'
-                                    : 'bg-white/15'
+                                    : 'bg-[var(--color-line-strong)]'
                                 }`}
                               >
                                 <motion.span
                                   layout
                                   transition={{ duration: 0.18, ease: EASE }}
-                                  className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow-sm flex items-center justify-center ${
-                                    checked ? 'left-[18px]' : 'left-0.5'
+                                  className={`absolute top-[2px] h-3.5 w-3.5 rounded-full bg-white shadow-sm flex items-center justify-center ${
+                                    checked ? 'left-[16px]' : 'left-[2px]'
                                   }`}
                                 >
                                   {checked && <Check className="w-2.5 h-2.5 text-[var(--color-gold)]" strokeWidth={3} />}
@@ -212,7 +208,7 @@ export function CookieBanner() {
                               </button>
                             )}
                           </div>
-                          <p className="text-[12px] leading-[1.5] text-white/55">
+                          <p className="text-[11.5px] leading-[1.45] text-[var(--color-graphite-soft)]">
                             {t(`cookies.cat.${cat.id}.desc`)}
                           </p>
                         </div>
@@ -221,18 +217,18 @@ export function CookieBanner() {
                   })}
                 </ul>
 
-                <div className="flex gap-2.5">
+                <div className="flex gap-2">
                   <button
                     type="button"
                     onClick={() => setView('banner')}
-                    className="flex-1 h-10 rounded-lg border border-white/15 hover:border-white/35 text-[13px] font-medium text-white/85 hover:text-white transition-colors cursor-pointer"
+                    className="flex-1 h-9 rounded-lg border border-[var(--color-line-strong)] hover:border-[var(--color-graphite)] hover:bg-[var(--color-bg-alt)] text-[12.5px] font-medium text-[var(--color-graphite)] hover:text-[var(--color-ink)] transition-colors cursor-pointer"
                   >
                     {t('cookies.back')}
                   </button>
                   <button
                     type="button"
                     onClick={onSavePreferences}
-                    className="flex-1 h-10 rounded-lg bg-[var(--color-gold)] hover:bg-[var(--color-gold-hi)] text-[var(--color-ink)] text-[13px] font-semibold transition-colors cursor-pointer"
+                    className="flex-1 h-9 rounded-lg bg-[var(--color-gold)] hover:bg-[var(--color-gold-hi)] text-[var(--color-ink)] text-[12.5px] font-semibold transition-colors cursor-pointer"
                   >
                     {t('cookies.save')}
                   </button>
