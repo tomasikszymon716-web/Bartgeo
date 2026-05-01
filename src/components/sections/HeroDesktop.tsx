@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { SplitText } from '../ui/SplitText';
 import { Highlight } from '../ui/Highlight';
 import { Button } from '../ui/Button';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
@@ -36,18 +35,17 @@ export function HeroDesktop() {
           >
             {t('hero.eyebrow')}
           </motion.p>
-          <h1 id="hero-heading" className="font-display font-extrabold text-[clamp(36px,3.6vw,56px)] tracking-[-0.025em] leading-[1.15] mb-7">
-            <SplitText delay={1.4} renderWord={(word, i) => {
-              const highlight = t('hero.h1_highlight');
-              const highlightWords = highlight.split(' ');
-              if (highlightWords.includes(word)) {
-                return <Highlight delay={2.2 + i * 0.1}>{word}</Highlight>;
-              }
-              return word;
-            }}>
-              {`${t('hero.h1_1')} ${t('hero.h1_highlight')} ${t('hero.h1_2')}`}
-            </SplitText>
-          </h1>
+          <motion.h1
+            id="hero-heading"
+            className="font-display font-extrabold text-[clamp(36px,3.6vw,56px)] tracking-[-0.025em] leading-[1.15] mb-7"
+            initial={reduced ? { opacity: 0 } : { opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 1.4 }}
+          >
+            {t('hero.h1_1')}{' '}
+            <Highlight delay={1.9}>{t('hero.h1_highlight')}</Highlight>{' '}
+            {t('hero.h1_2')}
+          </motion.h1>
           <motion.p
             className="text-[16px] leading-[1.65] tracking-[-0.005em] text-[var(--color-graphite-soft)] max-w-[420px] mb-9"
             initial={{ opacity: 0 }}
