@@ -94,8 +94,9 @@ export function OfertaDesktop() {
       <div ref={scrollAreaRef} style={{ height: '380vh' }}>
         <div className="sticky top-0 h-screen flex flex-col overflow-hidden">
 
-          {/* ── Header — left-aligned, consistent with other sections ── */}
-          <div className="max-w-[1280px] mx-auto px-10 w-full pt-14 pb-2">
+          {/* ── Header — pt clears the 80px fixed navbar so the
+                 USŁUGI eyebrow sits just below it once sticky pins ── */}
+          <div className="max-w-[1280px] mx-auto px-10 w-full pt-28 pb-2">
             <SectionHeading
               eyebrow={t('services.eyebrow')}
               heading={t('services.heading')}
@@ -103,8 +104,11 @@ export function OfertaDesktop() {
             />
           </div>
 
-          {/* ── Content grid ── */}
-          <div className="flex-1 max-w-[1280px] mx-auto px-10 w-full grid grid-cols-[1fr_520px] gap-14 items-start pt-12">
+          {/* ── Content grid — items-center pins the orbital + service
+                 list to the visual middle of the remaining viewport so
+                 the screenshot state (heading top, content centred) is
+                 the pinned state. ── */}
+          <div className="flex-1 max-w-[1280px] mx-auto px-10 w-full grid grid-cols-[1fr_520px] gap-14 items-center">
 
             {/* ── Left: Service list ── */}
             <div className="flex flex-col">
