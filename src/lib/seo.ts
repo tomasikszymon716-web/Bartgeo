@@ -1,8 +1,19 @@
 export const localBusinessJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  '@id': 'https://www.bartgeo.pl/#business',
   name: 'BartGeo Usługi Geodezyjno-Kartograficzne',
-  founder: 'mgr inż. Bartłomiej Tomasik',
+  alternateName: 'BartGeo',
+  description:
+    'Geodeta z powiatu rzeszowskiego z 15-letnim doświadczeniem. Mapy do celów projektowych, tyczenia budynków, podziały nieruchomości, wznowienia granic i mapy prawne. Laureat plebiscytu Orły Geodezji 2025–2026.',
+  url: 'https://www.bartgeo.pl/',
+  logo: 'https://www.bartgeo.pl/brand/logo-icon.png',
+  image: 'https://www.bartgeo.pl/brand/logo-icon.png',
+  founder: {
+    '@type': 'Person',
+    name: 'Bartłomiej Tomasik',
+    honorificPrefix: 'mgr inż.',
+  },
   telephone: '+48669563771',
   email: 'bbartgeo@gmail.com',
   address: {
@@ -27,6 +38,14 @@ export const localBusinessJsonLd = {
     },
   ],
   priceRange: '$$',
-  image: '/og-image.jpg',
   vatID: 'PL5170221234',
+  taxID: '5170221234',
+  award: [
+    'Laureat plebiscytu Orły Geodezji 2026',
+    'Laureat plebiscytu Orły Geodezji 2025',
+    'Silver — plebiscyt Orły Geodezji 2025',
+  ],
+  sameAs: [
+    'https://www.orlygeodezji.pl/profile-1350-bartgeo-uslugi-geodezyjno-kartograficzne',
+  ],
 };
