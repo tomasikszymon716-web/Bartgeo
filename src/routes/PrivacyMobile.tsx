@@ -129,7 +129,7 @@ export function PrivacyMobile() {
           initial={{ opacity: 0, y: 6 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: EASE, delay: 0.15 }}
-          className="sticky top-[60px] z-30 bg-[var(--color-bg)]/92 backdrop-blur-md border-b border-[var(--color-line)]"
+          className="sticky top-[68px] z-30 bg-[var(--color-bg)]/92 backdrop-blur-md border-b border-[var(--color-line)]"
         >
           <div
             ref={tocScrollerRef}

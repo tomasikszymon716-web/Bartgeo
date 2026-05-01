@@ -88,7 +88,12 @@ export function ContactRow({
       )}
 
       {copyValue && (
-        <div className="relative shrink-0 w-[120px] h-8 flex items-center justify-end">
+        /* Slot reserves only the button width (32px). The "Skopiowano"
+           pill is absolutely-positioned at right-0 so it can grow
+           leftward across the value text for the 1.8s feedback window
+           without permanently eating layout width — important on
+           narrow phone viewports where +48 669 563 771 was wrapping. */
+        <div className="relative shrink-0 w-8 h-8">
           <AnimatePresence mode="wait" initial={false}>
             {copied ? (
               <motion.span
@@ -97,7 +102,7 @@ export function ContactRow({
                 animate={{ opacity: 1, scale: 1, x: 0 }}
                 exit={{ opacity: 0, scale: 0.9, x: 4 }}
                 transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                className="flex items-center gap-1.5 h-8 px-2.5 rounded-lg bg-[var(--color-gold)]/15 text-[var(--color-gold)] font-mono text-[10.5px] tracking-[0.14em] uppercase whitespace-nowrap"
+                className="absolute top-0 right-0 flex items-center gap-1.5 h-8 px-2.5 rounded-lg bg-[var(--color-gold)]/15 backdrop-blur-md text-[var(--color-gold)] font-mono text-[10.5px] tracking-[0.14em] uppercase whitespace-nowrap"
                 role="status"
                 aria-live="polite"
               >
@@ -112,7 +117,7 @@ export function ContactRow({
                 aria-label={t('contact.actions.copy')}
                 title={t('contact.actions.copy')}
                 whileTap={{ scale: 0.92 }}
-                className="w-8 h-8 rounded-lg bg-white/[0.04] hover:bg-[var(--color-gold)]/15 text-white/55 hover:text-[var(--color-gold)] flex items-center justify-center cursor-pointer transition-[background-color,color,opacity] duration-200 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:focus-visible:opacity-100"
+                className="absolute top-0 right-0 w-8 h-8 rounded-lg bg-white/[0.04] hover:bg-[var(--color-gold)]/15 text-white/55 hover:text-[var(--color-gold)] flex items-center justify-center cursor-pointer transition-[background-color,color,opacity] duration-200 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:focus-visible:opacity-100"
               >
                 <Copy className="w-3.5 h-3.5" />
               </motion.button>
