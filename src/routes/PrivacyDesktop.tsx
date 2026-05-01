@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Settings2 } from 'lucide-react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
+import { resetConsent } from '../lib/consent';
 
 const sectionKeys = [
   'admin',
@@ -13,8 +15,12 @@ const sectionKeys = [
   'recipients',
   'rights',
   'cookies',
+  'transfer',
+  'profiling',
   'contact',
 ] as const;
+
+const LAST_UPDATED = '2026-05-01';
 
 type SectionKey = (typeof sectionKeys)[number];
 
@@ -88,7 +94,7 @@ export function PrivacyDesktop() {
 
             {/* Meta strip */}
             <div className="flex items-center gap-0 pt-6 border-t border-[var(--color-line)] text-[14px] text-[var(--color-muted)]">
-              <span>{t('privacy.updated')} <span className="text-[var(--color-graphite-soft)] font-medium">2026-04-07</span></span>
+              <span>{t('privacy.updated')} <span className="text-[var(--color-graphite-soft)] font-medium">{LAST_UPDATED}</span></span>
               <span className="mx-5 text-[var(--color-line-strong)]">·</span>
               <span>{t('privacy.sections_count', { count: sectionKeys.length })}</span>
               <span className="mx-5 text-[var(--color-line-strong)]">·</span>
@@ -208,9 +214,19 @@ export function PrivacyDesktop() {
                         <h2 className="font-display font-semibold text-[1.15rem] leading-snug text-[var(--color-ink)] mb-4">
                           {stripNumber(t(`privacy.sections.${key}_title`))}
                         </h2>
-                        <p className="text-[15px] leading-[1.85] text-[var(--color-graphite-soft)]">
+                        <p className="text-[15px] leading-[1.85] text-[var(--color-graphite-soft)] whitespace-pre-line">
                           {t(`privacy.sections.${key}_text`)}
                         </p>
+                        {key === 'cookies' && (
+                          <button
+                            type="button"
+                            onClick={resetConsent}
+                            className="mt-5 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-gold-tint)] hover:bg-[var(--color-gold)]/25 text-[var(--color-ink)] font-mono text-[11px] tracking-[0.18em] uppercase transition-colors cursor-pointer"
+                          >
+                            <Settings2 className="w-3.5 h-3.5 text-[var(--color-gold)]" />
+                            {t('cookies.reopen')}
+                          </button>
+                        )}
                       </div>
                     </div>
                   </motion.section>

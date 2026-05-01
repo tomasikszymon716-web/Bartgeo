@@ -8,8 +8,10 @@ import { Loader } from './components/layout/Loader';
 import { ScrollProgress } from './components/layout/ScrollProgress';
 import { BackToTop } from './components/layout/BackToTop';
 import { CursorDot } from './components/layout/CursorDot';
+import { CookieBanner } from './components/layout/CookieBanner';
 import { Home } from './routes/Home';
 import { scrollToSection } from './lib/scrollToSection';
+import { initAnalyticsConsentBridge } from './lib/analytics';
 
 const Privacy = lazy(() => import('./routes/Privacy').then((m) => ({ default: m.Privacy })));
 const NotFound = lazy(() => import('./routes/NotFound').then((m) => ({ default: m.NotFound })));
@@ -51,6 +53,12 @@ function HomeLayout() {
 }
 
 export default function App() {
+  /* Boot analytics bridge once. Listens for consent grant and only
+     then injects the GA4 script — never at app boot. */
+  useEffect(() => {
+    initAnalyticsConsentBridge();
+  }, []);
+
   return (
     <HelmetProvider>
       <BrowserRouter>
@@ -61,6 +69,7 @@ export default function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        <CookieBanner />
       </BrowserRouter>
     </HelmetProvider>
   );

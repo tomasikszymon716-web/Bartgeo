@@ -175,26 +175,57 @@
   "privacy": {
     "title": "Datenschutzerklärung",
     "sections_count": "{{count}} Abschnitte",
-    "read_time": "~3 Min. Lesezeit",
+    "read_time": "~4 Min. Lesezeit",
     "sections": {
       "admin_title": "1. Verantwortlicher",
-      "admin_text": "Verantwortlicher für Ihre Daten ist BartGeo Vermessungsdienstleistungen, Dipl.-Ing. Bartłomiej Tomasik, Trzebownisko 949, 36-001 Trzebownisko, Polen, USt-IdNr.: 5170221234, Kontakt: bbartgeo@gmail.com, +48 669 563 771.",
+      "admin_text": "Verantwortlicher für Ihre personenbezogenen Daten ist BartGeo Vermessungsdienstleistungen, Dipl.-Ing. Bartłomiej Tomasik, Trzebownisko 949, 36-001 Trzebownisko, Polen, USt-IdNr.: 5170221234. Kontakt: bbartgeo@gmail.com, +48 669 563 771.",
       "purpose_title": "2. Zweck und Umfang der Verarbeitung",
-      "purpose_text": "Ihre Daten (Name, E-Mail, Telefonnummer, Nachricht) werden ausschließlich zur Beantwortung von Anfragen über das Kontaktformular und zur Anbahnung einer Zusammenarbeit verarbeitet.",
+      "purpose_text": "Wir verarbeiten Ihre Daten zu folgenden Zwecken:\n• Bearbeitung von Anfragen über das Kontaktformular (Name, E-Mail, Telefonnummer, Nachricht) — zur Beantwortung und zur Anbahnung einer Zusammenarbeit;\n• Erfüllung von Vermessungsverträgen — soweit zur Auftragsdurchführung erforderlich;\n• Analyse des Website-Traffics — ausschließlich nach Ihrer Einwilligung im Cookie-Banner (siehe „Cookies und Analytik“);\n• Sicherstellung der Sicherheit und Funktionsfähigkeit der Website — einschließlich Speicherung Ihrer Sprachpräferenz und Ihrer Cookie-Entscheidung.",
       "legal_title": "3. Rechtsgrundlage",
-      "legal_text": "Rechtsgrundlage ist Art. 6 Abs. 1 lit. a) und b) DSGVO - Einwilligung der betroffenen Person sowie Vertragserfüllung oder vorvertragliche Maßnahmen.",
+      "legal_text": "Wir verarbeiten Ihre Daten auf folgenden Rechtsgrundlagen:\n• Art. 6 Abs. 1 lit. a) DSGVO — Ihre freiwillige Einwilligung (Kontaktformular, Analyse-Cookies);\n• Art. 6 Abs. 1 lit. b) DSGVO — Vertragserfüllung oder vorvertragliche Maßnahmen (Vermessungsaufträge);\n• Art. 6 Abs. 1 lit. f) DSGVO — berechtigtes Interesse des Verantwortlichen (Sicherheit der Website, notwendige Cookies, Archivierung der Korrespondenz zur Verteidigung gegen Ansprüche).",
       "retention_title": "4. Speicherdauer",
-      "retention_text": "Die Daten werden für die zur Bearbeitung erforderliche Dauer gespeichert, höchstens 24 Monate ab dem letzten Kontakt.",
+      "retention_text": "Wir speichern Ihre Daten nicht länger als erforderlich:\n• Daten aus dem Kontaktformular — bis zu 24 Monate nach dem letzten Kontakt;\n• vertragsbezogene Daten — für den gesetzlich vorgeschriebenen Aufbewahrungszeitraum (bis zu 5 Jahre nach Ende des Geschäftsjahres);\n• Analyse-Cookies (Google Analytics 4) — bis zu 14 Monate nach der letzten Aktivität;\n• notwendige Cookies — bis zum Ende der Browsersitzung oder maximal 12 Monate.",
       "recipients_title": "5. Datenempfänger",
-      "recipients_text": "Daten werden nur im Rahmen unserer Benachrichtigungsautomatisierung (n8n, WhatsApp, Gmail) auf eigenen Kanälen weitergegeben. Keine Weitergabe an Dritte.",
+      "recipients_text": "Ihre Daten können an folgende Kategorien von Empfängern weitergegeben werden:\n• Vercel Inc. — Hosting-Anbieter der Website (auf Grundlage einer Auftragsverarbeitungsvereinbarung);\n• Google Ireland Limited / Google LLC — Anbieter von Google Analytics 4 (nur mit Ihrer Einwilligung);\n• n8n GmbH — Automatisierung der Kontaktformular-Benachrichtigungen;\n• Google (Gmail), Meta Platforms (WhatsApp Business) — Kanäle, auf denen Anfrage-Benachrichtigungen eingehen;\n• kooperierende Kanzleien und Architekturbüros bei einem konkreten Projekt — nur soweit zur Vertragserfüllung erforderlich.\nWir verkaufen Ihre Daten nicht und geben sie nicht zu Marketingzwecken an Dritte weiter.",
       "rights_title": "6. Ihre Rechte",
-      "rights_text": "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit sowie Widerspruch und Beschwerde beim Präsidenten des UODO.",
+      "rights_text": "Im Zusammenhang mit der Verarbeitung Ihrer Daten haben Sie folgende Rechte:\n• Auskunft über Ihre Daten und Erhalt einer Kopie;\n• Berichtigung unrichtiger oder veralteter Daten;\n• Löschung („Recht auf Vergessenwerden“);\n• Einschränkung der Verarbeitung;\n• Widerspruch gegen die Verarbeitung;\n• Datenübertragbarkeit zu einem anderen Verantwortlichen;\n• jederzeitiger Widerruf der Einwilligung — ohne dass die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung berührt wird;\n• Beschwerde bei der Aufsichtsbehörde — Präsident des Amts für den Schutz personenbezogener Daten (Stawki 2, 00-193 Warschau, uodo.gov.pl)."
+,
       "cookies_title": "7. Cookies und Analytik",
-      "cookies_text": "Die Website verwendet keine analytischen oder Marketing-Cookies. Wir setzen keine Tracking-Tools ein.",
-      "contact_title": "8. Kontakt",
-      "contact_text": "In Datenschutzangelegenheiten kontaktieren Sie uns unter bbartgeo@gmail.com."
+      "cookies_text": "Die Website verwendet zwei Cookie-Kategorien:\n\nNotwendig (immer aktiv) — sie sichern den Grundbetrieb der Website: Speicherung Ihrer Sprachpräferenz und Ihrer Entscheidung im Cookie-Banner. Ohne sie funktioniert die Seite nicht ordnungsgemäß. Rechtsgrundlage: Art. 6 Abs. 1 lit. f) DSGVO.\n\nAnalyse (Google Analytics 4) — zählen anonym Besuche und das Nutzungsverhalten, damit wir die Seite verbessern können. IP-Adressen werden anonymisiert; Google Signals und Werbepersonalisierung sind deaktiviert. Analyse-Cookies werden nur nach Ihrer ausdrücklichen Einwilligung im Banner geladen. Rechtsgrundlage: Art. 6 Abs. 1 lit. a) DSGVO.\n\nIhre Entscheidung können Sie jederzeit ändern — klicken Sie auf die Schaltfläche unten oder löschen Sie Website-Daten in Ihren Browsereinstellungen. Ein Widerruf wirkt sich nicht auf die Rechtmäßigkeit der vorherigen Verarbeitung aus.",
+      "transfer_title": "8. Datenübermittlung außerhalb des EWR",
+      "transfer_text": "Wenn Sie Google Analytics zustimmen, können Ihre anonymisierten Analysedaten an Google LLC in den USA übermittelt werden. Die Übermittlung erfolgt auf Grundlage des Durchführungsbeschlusses (EU) 2023/1795 der Europäischen Kommission vom 10. Juli 2023 über das angemessene Schutzniveau personenbezogener Daten im Rahmen des EU-US Data Privacy Framework, an dem Google aktiv teilnimmt (Zertifikat verfügbar unter dataprivacyframework.gov). Alle übrigen Daten werden innerhalb des Europäischen Wirtschaftsraums verarbeitet.",
+      "profiling_title": "9. Profiling und automatisierte Entscheidungen",
+      "profiling_text": "Wir treffen Ihnen gegenüber keine ausschließlich automatisierten Entscheidungen mit rechtlicher Wirkung oder erheblichen Auswirkungen. Wir führen kein Profiling im Sinne von Art. 22 DSGVO durch.",
+      "contact_title": "10. Datenschutzkontakt",
+      "contact_text": "In Datenschutzangelegenheiten wenden Sie sich an den Verantwortlichen:\n• E-Mail: bbartgeo@gmail.com\n• Telefon: +48 669 563 771\n• Postanschrift: BartGeo, Trzebownisko 949, 36-001 Trzebownisko, Polen\nWir antworten auf Ihre Anfrage unverzüglich, spätestens innerhalb von 30 Tagen nach Eingang."
     },
     "updated": "Letzte Aktualisierung:"
+  },
+  "cookies": {
+    "eyebrow": "Cookies",
+    "title": "Ihre Privatsphäre, Ihre Wahl.",
+    "body": "Wir verwenden notwendige Cookies (Seitenbetrieb) und — mit Ihrer Einwilligung — Analyse-Cookies (Google Analytics), um Traffic zu messen und die Seite zu verbessern. Wir verkaufen Ihre Daten niemals.",
+    "read_more": "Datenschutzerklärung",
+    "accept": "Alle akzeptieren",
+    "reject": "Nur notwendige",
+    "manage": "Anpassen",
+    "close": "Banner schließen",
+    "manage_eyebrow": "Einstellungen",
+    "manage_title": "Cookies anpassen",
+    "always_on": "Immer aktiv",
+    "back": "Zurück",
+    "save": "Auswahl speichern",
+    "reopen": "Cookie-Einstellungen ändern",
+    "cat": {
+      "essential": {
+        "name": "Notwendig",
+        "desc": "Sichern den Seitenbetrieb — Sprachpräferenz und Cookie-Entscheidung. Sie erfassen keine Analysedaten."
+      },
+      "analytics": {
+        "name": "Analyse",
+        "desc": "Google Analytics 4 — anonyme Traffic-Messung zur Verbesserung der Seite. IPs werden anonymisiert."
+      }
+    }
   },
   "loader": {
     "brand": "BartGeo"

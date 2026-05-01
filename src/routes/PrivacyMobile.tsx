@@ -2,8 +2,10 @@ import { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import { Settings2 } from 'lucide-react';
 import { Navbar } from '../components/layout/Navbar';
 import { Footer } from '../components/layout/Footer';
+import { resetConsent } from '../lib/consent';
 
 const sectionKeys = [
   'admin',
@@ -13,8 +15,12 @@ const sectionKeys = [
   'recipients',
   'rights',
   'cookies',
+  'transfer',
+  'profiling',
   'contact',
 ] as const;
+
+const LAST_UPDATED = '2026-05-01';
 
 type SectionKey = (typeof sectionKeys)[number];
 
@@ -114,7 +120,7 @@ export function PrivacyMobile() {
             <div className="flex items-center flex-wrap gap-x-2 gap-y-1 text-[12px] text-[var(--color-muted)]">
               <span className="inline-flex items-center gap-1.5">
                 <span className="w-1 h-1 rounded-full bg-[var(--color-gold)]" />
-                {t('privacy.updated')} <span className="text-[var(--color-graphite-soft)] font-medium">2026-04-07</span>
+                {t('privacy.updated')} <span className="text-[var(--color-graphite-soft)] font-medium">{LAST_UPDATED}</span>
               </span>
               <span className="text-[var(--color-line-strong)]">·</span>
               <span>{t('privacy.sections_count', { count: sectionKeys.length })}</span>
@@ -213,9 +219,19 @@ export function PrivacyMobile() {
                     </h2>
                   </div>
 
-                  <p className="text-[14.5px] leading-[1.8] text-[var(--color-graphite-soft)]">
+                  <p className="text-[14.5px] leading-[1.8] text-[var(--color-graphite-soft)] whitespace-pre-line">
                     {t(`privacy.sections.${key}_text`)}
                   </p>
+                  {key === 'cookies' && (
+                    <button
+                      type="button"
+                      onClick={resetConsent}
+                      className="mt-4 inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-[var(--color-gold-tint)] active:bg-[var(--color-gold)]/25 text-[var(--color-ink)] font-mono text-[10px] tracking-[0.18em] uppercase transition-colors cursor-pointer"
+                    >
+                      <Settings2 className="w-3.5 h-3.5 text-[var(--color-gold)]" />
+                      {t('cookies.reopen')}
+                    </button>
+                  )}
                 </div>
               </motion.section>
             );
