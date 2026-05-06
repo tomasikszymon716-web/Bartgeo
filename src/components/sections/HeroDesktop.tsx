@@ -47,12 +47,20 @@ export function HeroDesktop() {
             {t('hero.h1_2')}
           </motion.h1>
           <motion.p
-            className="text-[16px] leading-[1.65] tracking-[-0.005em] text-[var(--color-graphite-soft)] max-w-[420px] mb-9"
+            className="text-[16px] leading-[1.65] tracking-[-0.005em] text-[var(--color-graphite-soft)] max-w-[420px] mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 2.0 }}
           >
             {t('hero.sub')}
+          </motion.p>
+          <motion.p
+            className="text-[16px] leading-[1.6] tracking-[-0.005em] text-[var(--color-graphite)] max-w-[420px] font-medium mb-9"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 2.1 }}
+          >
+            {t('hero.sub_tagline')}
           </motion.p>
           <motion.div
             className="flex items-center gap-4 mb-14"

@@ -58,14 +58,22 @@ export function HeroTablet() {
           {t('hero.h1_2')}
         </motion.h1>
 
-        {/* ── Sub ── */}
+        {/* ── Sub + tagline ── */}
         <motion.p
-          className="text-[16px] leading-[1.65] tracking-[-0.005em] text-[var(--color-graphite-soft)] max-w-[600px] mb-9"
+          className="text-[16px] leading-[1.65] tracking-[-0.005em] text-[var(--color-graphite-soft)] max-w-[600px] mb-4"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
           {t('hero.sub')}
+        </motion.p>
+        <motion.p
+          className="text-[16px] leading-[1.6] tracking-[-0.005em] text-[var(--color-graphite)] max-w-[600px] font-medium mb-9"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          {t('hero.sub_tagline')}
         </motion.p>
       </div>
 

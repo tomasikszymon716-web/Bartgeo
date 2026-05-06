@@ -42,14 +42,22 @@ export function HeroMobile() {
         {after}
       </motion.h1>
 
-      {/* Subtitle */}
+      {/* Subtitle + tagline */}
       <motion.p
-        className="text-[15px] leading-[1.7] text-[var(--color-graphite-soft)] mb-7"
+        className="text-[15px] leading-[1.7] text-[var(--color-graphite-soft)] mb-3"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.35 }}
       >
         {t('hero.sub')}
+      </motion.p>
+      <motion.p
+        className="text-[15px] leading-[1.6] text-[var(--color-graphite)] font-medium mb-7"
+        initial={{ opacity: 0, y: 8 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      >
+        {t('hero.sub_tagline')}
       </motion.p>
 
       {/* Photo gallery */}
