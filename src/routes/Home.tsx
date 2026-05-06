@@ -1,12 +1,23 @@
+import { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import { Hero } from '../components/sections/Hero';
-import { Oferta } from '../components/sections/Oferta';
-import { Realizacje } from '../components/sections/Realizacje';
-import { ONas } from '../components/sections/ONas';
-import { Opinie } from '../components/sections/Opinie';
-import { Kontakt } from '../components/sections/Kontakt';
 import { localBusinessJsonLd } from '../lib/seo';
+
+/* Below-the-fold sections are code-split. Hero ships in the entry
+   chunk so the first paint is instant; everything else streams in
+   while the user reads the hero. Suspense fallback is intentionally
+   `null` — sections take their natural height when they hydrate, no
+   layout shift because the page extends as the user scrolls. */
+const Oferta = lazy(() => import('../components/sections/Oferta').then((m) => ({ default: m.Oferta })));
+const Realizacje = lazy(() =>
+  import('../components/sections/Realizacje').then((m) => ({ default: m.Realizacje })),
+);
+const ONas = lazy(() => import('../components/sections/ONas').then((m) => ({ default: m.ONas })));
+const Opinie = lazy(() => import('../components/sections/Opinie').then((m) => ({ default: m.Opinie })));
+const Kontakt = lazy(() =>
+  import('../components/sections/Kontakt').then((m) => ({ default: m.Kontakt })),
+);
 
 export function Home() {
   const { i18n } = useTranslation();
@@ -32,11 +43,13 @@ export function Home() {
       </Helmet>
       <main>
         <Hero />
-        <Oferta />
-        <Realizacje />
-        <ONas />
-        <Opinie />
-        <Kontakt />
+        <Suspense fallback={null}>
+          <Oferta />
+          <Realizacje />
+          <ONas />
+          <Opinie />
+          <Kontakt />
+        </Suspense>
       </main>
     </>
   );

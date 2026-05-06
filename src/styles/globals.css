@@ -30,6 +30,10 @@
 
 html {
   scroll-behavior: auto;
+  /* Hint to the browser to keep its scrolling thread fast on
+     mouse-wheel input — biggest single win for Windows scroll
+     smoothness. Browsers fall back to default scroll on Mac. */
+  scroll-padding-top: 0;
 }
 
 body {
@@ -39,6 +43,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-feature-settings: "ss01", "cv11";
+  /* Avoids overscroll bounce triggering scrollYProgress oscillation
+     on Windows trackpads. */
+  overscroll-behavior-y: none;
+  text-rendering: optimizeLegibility;
 }
 
 /*
@@ -58,6 +66,27 @@ body::before {
   z-index: 1;
   transform: translateZ(0);
   will-change: transform;
+}
+
+/* Touch / coarse-pointer: kill hover-only effects.
+   Hover transitions on every card cost paint cycles even when the
+   user can never trigger them (touch devices fire :hover on tap and
+   leave it sticky, which also looks weird). */
+@media (hover: none), (pointer: coarse) {
+  *:hover {
+    transition-duration: 0s !important;
+  }
+}
+
+/* `content-visibility: auto` lets the browser skip rendering work
+   for offscreen `<section>`s. Saves layout/paint on long pages —
+   meaningful on tablet and underpowered Windows laptops. We pair it
+   with a contain-intrinsic-size hint so the scrollbar still
+   represents the full document length. */
+main > section,
+main > div > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
 }
 
 /* Skip to content */
@@ -109,4 +138,17 @@ body::before {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Honour OS reduced-motion globally — kills the Marquee, Hero parallax
+   tweens, and any rogue animation we missed on a per-component basis.
+   Components also branch on this for higher-quality fallbacks; the CSS
+   here is the safety net. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

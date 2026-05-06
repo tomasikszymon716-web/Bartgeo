@@ -115,6 +115,8 @@ export function HeroDesktop() {
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-[filter] duration-700"
                     style={{ objectPosition: photo.pos }}
                     fetchPriority={i === 0 ? 'high' : undefined}
+                    loading={i === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
                   />
                 </div>
               </motion.div>

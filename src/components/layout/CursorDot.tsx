@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'framer-motion';
 import { useIsMobile } from '../../hooks/useIsMobile';
 
@@ -10,8 +10,19 @@ const SVG = 32;
 const HALF = SVG / 2;
 const DOT_R = 4;
 
+/* Detect a true fine-pointer device. iPad in landscape lands in the
+   "desktop" tier by viewport width (>=1280) but is still a touch device,
+   so we additionally gate on the hover/pointer media features — only
+   render the cursor dot when the OS reports a hover-capable, fine
+   pointer. */
+function detectFinePointer(): boolean {
+  if (typeof window === 'undefined' || !window.matchMedia) return true;
+  return window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+}
+
 export function CursorDot() {
   const isMobile = useIsMobile();
+  const [hasFinePointer, setHasFinePointer] = useState(detectFinePointer);
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
   const scale = useMotionValue(1);
@@ -21,7 +32,17 @@ export function CursorDot() {
   const springScale = useSpring(scale, { stiffness: 300, damping: 20 });
 
   useEffect(() => {
-    if (isMobile) return;
+    const mql = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const update = () => setHasFinePointer(mql.matches);
+    update();
+    mql.addEventListener('change', update);
+    return () => mql.removeEventListener('change', update);
+  }, []);
+
+  const disabled = isMobile || !hasFinePointer;
+
+  useEffect(() => {
+    if (disabled) return;
 
     document.documentElement.style.cursor = 'none';
 
@@ -41,9 +62,9 @@ export function CursorDot() {
       scale.set(1);
     };
 
-    window.addEventListener('mousemove', move);
-    document.addEventListener('mouseover', over);
-    document.addEventListener('mouseout', out);
+    window.addEventListener('mousemove', move, { passive: true });
+    document.addEventListener('mouseover', over, { passive: true });
+    document.addEventListener('mouseout', out, { passive: true });
 
     return () => {
       document.documentElement.style.cursor = '';
@@ -51,9 +72,9 @@ export function CursorDot() {
       document.removeEventListener('mouseover', over);
       document.removeEventListener('mouseout', out);
     };
-  }, [isMobile, x, y, scale]);
+  }, [disabled, x, y, scale]);
 
-  if (isMobile) return null;
+  if (disabled) return null;
 
   return (
     <motion.svg

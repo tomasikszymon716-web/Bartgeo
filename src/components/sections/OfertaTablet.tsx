@@ -189,9 +189,6 @@ export function OfertaTablet() {
                 className="w-full h-full object-contain mix-blend-multiply"
               />
             </div>
-            <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-center text-[var(--color-muted)] mt-4 opacity-70">
-              {t('services.tachymeter_caption')}
-            </p>
           </div>
         </div>
       </div>
