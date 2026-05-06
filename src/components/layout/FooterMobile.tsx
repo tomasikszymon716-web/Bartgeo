@@ -1,11 +1,13 @@
 import { useTranslation } from 'react-i18next';
 import { navItems } from '../../data/nav';
 import { company } from '../../data/company';
+import { CopyInline } from '../ui/CopyInline';
 import { useNavLink } from '../../lib/useNavLink';
 
 export function FooterMobile() {
   const { t, i18n } = useTranslation();
   const navTo = useNavLink();
+  const fullAddress = `${company.address.street}, ${company.address.postalCode} ${company.address.city}`;
 
   return (
     <footer className="bg-[var(--color-ink)] text-[var(--color-bg)] pt-16 pb-10 px-6">
@@ -51,16 +53,34 @@ export function FooterMobile() {
         </h3>
         <ul className="space-y-3 text-[13px]">
           <li>
-            <a href={`tel:${company.phoneRaw}`} className="text-white/70 active:text-[var(--color-gold)] transition-colors">
+            <CopyInline
+              value={company.phone}
+              href={`tel:${company.phoneRaw}`}
+              ariaLabel={t('contact.actions.callPhone')}
+              textClass="text-white/70 active:text-[var(--color-gold)]"
+            >
               {company.phone}
-            </a>
+            </CopyInline>
           </li>
           <li>
-            <a href={`mailto:${company.email}`} className="text-white/70 active:text-[var(--color-gold)] transition-colors">
+            <CopyInline
+              value={company.email}
+              href={`mailto:${company.email}`}
+              ariaLabel={t('contact.actions.sendEmail')}
+              textClass="text-white/70 active:text-[var(--color-gold)]"
+            >
               {company.email}
-            </a>
+            </CopyInline>
           </li>
-          <li className="text-white/70">{company.address.street}, {company.address.postalCode} {company.address.city}</li>
+          <li>
+            <CopyInline
+              value={fullAddress}
+              ariaLabel={t('contact.actions.directions')}
+              textClass="text-white/70 active:text-[var(--color-gold)]"
+            >
+              {fullAddress}
+            </CopyInline>
+          </li>
         </ul>
       </div>
 

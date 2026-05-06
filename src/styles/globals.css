@@ -108,16 +108,53 @@ body::before {
   color: var(--color-ink);
 }
 
-/* Scrollbar */
+/* Scrollbar — wider + branded gold thumb so it's actually visible on
+   Windows (where the OS scrollbar is opaque and prominent by default,
+   so a 6px ghost looked broken). Mac trackpad users see overlay
+   scrollbars from the OS and ignore this rule entirely. */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 12px;
+  height: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--color-bg-alt);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-line-strong);
-  border-radius: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--color-gold) 0%,
+    var(--color-gold-lo) 100%
+  );
+  border-radius: 8px;
+  border: 3px solid var(--color-bg-alt);
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--color-gold-hi) 0%,
+    var(--color-gold) 100%
+  );
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-corner {
+  background: var(--color-bg-alt);
+}
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) var(--color-bg-alt);
+}
+/* Touch devices: keep the scrollbar invisible — the OS handles its own
+   scroll indicator and the gold rail looks heavy on phone/tablet. */
+@media (hover: none), (pointer: coarse) {
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  html {
+    scrollbar-width: none;
+  }
 }
 
 /* Hidden scrollbar utility — for horizontal carousels/TOC pills */

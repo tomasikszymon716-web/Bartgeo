@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Award } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Counter } from '../ui/Counter';
 
@@ -117,49 +117,88 @@ export function ONasDesktop() {
           ))}
         </div>
 
-        {/* ── Awards: editorial inline strip ────────────── */}
+        {/* ── Awards: editorial card ────────────────────── */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="mt-8 pt-7 border-t border-[var(--color-line)] flex items-center"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-14 relative rounded-[24px] border border-[var(--color-line)] bg-gradient-to-br from-[var(--color-card)] via-[var(--color-card)] to-[var(--color-gold-tint)]/40 px-10 py-9 overflow-hidden"
+          style={{ boxShadow: '0 1px 0 rgba(45,64,87,0.04), 0 24px 64px -28px rgba(240,165,0,0.25)' }}
         >
-          <div className="shrink-0 mr-8 leading-none">
-            <p className="font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--color-muted)]">
+          {/* Decorative gradient blob */}
+          <span
+            aria-hidden
+            className="absolute -top-24 -right-24 w-72 h-72 rounded-full opacity-40 pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(closest-side, rgba(240,165,0,0.45), transparent 75%)',
+            }}
+          />
+
+          <div className="relative flex flex-col items-center text-center">
+            <span className="inline-flex items-center gap-3 mb-4">
+              <span className="h-px w-10 bg-[var(--color-gold)]" />
+              <span className="font-mono text-[10.5px] tracking-[0.28em] uppercase text-[var(--color-gold)]">
+                {t('about.awards_eyebrow')}
+              </span>
+              <span className="h-px w-10 bg-[var(--color-gold)]" />
+            </span>
+
+            <div className="inline-flex items-center gap-3.5">
+              <motion.span
+                className="w-12 h-12 rounded-full bg-[var(--color-gold-tint)] flex items-center justify-center shrink-0"
+                initial={{ rotate: -18, scale: 0.85, opacity: 0 }}
+                whileInView={{ rotate: 0, scale: 1, opacity: 1 }}
+                viewport={{ once: true, amount: 0.4 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+              >
+                <Award className="w-6 h-6 text-[var(--color-gold)]" strokeWidth={2.2} />
+              </motion.span>
+              <h3 className="font-display font-bold text-[clamp(26px,2.6vw,34px)] tracking-[-0.025em] leading-[1.15] text-[var(--color-ink)]">
+                Orły Geodezji
+              </h3>
+            </div>
+
+            <p className="mt-3 text-[14px] tracking-[-0.005em] text-[var(--color-graphite-soft)] max-w-[520px]">
               {t('about.awards_kicker')}
             </p>
-            <p className="font-mono text-[11.5px] font-semibold tracking-[0.12em] uppercase text-[var(--color-ink-soft)] mt-1.5">
-              Orły Geodezji
-            </p>
+
+            <div className="mt-7 flex items-center justify-center flex-wrap gap-2.5">
+              {awards.map((award, i) => (
+                <motion.span
+                  key={i}
+                  initial={{ opacity: 0, y: 8 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.5, delay: 0.25 + i * 0.08 }}
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[var(--color-gold)]/35 bg-[var(--color-card)] text-[13px]"
+                >
+                  <motion.span
+                    className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]"
+                    animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
+                    transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }}
+                  />
+                  <span className="font-semibold tracking-[-0.005em] text-[var(--color-ink-soft)]">
+                    {t(award.typeKey)}
+                  </span>
+                  <span className="font-mono text-[12px] tabular-nums text-[var(--color-muted)]">
+                    {award.year}
+                  </span>
+                </motion.span>
+              ))}
+            </div>
+
+            <a
+              href={ORLY_PROFILE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-7 inline-flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-[var(--color-gold-lo)] hover:text-[var(--color-gold)] transition-colors duration-300"
+            >
+              {t('about.awards_link')}
+              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+            </a>
           </div>
-
-          <div className="flex items-center gap-6">
-            {awards.map((award, i) => (
-              <span
-                key={i}
-                className="inline-flex items-center gap-2 text-[13px]"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]" />
-                <span className="font-medium text-[var(--color-ink-soft)]">
-                  {t(award.typeKey)}
-                </span>
-                <span className="text-[var(--color-muted)]">{award.year}</span>
-              </span>
-            ))}
-          </div>
-
-          <div className="flex-1" />
-
-          <a
-            href={ORLY_PROFILE}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 font-mono text-[11px] tracking-[0.06em] text-[var(--color-gold-lo)] hover:text-[var(--color-gold)] transition-colors duration-300 shrink-0"
-          >
-            {t('about.awards_link')}
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </a>
         </motion.div>
       </div>
     </section>

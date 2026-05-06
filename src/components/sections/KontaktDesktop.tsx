@@ -79,7 +79,7 @@ export function KontaktDesktop() {
                   icon={<Clock className="w-4 h-4 text-[var(--color-gold)]" />}
                   align="start"
                 >
-                  <p>{t('hours.monSat')}: 07:00–18:00</p>
+                  <p>{t('hours.monSat')}: 08:00–18:00</p>
                   <p className="text-white/50">{t('hours.sunday')}: {t('hours.closed')}</p>
                 </ContactRow>
               </div>

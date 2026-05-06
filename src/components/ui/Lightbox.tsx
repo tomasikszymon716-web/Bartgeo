@@ -56,18 +56,27 @@ export function Lightbox({ open, onClose, title, images, startIndex = 0 }: Light
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[1000] flex flex-col bg-[var(--color-ink)]/95 backdrop-blur-md"
+          /* Grid rows: header / image / mobile-nav / thumbs.
+             Using `dvh` so Windows/Chrome and iOS Safari with their
+             dynamic browser chrome don't push the thumbnail strip off
+             the bottom edge. The image row gets `1fr` and `min-height: 0`
+             so it shrinks under pressure rather than overflowing. */
+          className="fixed inset-0 z-[1000] grid bg-[var(--color-ink)]/95 backdrop-blur-md"
+          style={{
+            height: '100dvh',
+            gridTemplateRows: 'auto minmax(0, 1fr) auto auto',
+          }}
           role="dialog"
           aria-modal="true"
           aria-label={title}
         >
           {/* ── Header ───────────────────────────────────────── */}
-          <div className="shrink-0 flex items-center justify-between gap-4 px-5 sm:px-8 lg:px-12 pt-5 sm:pt-7 lg:pt-8 pb-3 lg:pb-4">
+          <div className="flex items-center justify-between gap-4 px-4 sm:px-8 lg:px-12 pt-3 sm:pt-5 lg:pt-6 pb-2 lg:pb-3">
             <div className="min-w-0 flex-1">
-              <p className="font-mono text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.22em] uppercase text-[var(--color-gold)] mb-1.5">
+              <p className="font-mono text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.22em] uppercase text-[var(--color-gold)] mb-1">
                 {t('realizacje.lightbox.eyebrow')}
               </p>
-              <h2 className="font-display font-bold text-[18px] sm:text-[22px] lg:text-[28px] tracking-[-0.02em] text-white leading-tight truncate">
+              <h2 className="font-display font-bold text-[16px] sm:text-[20px] lg:text-[24px] tracking-[-0.02em] text-white leading-tight truncate">
                 {title}
               </h2>
             </div>
@@ -88,8 +97,9 @@ export function Lightbox({ open, onClose, title, images, startIndex = 0 }: Light
             </div>
           </div>
 
-          {/* ── Main image ───────────────────────────────────── */}
-          <div className="flex-1 relative flex items-center justify-center px-4 sm:px-12 lg:px-20 py-2 lg:py-4 min-h-0 select-none">
+          {/* ── Main image — 1fr row, min-height: 0 so the img can
+                 shrink to fit any viewport without overflowing. ───── */}
+          <div className="relative min-h-0 flex items-center justify-center px-3 sm:px-12 lg:px-20 select-none overflow-hidden">
             {/* Prev (desktop) */}
             <button
               type="button"
@@ -119,7 +129,12 @@ export function Lightbox({ open, onClose, title, images, startIndex = 0 }: Light
                 <img
                   src={images[index]}
                   alt={`${title} — ${index + 1}/${images.length}`}
-                  className="max-w-full max-h-full object-contain rounded-xl shadow-[0_30px_80px_rgba(0,0,0,0.5)] pointer-events-none"
+                  /* width/height 100% + object-contain is the most
+                     reliable cross-browser way to fit an image inside
+                     a flex grid cell. Browsers that misbehave on
+                     `max-w-full max-h-full` (older Edge, some Safari
+                     versions) get a deterministic frame here. */
+                  className="w-full h-full object-contain rounded-xl shadow-[0_30px_80px_rgba(0,0,0,0.5)] pointer-events-none"
                   draggable={false}
                 />
               </motion.div>
@@ -137,7 +152,7 @@ export function Lightbox({ open, onClose, title, images, startIndex = 0 }: Light
           </div>
 
           {/* ── Mobile prev/next + counter ───────────────────── */}
-          <div className="lg:hidden shrink-0 flex items-center justify-between px-5 sm:px-8 pb-3">
+          <div className="lg:hidden flex items-center justify-between px-5 sm:px-8 pt-1 pb-2">
             <button
               type="button"
               onClick={prev}
@@ -166,9 +181,9 @@ export function Lightbox({ open, onClose, title, images, startIndex = 0 }: Light
               (4px outset) room to render — overflow-x-auto would clip
               both axes otherwise and chop off the active outline. */}
           {images.length > 1 && (
-            <div className="shrink-0 px-3 sm:px-6 lg:px-10 pb-5 sm:pb-7 lg:pb-8">
+            <div className="px-3 sm:px-6 lg:px-10 pb-3 sm:pb-5 lg:pb-6">
               <div
-                className="flex items-center justify-center gap-2 sm:gap-2.5 overflow-x-auto px-2 py-2"
+                className="flex items-center justify-center gap-2 sm:gap-2.5 overflow-x-auto px-2 py-2 no-scrollbar"
                 role="tablist"
               >
                 {images.map((src, i) => {
@@ -183,8 +198,8 @@ export function Lightbox({ open, onClose, title, images, startIndex = 0 }: Light
                       aria-label={`${i + 1} / ${images.length}`}
                       className={`shrink-0 overflow-hidden rounded-lg transition-all duration-300 cursor-pointer ${
                         isActive
-                          ? 'w-[68px] h-[48px] sm:w-[88px] sm:h-[60px] ring-2 ring-[var(--color-gold)] ring-offset-2 ring-offset-[var(--color-ink)]'
-                          : 'w-[60px] h-[42px] sm:w-[76px] sm:h-[52px] opacity-45 hover:opacity-100'
+                          ? 'w-[60px] h-[42px] sm:w-[80px] sm:h-[56px] ring-2 ring-[var(--color-gold)] ring-offset-2 ring-offset-[var(--color-ink)]'
+                          : 'w-[52px] h-[38px] sm:w-[68px] sm:h-[48px] opacity-45 hover:opacity-100'
                       }`}
                     >
                       <img

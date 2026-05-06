@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
-import { ArrowUpRight } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Award } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Counter } from '../ui/Counter';
 
@@ -75,38 +76,71 @@ export function ONasMobile() {
         ))}
       </div>
 
-      {/* Awards */}
-      <div className="mt-8 pt-7 border-t border-[var(--color-line)]">
-        <div className="flex items-start justify-between gap-4 mb-5">
-          <div className="leading-none">
-            <p className="font-mono text-[8.5px] tracking-[0.22em] uppercase text-[var(--color-muted)]">
-              {t('about.awards_kicker')}
-            </p>
-            <p className="font-mono text-[10.5px] font-semibold tracking-[0.12em] uppercase text-[var(--color-ink-soft)] mt-1.5">
+      {/* Awards card */}
+      <motion.div
+        initial={{ opacity: 0, y: 14 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        className="mt-10 relative rounded-[20px] border border-[var(--color-line)] bg-gradient-to-br from-[var(--color-card)] via-[var(--color-card)] to-[var(--color-gold-tint)]/40 px-5 py-7 overflow-hidden"
+        style={{ boxShadow: '0 1px 0 rgba(45,64,87,0.04), 0 18px 48px -22px rgba(240,165,0,0.28)' }}
+      >
+        <span
+          aria-hidden
+          className="absolute -top-16 -right-16 w-48 h-48 rounded-full opacity-40 pointer-events-none"
+          style={{ background: 'radial-gradient(closest-side, rgba(240,165,0,0.45), transparent 75%)' }}
+        />
+
+        <div className="relative flex flex-col items-center text-center">
+          <span className="inline-flex items-center gap-2 mb-3.5">
+            <span className="h-px w-7 bg-[var(--color-gold)]" />
+            <span className="font-mono text-[9.5px] tracking-[0.26em] uppercase text-[var(--color-gold)]">
+              {t('about.awards_eyebrow')}
+            </span>
+            <span className="h-px w-7 bg-[var(--color-gold)]" />
+          </span>
+
+          <div className="inline-flex items-center gap-2.5">
+            <span className="w-9 h-9 rounded-full bg-[var(--color-gold-tint)] flex items-center justify-center shrink-0">
+              <Award className="w-[18px] h-[18px] text-[var(--color-gold)]" strokeWidth={2.2} />
+            </span>
+            <h3 className="font-display font-bold text-[clamp(20px,5.6vw,26px)] tracking-[-0.022em] leading-[1.15] text-[var(--color-ink)]">
               Orły Geodezji
-            </p>
+            </h3>
           </div>
+
+          <p className="mt-2.5 text-[13px] leading-[1.55] tracking-[-0.005em] text-[var(--color-graphite-soft)]">
+            {t('about.awards_kicker')}
+          </p>
+
+          <div className="mt-5 flex items-center justify-center flex-wrap gap-2">
+            {awards.map((award, i) => (
+              <span
+                key={i}
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--color-gold)]/35 bg-[var(--color-card)] text-[12px]"
+              >
+                <motion.span
+                  className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]"
+                  animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
+                  transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }}
+                />
+                <span className="font-semibold text-[var(--color-ink-soft)]">{t(award.typeKey)}</span>
+                <span className="font-mono text-[11.5px] tabular-nums text-[var(--color-muted)]">{award.year}</span>
+              </span>
+            ))}
+          </div>
+
           <a
             href={ORLY_PROFILE}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-mono text-[10px] tracking-[0.06em] text-[var(--color-gold-lo)] active:text-[var(--color-gold)] transition-colors mt-0.5 shrink-0"
+            className="mt-5 inline-flex items-center gap-1 font-mono text-[10.5px] tracking-[0.12em] uppercase text-[var(--color-gold-lo)] active:text-[var(--color-gold)] transition-colors"
           >
             {t('about.awards_link')}
             <ArrowUpRight className="w-3 h-3" />
           </a>
         </div>
-
-        <div className="flex flex-col gap-3">
-          {awards.map((award, i) => (
-            <span key={i} className="inline-flex items-center gap-3 text-[13px]">
-              <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] shrink-0" />
-              <span className="font-medium text-[var(--color-ink-soft)]">{t(award.typeKey)}</span>
-              <span className="text-[var(--color-muted)]">{award.year}</span>
-            </span>
-          ))}
-        </div>
-      </div>
+      </motion.div>
       </div>
     </section>
   );
