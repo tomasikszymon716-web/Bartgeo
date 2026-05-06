@@ -11,8 +11,8 @@ import { useReducedMotion } from '../../hooks/useReducedMotion';
    tighter than Desktop's 5+7 grid (which would cramp at <1280px). */
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&q=80', h: 320, mt: 20, pos: 'center' },
-  { src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80', h: 380, mt: 0, pos: 'center' },
+  { src: '/photos/hero-1.jpg', h: 320, mt: 20, pos: 'center' },
+  { src: '/photos/hero-2.jpg', h: 380, mt: 0, pos: 'center 30%' },
   { src: '/photos/hero-3.jpg', h: 280, mt: 50, pos: 'center 45%' },
 ];
 

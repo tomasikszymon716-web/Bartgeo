@@ -6,8 +6,8 @@ import { Button } from '../ui/Button';
 import { useReducedMotion } from '../../hooks/useReducedMotion';
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=800&q=80', h: 480, mt: 48, pos: 'center' },
-  { src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80', h: 572, mt: 0, pos: 'center' },
+  { src: '/photos/hero-1.jpg', h: 480, mt: 48, pos: 'center' },
+  { src: '/photos/hero-2.jpg', h: 572, mt: 0, pos: 'center 30%' },
   { src: '/photos/hero-3.jpg', h: 424, mt: 90, pos: 'center 45%' },
 ];
 

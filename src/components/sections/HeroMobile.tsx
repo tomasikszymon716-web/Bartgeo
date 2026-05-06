@@ -4,8 +4,8 @@ import { Highlight } from '../ui/Highlight';
 import { Button } from '../ui/Button';
 
 const photos = [
-  { src: 'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?w=600&q=80', h: 240, mt: 0 },
-  { src: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80', h: 190, mt: 28 },
+  { src: '/photos/hero-1.jpg', h: 240, mt: 0, pos: 'center' },
+  { src: '/photos/hero-2.jpg', h: 190, mt: 28, pos: 'center 30%' },
 ];
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -71,6 +71,7 @@ export function HeroMobile() {
                 src={photo.src}
                 alt={`BartGeo geodesy ${i + 1}`}
                 className="w-full h-full object-cover grayscale"
+                style={{ objectPosition: photo.pos }}
                 fetchPriority={i === 0 ? 'high' : undefined}
               />
             </div>
