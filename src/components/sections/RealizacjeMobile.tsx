@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Marquee } from '../ui/Marquee';
@@ -77,24 +78,47 @@ export function RealizacjeMobile() {
       </div>
 
       {/* ── Partner marquee ────────────────────────────────── */}
-      <div className="mt-10 relative border-t border-b border-[var(--color-line)] py-7">
-        <div className="absolute -top-[9px] left-1/2 -translate-x-1/2 px-3.5 bg-[var(--color-bg)] flex items-center gap-2 whitespace-nowrap">
-          <span className="h-px w-3.5 bg-[var(--color-gold)]/60" />
-          <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-[var(--color-gold)]">
-            {t('partners.label')}
+      <div className="mt-12">
+        <div className="flex flex-col items-center text-center mb-6">
+          <span className="inline-flex items-center gap-2 mb-3.5">
+            <span className="h-px w-6 bg-[var(--color-gold)]" />
+            <span className="font-mono text-[9px] tracking-[0.24em] uppercase text-[var(--color-gold)]">
+              {t('partners.eyebrow')}
+            </span>
+            <span className="h-px w-6 bg-[var(--color-gold)]" />
           </span>
-          <span className="h-px w-3.5 bg-[var(--color-gold)]/60" />
+          <h3 className="font-display font-bold text-[clamp(20px,5.6vw,24px)] tracking-[-0.02em] leading-[1.2] text-[var(--color-ink)]">
+            {t('partners.label')}
+          </h3>
         </div>
-        <Marquee duration={25}>
-          <div className="flex items-center">
-            {(['architectural', 'law', 'legal', 'notary', 'developers', 'individual'] as const).map((key) => (
-              <span key={key} className="flex items-center font-mono text-[11px] tracking-[0.06em] text-[var(--color-muted)] whitespace-nowrap">
-                {t(`partners.${key}`)}
-                <span className="w-1 h-1 rounded-full bg-[var(--color-gold)] mx-4 shrink-0" />
-              </span>
-            ))}
-          </div>
-        </Marquee>
+
+        <div
+          className="relative py-1"
+          style={{
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
+            maskImage:
+              'linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%)',
+          }}
+        >
+          <Marquee duration={26}>
+            <div className="flex items-center">
+              {(['architectural', 'law', 'legal', 'notary', 'developers', 'individual'] as const).map((key) => (
+                <span
+                  key={key}
+                  className="flex items-center font-mono text-[11.5px] font-medium tracking-[0.08em] text-[var(--color-graphite)] whitespace-nowrap"
+                >
+                  {t(`partners.${key}`)}
+                  <motion.span
+                    className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] mx-5 shrink-0"
+                    animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
+                    transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+                  />
+                </span>
+              ))}
+            </div>
+          </Marquee>
+        </div>
       </div>
 
       {/* ── Lightbox ─────────────────────────────────────────── */}

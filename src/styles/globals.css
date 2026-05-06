@@ -78,17 +78,6 @@ body::before {
   }
 }
 
-/* `content-visibility: auto` lets the browser skip rendering work
-   for offscreen `<section>`s. Saves layout/paint on long pages —
-   meaningful on tablet and underpowered Windows laptops. We pair it
-   with a contain-intrinsic-size hint so the scrollbar still
-   represents the full document length. */
-main > section,
-main > div > section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 800px;
-}
-
 /* Skip to content */
 .skip-to-content {
   position: absolute;

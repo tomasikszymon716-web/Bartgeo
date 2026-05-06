@@ -88,24 +88,53 @@ export function RealizacjeTablet() {
         </div>
 
         {/* ── Partner marquee ────────────────────────────────── */}
-        <div className="mt-14 relative border-t border-b border-[var(--color-line)] py-8">
-          <div className="absolute -top-[10px] left-1/2 -translate-x-1/2 px-4 bg-[var(--color-bg)] flex items-center gap-2.5 whitespace-nowrap">
-            <span className="h-px w-5 bg-[var(--color-gold)]/60" />
-            <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--color-gold)]">
-              {t('partners.label')}
+        <div className="mt-16">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col items-center text-center mb-8"
+          >
+            <span className="inline-flex items-center gap-2.5 mb-4">
+              <span className="h-px w-8 bg-[var(--color-gold)]" />
+              <span className="font-mono text-[10px] tracking-[0.26em] uppercase text-[var(--color-gold)]">
+                {t('partners.eyebrow')}
+              </span>
+              <span className="h-px w-8 bg-[var(--color-gold)]" />
             </span>
-            <span className="h-px w-5 bg-[var(--color-gold)]/60" />
+            <h3 className="font-display font-bold text-[clamp(22px,3vw,28px)] tracking-[-0.022em] leading-[1.15] text-[var(--color-ink)]">
+              {t('partners.label')}
+            </h3>
+          </motion.div>
+
+          <div
+            className="relative py-1"
+            style={{
+              WebkitMaskImage:
+                'linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)',
+              maskImage:
+                'linear-gradient(to right, transparent 0%, black 7%, black 93%, transparent 100%)',
+            }}
+          >
+            <Marquee duration={30}>
+              <div className="flex items-center">
+                {(['architectural', 'law', 'legal', 'notary', 'developers', 'individual'] as const).map((key) => (
+                  <span
+                    key={key}
+                    className="flex items-center font-mono text-[13px] font-medium tracking-[0.08em] text-[var(--color-graphite)] whitespace-nowrap"
+                  >
+                    {t(`partners.${key}`)}
+                    <motion.span
+                      className="w-2 h-2 rounded-full bg-[var(--color-gold)] mx-6 shrink-0"
+                      animate={{ scale: [1, 1.4, 1], opacity: [0.7, 1, 0.7] }}
+                      transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
+                    />
+                  </span>
+                ))}
+              </div>
+            </Marquee>
           </div>
-          <Marquee duration={28}>
-            <div className="flex items-center">
-              {(['architectural', 'law', 'legal', 'notary', 'developers', 'individual'] as const).map((key) => (
-                <span key={key} className="flex items-center font-mono text-[12.5px] tracking-[0.06em] text-[var(--color-muted)] whitespace-nowrap">
-                  {t(`partners.${key}`)}
-                  <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)] mx-5 shrink-0" />
-                </span>
-              ))}
-            </div>
-          </Marquee>
         </div>
       </div>
 
