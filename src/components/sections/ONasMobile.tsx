@@ -25,18 +25,20 @@ export function ONasMobile() {
         id="onas-heading-m"
       />
 
-      {/* Photo with gold accent bar */}
+      {/* Photo with gold accent bar — aspect-[2/3] matches the
+          owner portrait's native ratio so nothing gets cropped. */}
       <div className="mt-8 md:mt-10 relative">
         <div className="absolute left-0 top-8 bottom-8 w-[3px] rounded-full bg-gradient-to-b from-[var(--color-gold)] to-[var(--color-gold-hi)] z-10" />
         <div
-          className="ml-3.5 rounded-2xl overflow-hidden h-[280px] md:h-[360px] relative"
+          className="ml-3.5 rounded-2xl overflow-hidden aspect-[2/3] max-w-[320px] mx-auto relative"
           style={{ boxShadow: '0 20px 50px -16px rgba(45, 64, 87, 0.2)' }}
         >
           <img
-            src="https://images.unsplash.com/photo-1541976590-713941681591?w=600"
-            alt="Geodeta w terenie"
+            src="/photos/owner.jpg"
+            alt="mgr inż. Bartłomiej Tomasik — założyciel BartGeo"
             className="w-full h-full object-cover"
             loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/[0.12] to-transparent pointer-events-none" />
         </div>

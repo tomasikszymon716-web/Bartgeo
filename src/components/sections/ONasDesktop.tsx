@@ -49,16 +49,21 @@ export function ONasDesktop() {
               {/* Gold accent */}
               <div className="absolute left-0 top-10 bottom-10 w-[3px] rounded-full bg-gradient-to-b from-[var(--color-gold)] to-[var(--color-gold-hi)] z-10" />
 
-              {/* Image */}
+              {/* Image — aspect-[2/3] matches the owner portrait's
+                  native ratio (798×1200), so `object-cover` doesn't
+                  crop a single pixel from the subject. max-w cap
+                  keeps the image from blowing up on ultra-wide
+                  viewports. */}
               <div
-                className="ml-4 rounded-2xl overflow-hidden h-[440px] relative"
+                className="ml-4 rounded-2xl overflow-hidden aspect-[2/3] max-w-[420px] relative"
                 style={{ boxShadow: '0 24px 64px -20px rgba(45, 64, 87, 0.22)' }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1541976590-713941681591?w=800"
-                  alt="Geodeta w terenie"
+                  src="/photos/owner.jpg"
+                  alt="mgr inż. Bartłomiej Tomasik — założyciel BartGeo"
                   className="w-full h-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
                   loading="lazy"
+                  decoding="async"
                 />
                 {/* Depth gradient */}
                 <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/[0.12] to-transparent pointer-events-none" />
