@@ -22,7 +22,7 @@
   },
   "services": {
     "eyebrow": "LEISTUNGEN",
-    "heading": "Sechs Leistungen. Ein Präzisionsstandard.",
+    "heading": "Vielfältige Leistungen. Ein Präzisionsstandard.",
     "sub": "Jedes Projekt wird individuell behandelt. Preise nach kurzer Beratung.",
     "cta": "Angebot anfragen",
     "tachymeter_caption": "MODELL: TOTALSTATION · SCROLLEN ZUM DREHEN",
@@ -31,8 +31,8 @@
       "desc": "Grundlage jeder Bauinvestition. Dokumentation gemäß Anforderungen der Dokumentationsstelle."
     },
     "stake": {
-      "title": "Gebäudeabsteckung",
-      "desc": "Präzise Absteckung von Bauwerken und Versorgungsnetzen vor Ort, gemäß Planung."
+      "title": "Gebäude- und Netzabsteckung",
+      "desc": "Präzise Absteckung von Bauwerken und Versorgungsnetzen auf dem Gelände, gemäß Planung."
     },
     "inventory": {
       "title": "Bestandsaufnahmen",
@@ -48,12 +48,12 @@
     },
     "legal": {
       "title": "Karten für Rechtszwecke",
-      "desc": "Dokumentation für Gerichte, Anwaltskanzleien, Rechtsberater und Notare."
+      "desc": "Erstellung von Dokumentation für Gerichte, Anwaltskanzleien, Rechtsberater und Notare."
     }
   },
   "realizacje": {
     "eyebrow": "PORTFOLIO",
-    "heading": "Sechs Leistungen. Eine Galerie.",
+    "heading": "Eine Galerie unserer Arbeit.",
     "sub": "Wählen Sie eine Leistung, um mehr Fotos aus unseren Projekten zu sehen - von Einzelgrundstücken bis zu großen Investitionen.",
     "badge": "Ausgezeichnet beim Wettbewerb Geodäsie-Adler",
     "gallery_label": "Galerie",
@@ -97,8 +97,8 @@
   "about": {
     "eyebrow": "ÜBER UNS",
     "heading": "15 Jahre Präzision im Gelände.",
-    "p1": "BartGeo ist ein Vermessungs- und Kartografieunternehmen unter Leitung von Dipl.-Ing. Bartłomiej Tomasik. Seit 15 Jahren bieten wir Vermessungsleistungen höchster Qualität in den Kreisen Rzeszów, Łańcut, Kolbuszowa und Ropczyce-Sędziszów.",
-    "p2": "Wir arbeiten mit Architekturbüros, Kanzleien, Rechtsberatern und Notaren zusammen. Jedes Projekt - vom Einzelgrundstück bis zur Großinvestition - wird mit derselben Sorgfalt ausgeführt.",
+    "p1": "BartGeo ist ein Vermessungs- und Kartografieunternehmen unter Leitung von Dipl.-Ing. Bartłomiej Tomasik. Seit 15 Jahren bieten wir Vermessungsleistungen höchster Qualität in der Stadt Rzeszów sowie den Kreisen Rzeszów, Łańcut, Kolbuszowa und Ropczyce-Sędziszów.",
+    "p2": "Wir arbeiten mit Architekturbüros, Notariaten, Bauleitern, Bauträgern und Anwaltskanzleien zusammen. Jedes Projekt - vom Einzelgrundstück bis zur Großinvestition - wird mit derselben Sorgfalt ausgeführt.",
     "stat_projects": "Projekte",
     "stat_years": "Jahre Erfahrung",
     "stat_counties": "Landkreise",

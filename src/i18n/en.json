@@ -22,7 +22,7 @@
   },
   "services": {
     "eyebrow": "SERVICES",
-    "heading": "Six services. One standard of precision.",
+    "heading": "Multiple services. One standard of precision.",
     "sub": "Every project is treated individually. Pricing is set after a brief consultation.",
     "cta": "Request a quote",
     "tachymeter_caption": "MODEL: TOTAL STATION · SCROLL TO ROTATE",
@@ -31,8 +31,8 @@
       "desc": "The foundation of every construction project. Documentation compliant with geodetic centre requirements."
     },
     "stake": {
-      "title": "Building setting out",
-      "desc": "Precise on-site marking of structures and utility networks per the design."
+      "title": "Building & utility setting out",
+      "desc": "Precise on-the-ground marking of structures and utility networks per the design."
     },
     "inventory": {
       "title": "As-built surveys",
@@ -48,12 +48,12 @@
     },
     "legal": {
       "title": "Legal-purpose maps",
-      "desc": "Documentation for courts, law offices, legal advisors and notaries."
+      "desc": "Drafting documentation for courts, law offices, legal advisors and notaries."
     }
   },
   "realizacje": {
     "eyebrow": "PORTFOLIO",
-    "heading": "Six services. A gallery of work.",
+    "heading": "A gallery of our work.",
     "sub": "Pick a service to see more photos from our projects - from individual plots to major investments.",
     "badge": "Awarded in the Geodesy Eagles competition",
     "gallery_label": "Gallery",
@@ -97,8 +97,8 @@
   "about": {
     "eyebrow": "ABOUT US",
     "heading": "15 years of precision in the field.",
-    "p1": "BartGeo is a surveying and cartography company led by Bartłomiej Tomasik, MSc Eng. For 15 years we deliver top-quality surveying services in Rzeszów, Łańcut, Kolbuszowa and Ropczyce-Sędziszów counties.",
-    "p2": "We cooperate with architectural firms, law offices, legal advisors and notaries. Every project - from a single plot to large-scale investments - is carried out with the same care and punctuality.",
+    "p1": "BartGeo is a surveying and cartography company led by Bartłomiej Tomasik, MSc Eng. For 15 years we deliver top-quality surveying services in the city of Rzeszów and the Rzeszów, Łańcut, Kolbuszowa and Ropczyce-Sędziszów counties.",
+    "p2": "We cooperate with architectural firms, notary offices, construction managers, developers and law firms. Every project - from a single plot to large-scale investments - is carried out with the same care and punctuality.",
     "stat_projects": "Projects completed",
     "stat_years": "Years of experience",
     "stat_counties": "Counties served",

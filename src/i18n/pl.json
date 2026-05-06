@@ -22,7 +22,7 @@
   },
   "services": {
     "eyebrow": "USŁUGI",
-    "heading": "Sześć usług. Jeden standard precyzji.",
+    "heading": "Wiele usług. Jeden standard precyzji.",
     "sub": "Każdy projekt traktujemy indywidualnie. Cennik ustalamy po krótkiej rozmowie i poznaniu szczegółów zlecenia.",
     "cta": "Zapytaj o wycenę",
     "tachymeter_caption": "MODEL: STACJA TOTALNA · ROTUJ SCROLLEM",
@@ -31,8 +31,8 @@
       "desc": "Podstawa każdej inwestycji budowlanej. Dokumentacja zgodna z wymogami ośrodka dokumentacji geodezyjnej."
     },
     "stake": {
-      "title": "Tyczenie budynków i sieci",
-      "desc": "Precyzyjne wyznaczenie obiektów i sieci uzbrojenia terenu w terenie, zgodnie z projektem."
+      "title": "Tyczenie budynków i sieci uzbrojenia",
+      "desc": "Precyzyjne wyznaczenie obiektów i sieci uzbrojenia terenu na gruncie, zgodnie z projektem."
     },
     "inventory": {
       "title": "Inwentaryzacje powykonawcze",
@@ -48,7 +48,7 @@
     },
     "legal": {
       "title": "Mapy do celów prawnych",
-      "desc": "Dokumentacja dla sądów, kancelarii adwokackich, radców prawnych i notariuszy."
+      "desc": "Tworzenie dokumentacji dla sądów, kancelarii adwokackich, radców prawnych i notariuszy."
     }
   },
   "partners": {
@@ -63,7 +63,7 @@
   },
   "realizacje": {
     "eyebrow": "PORTFOLIO",
-    "heading": "Sześć usług. Galeria realizacji.",
+    "heading": "Galeria realizacji.",
     "sub": "Wybierz usługę, aby zobaczyć więcej zdjęć z naszych projektów. Od pojedynczych działek po duże inwestycje deweloperskie.",
     "badge": "Wyróżnieni w plebiscycie Orły Geodezji",
     "gallery_label": "Galeria",
@@ -97,8 +97,8 @@
   "about": {
     "eyebrow": "O FIRMIE",
     "heading": "15 lat precyzji w terenie.",
-    "p1": "BartGeo to firma geodezyjno-kartograficzna prowadzona przez mgr inż. Bartłomieja Tomasika. Od 15 lat dostarczamy usługi geodezyjne najwyższej jakości na terenie powiatu rzeszowskiego, łańcuckiego, kolbuszowskiego oraz ropczycko-sędziszowskiego.",
-    "p2": "Współpracujemy z biurami architektonicznymi, kancelariami adwokackimi, radców prawnych oraz kancelariami notarialnymi. Każdy projekt - od pojedynczej działki po obsługę dużych inwestycji - realizujemy z taką samą starannością i terminowością.",
+    "p1": "BartGeo to firma geodezyjno-kartograficzna prowadzona przez mgr inż. Bartłomieja Tomasika. Od 15 lat dostarczamy usługi geodezyjne najwyższej jakości na terenie miasta Rzeszów oraz powiatów rzeszowskiego, łańcuckiego, kolbuszowskiego i ropczycko-sędziszowskiego.",
+    "p2": "Współpracujemy z biurami architektonicznymi, kancelariami notarialnymi, kierownikami budów, deweloperami oraz kancelariami adwokackimi. Każdy projekt - od pojedynczej działki po obsługę dużych inwestycji - realizujemy z taką samą starannością i terminowością.",
     "stat_projects": "Zrealizowanych projektów",
     "stat_years": "Lat doświadczenia",
     "stat_counties": "Obsługiwanych powiatów",
