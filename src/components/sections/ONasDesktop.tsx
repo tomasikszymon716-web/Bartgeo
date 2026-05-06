@@ -117,27 +117,34 @@ export function ONasDesktop() {
           ))}
         </div>
 
-        {/* ── Awards: editorial card ────────────────────── */}
+        {/* ── Awards: editorial card ──────────────────────
+              Cross-platform notes: every fill, border and shadow is
+              a SOLID colour from the design palette — no
+              `from-X to-Y/40` gradient bg, no `radial-gradient(... ,
+              transparent)` blob, no alpha-only borders. Windows
+              (different gamma, no colour-managed display, lower
+              colour depth on some panels) renders alpha gradients
+              with visible banding and washes them out at high
+              brightness. Solid fills look identical on macOS and
+              Windows down to the pixel. */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-14 relative rounded-[24px] border border-[var(--color-line)] bg-gradient-to-br from-[var(--color-card)] via-[var(--color-card)] to-[var(--color-gold-tint)]/40 px-10 py-9 overflow-hidden"
-          style={{ boxShadow: '0 1px 0 rgba(45,64,87,0.04), 0 24px 64px -28px rgba(240,165,0,0.25)' }}
+          className="mt-14 relative rounded-[24px] border border-[var(--color-line)] bg-[var(--color-card)] px-10 py-9 overflow-hidden"
+          style={{ boxShadow: '0 24px 56px -24px rgba(45, 64, 87, 0.2)' }}
         >
-          {/* Decorative gradient blob */}
+          {/* Solid gold tab at the top — replaces the radial blob.
+              No gradient endpoints means no banding, looks identical
+              everywhere. */}
           <span
             aria-hidden
-            className="absolute -top-24 -right-24 w-72 h-72 rounded-full opacity-40 pointer-events-none"
-            style={{
-              background:
-                'radial-gradient(closest-side, rgba(240,165,0,0.45), transparent 75%)',
-            }}
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-[3px] rounded-b-full bg-[var(--color-gold)]"
           />
 
           <div className="relative flex flex-col items-center text-center">
-            <span className="inline-flex items-center gap-3 mb-4">
+            <span className="inline-flex items-center gap-3 mb-4 mt-1.5">
               <span className="h-px w-10 bg-[var(--color-gold)]" />
               <span className="font-mono text-[10.5px] tracking-[0.28em] uppercase text-[var(--color-gold)]">
                 {t('about.awards_eyebrow')}
@@ -172,7 +179,7 @@ export function ONasDesktop() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.5, delay: 0.25 + i * 0.08 }}
-                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-[var(--color-gold)]/35 bg-[var(--color-card)] text-[13px]"
+                  className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[var(--color-gold-tint)] text-[13px]"
                 >
                   <motion.span
                     className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]"
@@ -182,7 +189,7 @@ export function ONasDesktop() {
                   <span className="font-semibold tracking-[-0.005em] text-[var(--color-ink-soft)]">
                     {t(award.typeKey)}
                   </span>
-                  <span className="font-mono text-[12px] tabular-nums text-[var(--color-muted)]">
+                  <span className="font-mono text-[12px] tabular-nums text-[var(--color-gold-lo)]">
                     {award.year}
                   </span>
                 </motion.span>
@@ -196,7 +203,7 @@ export function ONasDesktop() {
               className="mt-7 inline-flex items-center gap-1.5 font-mono text-[11px] tracking-[0.12em] uppercase text-[var(--color-gold-lo)] hover:text-[var(--color-gold)] transition-colors duration-300"
             >
               {t('about.awards_link')}
-              <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+              <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
         </motion.div>

@@ -76,23 +76,23 @@ export function ONasMobile() {
         ))}
       </div>
 
-      {/* Awards card */}
+      {/* Awards card — solid colours only (see ONasDesktop for the
+          cross-platform rationale). */}
       <motion.div
         initial={{ opacity: 0, y: 14 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-        className="mt-10 relative rounded-[20px] border border-[var(--color-line)] bg-gradient-to-br from-[var(--color-card)] via-[var(--color-card)] to-[var(--color-gold-tint)]/40 px-5 py-7 overflow-hidden"
-        style={{ boxShadow: '0 1px 0 rgba(45,64,87,0.04), 0 18px 48px -22px rgba(240,165,0,0.28)' }}
+        className="mt-10 relative rounded-[20px] border border-[var(--color-line)] bg-[var(--color-card)] px-5 py-7 overflow-hidden"
+        style={{ boxShadow: '0 18px 40px -20px rgba(45, 64, 87, 0.22)' }}
       >
         <span
           aria-hidden
-          className="absolute -top-16 -right-16 w-48 h-48 rounded-full opacity-40 pointer-events-none"
-          style={{ background: 'radial-gradient(closest-side, rgba(240,165,0,0.45), transparent 75%)' }}
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-[3px] rounded-b-full bg-[var(--color-gold)]"
         />
 
         <div className="relative flex flex-col items-center text-center">
-          <span className="inline-flex items-center gap-2 mb-3.5">
+          <span className="inline-flex items-center gap-2 mb-3.5 mt-1">
             <span className="h-px w-7 bg-[var(--color-gold)]" />
             <span className="font-mono text-[9.5px] tracking-[0.26em] uppercase text-[var(--color-gold)]">
               {t('about.awards_eyebrow')}
@@ -117,7 +117,7 @@ export function ONasMobile() {
             {awards.map((award, i) => (
               <span
                 key={i}
-                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-[var(--color-gold)]/35 bg-[var(--color-card)] text-[12px]"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[var(--color-gold-tint)] text-[12px]"
               >
                 <motion.span
                   className="w-1.5 h-1.5 rounded-full bg-[var(--color-gold)]"
@@ -125,7 +125,7 @@ export function ONasMobile() {
                   transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut', delay: i * 0.4 }}
                 />
                 <span className="font-semibold text-[var(--color-ink-soft)]">{t(award.typeKey)}</span>
-                <span className="font-mono text-[11.5px] tabular-nums text-[var(--color-muted)]">{award.year}</span>
+                <span className="font-mono text-[11.5px] tabular-nums text-[var(--color-gold-lo)]">{award.year}</span>
               </span>
             ))}
           </div>
